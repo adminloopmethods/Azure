@@ -28,7 +28,7 @@ export default function AboutPage() {
 
   return (
     <div className="w-full bg-white">
-      <Header />
+      {/* <Header /> */}
       <Hero />
 
       {/* Main Content Section */}
@@ -185,7 +185,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

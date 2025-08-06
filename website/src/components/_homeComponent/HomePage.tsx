@@ -12,12 +12,12 @@ import { SolutionsSection } from "./SolutionsSection";
 import { ServiceBenefits } from "./ServiceBenefits";
 import { Footer } from "./Footer";
 
-export const HomePage = () => {
+export const HomePage = () => {``
   return (
     <div className="flex flex-col items-end font-poppins">
       <div className="flex overflow-hidden flex-col w-full bg-white  max-md:max-w-full">
-        <Header />
-        <ProductNavigation />
+        {/* <Header /> */}
+        {/* <ProductNavigation /> */}
         <HeroSection />
         <ProductShowcase />
         <AboutSection />
@@ -26,7 +26,7 @@ export const HomePage = () => {
         <BannerSections />
         <SolutionsSection />
         <ServiceBenefits />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
