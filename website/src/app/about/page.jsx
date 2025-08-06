@@ -64,13 +64,13 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="max-sm:px-5 max-sm:py-5">
+      <div className="max-sm:px-5 m-10 max-sm:py-5">
         <div className="h-[1px] w-full bg-gray-200" />
       </div>
 
       {/* Statistics Section */}
-      <div className="px-24 py-3.5 bg-white">
-        <div className="flex gap-72 justify-center items-center px-28 py-7 max-md:gap-24 max-md:px-12 max-md:py-7 max-sm:flex-col max-sm:gap-10 max-sm:p-5">
+      <div className="px-24 py-0 bg-white">
+        <div className="flex gap-30 justify-center items-center px-28 py-7 max-md:gap-24 max-md:px-12 max-md:py-7 max-sm:flex-col max-sm:gap-10 max-sm:p-5">
           <div className="text-center">
             <div className="text-6xl font-medium text-black leading-[56px] max-sm:text-5xl">
               20k
@@ -80,7 +80,7 @@ export default function AboutPage() {
             </div>
           </div>
           {/* divider */}
-          <div className="h-px w-full bg-gradient-to-r from-white via-gray-300 to-white" />
+          <div className="h-px w-full bg-gradient-to-r from-white via-gray-300 to-white lg:rotate-90" />
           <div className="text-center">
             <div className="text-6xl font-medium text-black leading-[56px] max-sm:text-5xl">
               20+
@@ -89,7 +89,7 @@ export default function AboutPage() {
               Year of Experience
             </div>
           </div>
-          <div className="h-px w-full bg-gradient-to-r from-white via-gray-300 to-white" />
+          <div className="h-px w-full bg-gradient-to-r from-white via-gray-300 to-white lg:rotate-90" />
           <div className="text-center">
             <div className="text-6xl font-medium text-black leading-[56px] max-sm:text-5xl">
               100+
@@ -101,12 +101,12 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="max-sm:px-5 max-sm:py-5">
+      <div className="max-sm:px-5 m-10 max-sm:py-5">
         <div className="h-[1px] w-full bg-gray-200" />
       </div>
 
       {/* Vision/Mission Section */}
-      <div className="flex px-24 gap-10 py-0 max-md:flex-col max-md:px-12 max-md:py-5 max-sm:px-0 max-sm:py-5 max-sm:mb-5">
+      <div className="flex px-24 mb-10 gap-10 max-md:flex-col max-md:px-12 max-md:py-5 max-sm:px-0 max-sm:py-5 max-sm:mb-5">
         <div className="h-[282px] w-[610px] max-md:w-full">
           <div className="p-12 bg-gray-200 h-[282px] max-w-[610px] max-sm:px-5 max-sm:py-8">
             <div className="mb-5 text-4xl font-medium leading-[50px] text-zinc-900 max-sm:text-3xl max-sm:leading-10">
@@ -166,7 +166,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="h-px w-full bg-gradient-to-r from-white via-gray-300 to-white" />
+          <div className="h-px w-full bg-gradient-to-r from-white via-gray-300 to-white lg:rotate-90 lg:translate-y-30" />
 
           <div className="text-center max-w-[300px]">
             <img
@@ -182,7 +182,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="h-px w-full bg-gradient-to-r from-white via-gray-300 to-white" />
+          <div className="h-px w-full bg-gradient-to-r from-white via-gray-300 to-white lg:rotate-90 lg:translate-y-30 " />
 
           <div className="text-center max-w-[300px]">
             <img
