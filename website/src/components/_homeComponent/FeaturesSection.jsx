@@ -40,7 +40,7 @@ const features = [
   },
 ];
 
-export const FeaturesSection: React.FC = () => {
+export const FeaturesSection = () => {
   return (
     <section className="flex flex-col px-20 py-20 w-full text-white bg-black max-md:px-6 max-md:py-14">
       <h2 className="text-5xl font-bold leading-none max-md:text-3xl">

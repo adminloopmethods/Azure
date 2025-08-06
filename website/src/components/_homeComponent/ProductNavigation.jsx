@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const ProductNavigation = () => {
   return (
-    <nav className="flex flex-wrap items-center gap-10 px-[100px] py-5 w-full text-xs font-light text-white bg-black border-b border-white border-opacity-10 max-md:px-5 max-md:max-w-full">
+    <nav className="flex h-14 flex-wrap items-center gap-10 px-[100px] py-5 w-full text-xs font-light text-white bg-black border-b border-white border-opacity-10 max-md:px-5 max-md:max-w-full">
       <div className="flex gap-2 items-center ">
         <img
           src={icons.appleIcon.src}

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { Header } from "./Header";
-import { ProductNavigation } from "./ProductNavigation";
+
+
 import { HeroSection } from "./HeroSection";
 import { ProductShowcase } from "./ProductShowcase";
 import { AboutSection } from "./AboutSection";
@@ -10,7 +10,6 @@ import { ProductGrid } from "./ProductGrid";
 import { BannerSections } from "./BannerSections";
 import { SolutionsSection } from "./SolutionsSection";
 import { ServiceBenefits } from "./ServiceBenefits";
-import { Footer } from "./Footer";
 
 export const HomePage = () => {``
   return (

@@ -2,7 +2,7 @@
 import React from "react";
 import { images } from "@/assets";
 
-export const BannerSections: React.FC = () => {
+export const BannerSections  = () => {
   const bannerCards = [
     {
       title: "Popular Products",

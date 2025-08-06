@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { ProductCard } from "./ProductCard";
 
-export const ProductGrid: React.FC = () => {
+export const ProductGrid = () => {
   const [selectedKey, setSelectedKey] = useState("New Arrival");
 
   const keys = ["New Arrival", "Bestseller", "Featured Products"];

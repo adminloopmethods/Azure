@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import  {Footer } from "@/components/Footer";
 import { ProductNavigation } from "@/components/_homeComponent/ProductNavigation";
 // import fav from "@/app/favicon.svg"
 
@@ -25,13 +25,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.variable}>
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="antialiased w-full">
+     
+      <body className="antialiased">
         <Header />
         <ProductNavigation />
         {children}
