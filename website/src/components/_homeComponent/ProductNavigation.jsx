@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 import {icons} from "@/assets/index"
+import Link from "next/link";
 
-export const ProductNavigation: React.FC = () => {
+export const ProductNavigation = () => {
   return (
     <nav className="flex flex-wrap items-center gap-10 px-[100px] py-5 w-full text-xs font-light text-white bg-black border-b border-white border-opacity-10 max-md:px-5 max-md:max-w-full">
       <div className="flex gap-2 items-center ">
@@ -14,27 +15,27 @@ export const ProductNavigation: React.FC = () => {
         <span className="basis-auto">Authorised Reseller</span>
       </div>
       <div className="flex flex-wrap gap-10 items-center  max-md:max-w-full ">
-        <a href="#" className="self-stretch my-auto">
+        <Link href="#" className="self-stretch my-auto">
           Mac
-        </a>
-        <a href="#" className="self-stretch my-auto">
+        </Link>
+        <Link href="#" className="self-stretch my-auto">
           iPad
-        </a>
-        <a href="#" className="self-stretch my-auto">
+        </Link>
+        <Link href="#" className="self-stretch my-auto">
           iPhone
-        </a>
-        <a href="#" className="self-stretch my-auto">
+        </Link>
+        <Link href="#" className="self-stretch my-auto">
           Watch
-        </a>
-        <a href="#" className="self-stretch my-auto">
+        </Link>
+        <Link href="#" className="self-stretch my-auto">
           AirPods
-        </a>
-        <a href="#" className="self-stretch my-auto">
+        </Link>
+        <Link href="#" className="self-stretch my-auto">
           TV & Home
-        </a>
-        <a href="#" className="self-stretch my-auto">
+        </Link>
+        <Link href="#" className="self-stretch my-auto">
           Accessories
-        </a>
+        </Link>
       </div>
     </nav>
   );
