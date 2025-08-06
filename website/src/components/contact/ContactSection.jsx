@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "./ContactForm";
 
-const ContactSection: React.FC = () => {
+const ContactSection = () => {
   return (
     <div className="relative px-24 py-16 w-full max-md:px-12 max-md:py-10 max-sm:px-5 max-sm:py-8">
       <div className="flex relative w-full bg-white shadow-2xl h-[534px] max-md:flex-col max-md:h-auto">

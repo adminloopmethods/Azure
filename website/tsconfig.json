@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/components/about/Hero.jsx", "src/components/about/TeamCard.jsx", "src/components/contact/BenefitsSection.jsx", "src/components/contact/ContactForm.jsx", "src/components/contact/ContactSection.jsx", "src/components/contact/Hero.jsx", "src/components/contact/Navigation.jsx", "src/components/contact/SearchBox.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
