@@ -31,11 +31,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="antialiased w-full">
-        <Header  />
+        {/* <Header  /> */}
         <ProductNavigation />
         {children}
         
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
