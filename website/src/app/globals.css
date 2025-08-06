@@ -24,3 +24,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+.font-thin {
+  font-weight: 100;
+}
+.font-extralight {
+  font-weight: 200;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-normal {
+  font-weight: 400;
+}
+/* ... and so on */
+
+
+.fade-mask {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, white 30%, white 70%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, white 30%, white 70%, transparent);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
