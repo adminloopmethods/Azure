@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-// import fav from "@/app/favicon.svg"
+import Header from "@/components/Header";
+import { ProductNavigation } from "@/components/_homeComponent/ProductNavigation";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,9 +30,13 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <Header/>
-      <body className="antialiased">{children}</body>
-      <Footer />
+      <body className="antialiased w-full">
+        <Header  />
+        <ProductNavigation />
+        {children}
+        
+        <Footer />
+      </body>
     </html>
   );
 }

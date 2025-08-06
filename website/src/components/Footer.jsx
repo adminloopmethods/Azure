@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <div className="px-24 pt-80 pb-0 max-md:px-12 max-md:pt-12 max-md:pb-0 max-sm:px-5 max-sm:pt-10 max-sm:pb-0">
       <div>
@@ -336,3 +336,5 @@ export const Footer = () => {
     </div>
   );
 };
+
+export default Footer

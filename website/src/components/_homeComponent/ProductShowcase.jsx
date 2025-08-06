@@ -2,7 +2,7 @@
 import { images } from "@/assets";
 import React from "react";
 
-export const ProductShowcase: React.FC = () => {
+export const ProductShowcase = () => {
   return (
     <>
       <section className="lg:hidden flex flex-col gap-10 items-center w-full px-6 py-10 md:flex-row md:flex-wrap md:gap-6 lg:px-16">

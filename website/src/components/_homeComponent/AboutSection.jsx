@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-export const AboutSection: React.FC = () => {
+export const AboutSection = () => {
   return (
     <section className="self-center py-[clamp(30px,5.5vw,80px)] border px-[100px] w-full max-xl:px-16 max-lg:px-10 max-md:px-6 max-sm:px-4 max-md:mt-10">
       <div className="flex gap-10 max-md:flex-col">

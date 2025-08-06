@@ -2,7 +2,7 @@
 import React from "react";
 import { images } from "@/assets";
 
-export const HeroSection: React.FC = () => {
+export const HeroSection = () => {
   return (
     <section
       style={{

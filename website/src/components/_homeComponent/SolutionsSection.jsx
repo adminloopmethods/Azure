@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-export const SolutionsSection: React.FC = () => {
+export const SolutionsSection = () => {
   return (
     <section className="w-full px-[100px] max-xl:px-16 max-lg:px-10 max-md:px-6 py-16 max-md:py-10">
       <div className="flex gap-10 max-lg:gap-6 max-md:flex-col">

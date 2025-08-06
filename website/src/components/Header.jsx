@@ -1,7 +1,9 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
-export const Header= () => {
+
+
+const Header= () => {
   return (
     <div className="relative">
       <div className="flex justify-between items-center px-24 py-2.5 bg-white border-b border-solid border-b-white border-b-opacity-10 max-md:px-12 max-md:py-2.5 max-sm:flex-col max-sm:gap-5 max-sm:px-5 max-sm:py-2.5">
@@ -91,3 +93,6 @@ export const Header= () => {
     </div>
   );
 };
+
+
+export default Header

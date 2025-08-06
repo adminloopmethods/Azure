@@ -1,18 +1,8 @@
 "use client";
 import React from "react";
 
-interface ProductCardProps {
-  iconSrc: string;
-  imageSrc: string;
-  title: string;
-  price?: string;
-  buttonText: string;
-  imageAspect?: string;
-  imageWidth?: string;
-  showPrice?: boolean;
-}
 
-export const ProductCard: React.FC<ProductCardProps> = ({
+export const ProductCard = ({
   iconSrc,
   imageSrc,
   title,
