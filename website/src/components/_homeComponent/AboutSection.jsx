@@ -3,26 +3,27 @@ import React from "react";
 
 export const AboutSection = () => {
   return (
-    <section className="self-center py-[clamp(30px,5.5vw,80px)] border px-[100px] w-full max-xl:px-16 max-lg:px-10 max-md:px-6 max-sm:px-4 max-md:mt-10">
-      <div className="flex gap-10 max-md:flex-col">
+    <section className="w-full  max-w-screen-2xl mx-auto py-[clamp(30px,5.5vw,80px)] px-[100px] max-2xl:px-24 max-xl:px-16 max-lg:px-10 max-md:px-6 max-sm:px-4 border border-gray-200">
+      <div className="flex gap-10 max-md:flex-col items-start">
         {/* Left: Heading and Button */}
-        <div className="w-[30%] max-md:w-full">
-          <div className="flex flex-col w-full">
-            <h2 className="text-6xl font-semibold text-black leading-[64px] max-xl:text-5xl max-lg:text-4xl max-md:text-3xl max-md:leading-[42px]">
-              <span className="font-light">About</span> Azure
+        {/* Left: Heading and Button */}
+        <div className="w-[30%] max-md:w-full max-md:flex max-md:flex-col max-md:items-center max-md:text-center">
+          <div className="flex flex-col">
+            <h2 className="text-black font-semibold text-5xl xl:text-6xl leading-tight max-lg:text-4xl max-md:text-3xl max-md:leading-[42px]">
+              <span className="font-light">About </span>Azure
               <br />
               Innovation
             </h2>
 
-            <button className="flex gap-3 justify-center items-center self-start py-3 px-10 mt-8 text-xl max-md:text-base leading-8 text-center text-black border-black border-solid border-[1.385px] min-h-[57px] rounded-full max-sm:px-6">
-              <span className="text-black">Read More</span>
+            <button className="mt-8 py-3 px-10 text-xl max-md:text-base leading-8 text-black border border-black rounded-full min-h-[57px] max-sm:px-6 transition hover:bg-black hover:text-white cursor-pointer">
+              Read More
             </button>
           </div>
         </div>
 
         {/* Right: Paragraph Text */}
-        <div className="w-[70%] ml-5 max-md:ml-0 max-md:w-full">
-          <div className="text-2xl font-light leading-9 text-black max-xl:text-xl max-lg:text-lg max-md:text-base max-md:leading-7">
+        <div className="w-[70%] max-md:w-full max-md:mt-6">
+          <div className="text-black text-lg xl:text-2xl font-light leading-8 max-xl:text-xl max-lg:text-lg max-md:text-base max-md:leading-7">
             <p>
               Azure Innovations is a dynamic Apple Reseller and Service
               Provider, supplying genuine Apple products to individuals and

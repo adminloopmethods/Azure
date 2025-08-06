@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navigation: React.FC = () => {
+const Navigation = () => {
   return (
     <div className="flex justify-between items-center px-24 py-0 w-full bg-black border-b border-solid border-b-white border-b-opacity-10 h-[57px] max-md:px-12 max-md:py-0 max-sm:flex-col max-sm:gap-2.5 max-sm:px-5 max-sm:py-0 max-sm:h-auto">
       <div className="flex gap-2 items-center max-sm:order-2">

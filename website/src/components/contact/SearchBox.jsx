@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchBox: React.FC = () => {
+const SearchBox = () => {
   return (
     <div>
       <div

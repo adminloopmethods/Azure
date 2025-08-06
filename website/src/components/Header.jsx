@@ -3,11 +3,10 @@ import React, { useState } from "react";
 import icons from "@/assets/icons/azure-logo.svg";
 import { usePathname } from "next/navigation";
 
-
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  
+
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
@@ -16,18 +15,16 @@ export const Header = () => {
   ];
 
   return (
-    <header className="w-full h-21 bg-white flex justify-between flex-col md:flex-row pt-2.5 pb-5 py-2.5 sm:px-10 text-sm font-light">
+    <header className="w-full bg-white flex flex-col lg:flex-row justify-between pt-2.5 pb-5 px-4 lg:px-10 text-sm font-light relative">
       {/* Top Row: Logo + Hamburger */}
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center w-full lg:w-auto">
         <img
           src={icons.src}
           alt="Azure Innovation Logo"
-          className="object-contain shrink-0 w-32 h-14"
+          className="object-contain w-32 h-14"
         />
-
-        {/* Hamburger Button (visible on small screens only) */}
         <button
-          className="md:hidden text-2xl"
+          className="lg:hidden text-black text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Menu"
         >
@@ -35,49 +32,100 @@ export const Header = () => {
         </button>
       </div>
 
-      
+      {/* Mobile Popup Menu */}
+      {menuOpen && (
+        <div className="absolute top-full left-0 w-full bg-white shadow-md z-50 px-4 pt-5 pb-6 flex flex-col gap-6">
+          {/* Search Bar */}
+          <div className="flex gap-2.5 px-3 py-2 border border-zinc-300 rounded-full text-neutral-500 h-9 w-full items-center">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/feac8458b9d780f3e7a69397d6f0170d371ef099?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
+              alt="Search icon"
+              className="h-full w-auto"
+            />
+            <input
+              type="text"
+              placeholder="Search accessories"
+              className="w-full bg-transparent outline-none text-sm"
+            />
+          </div>
 
-      {/* Collapsible Menu for Mobile + Horizontal for Desktop */}
-      <div
-        className={`${
-          menuOpen ? "flex" : "hidden"
-        } flex-col w-full pl-40 gap-10 md:flex md:flex-row items-center justify-between`}
-      >
-        {/* Search box */}  
-        <div className="flex gap-2.5 px-3.5 py-2.5 border border-solid bg-white bg-opacity-80 border-zinc-300 rounded-[86px] text-neutral-500 h-10">
+          {/* Navigation */}
+          <nav className="flex flex-col gap-4 items-center">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`relative group px-1 py-1 font-medium text-black transition-opacity ${
+                  pathname === link.href ? "opacity-100" : "opacity-70"
+                }`}
+              >
+                {link.label}
+                <span
+                  className={`absolute bottom-0 left-0 w-full h-[2px] transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 origin-left bg-black ${
+                    pathname === link.href ? "scale-x-100" : ""
+                  }`}
+                ></span>
+              </a>
+            ))}
+          </nav>
+
+          {/* CTA Button */}
+          {/* CTA Button */}
+          <div className="flex justify-center w-full">
+            <button className="inline-block text-xs px-2 py-1 border border-black rounded-full w-1/3 text-black whitespace-nowrap transition duration-300 hover:bg-black hover:text-white">
+              Get in Touch
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Desktop Menu */}
+      <div className="hidden lg:flex lg:flex-row lg:items-end lg:justify-between w-full">
+        {/* Search Bar */}
+        <div className="flex gap-2.5 px-3 py-2 border border-zinc-300 rounded-full text-neutral-500 h-9 w-96 bg-opacity-80 items-center lg:ml-5">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/feac8458b9d780f3e7a69397d6f0170d371ef099?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
             alt="Search icon"
-            className="object-contain shrink-0 my-auto w-3.5 aspect-square"
+            className="h-full w-auto"
           />
           <input
             type="text"
             placeholder="Search accessories"
-            className="flex-auto bg-transparent outline-none placeholder-neutral-500 w-[424px] text-sm"
+            className="w-full bg-transparent outline-none text-sm"
           />
         </div>
 
         {/* Navigation */}
-        <nav className="flex flex-col md:flex-row lg:gap-10 gap-[clamp(2px,1.1vw,16px)] mt-2 md:mt-0" role="navigation" aria-label="Main navigation">
-          <a href="#" className="font-medium text-black hover:underline hover:opacity-60">
-            Home
-          </a>
-          <a href="#" className="text-black opacity-70 hover:underline hover:opacity-90">
-            About
-          </a>
-          <a href="#" className="text-black opacity-70 hover:underline hover:opacity-90">
-            Contact
-          </a>
-          <a href="#" className="text-black opacity-70 hover:underline hover:opacity-90">
-            Blog
-          </a>
+        <nav
+          className="flex flex-row gap-6 items-center ml-6"
+          role="navigation"
+          aria-label="Main navigation"
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={`relative group px-1 py-1 font-medium text-black transition-opacity ${
+                pathname === link.href ? "opacity-100" : "opacity-70"
+              }`}
+            >
+              {link.label}
+              <span
+                className={`absolute bottom-0 left-0 w-full h-[2px] transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 origin-left bg-black ${
+                  pathname === link.href ? "scale-x-100" : ""
+                }`}
+              ></span>
+            </a>
+          ))}
         </nav>
 
         {/* CTA Button */}
-        <button className="self-start lg:px-6 px-4 min-h-[41px] py-2 text-black text-center border border-black border-solid rounded-[86px] w-fit md:w-auto">
+        <button className="inline-block text-xs px-2 py-1 border border-black rounded-full text-black whitespace-nowrap transition duration-300 hover:bg-black hover:text-white ml-6">
           Get in Touch
         </button>
       </div>
     </header>
   );
 };
+
+export default Header;

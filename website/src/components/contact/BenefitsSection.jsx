@@ -1,13 +1,7 @@
 import React from "react";
 
-interface BenefitCardProps {
-  icon: string;
-  title: string;
-  description: string;
-  iconAlt: string;
-}
 
-const BenefitCard: React.FC<BenefitCardProps> = ({
+const BenefitCard = ({
   icon,
   title,
   description,
@@ -26,7 +20,7 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
   );
 };
 
-const BenefitsSection: React.FC = () => {
+const BenefitsSection = () => {
   const benefits = [
     {
       icon: "https://api.builder.io/api/v1/image/assets/TEMP/ecda8f319f377123e2a829dabfdc9bec4b231def?width=88",
