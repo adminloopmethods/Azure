@@ -13,7 +13,7 @@ const Footer = () => {
         />
       </div>
       <div className="mb-8">
-        <div className="flex gap-64 mb-14 max-md:flex-wrap max-md:gap-12 max-sm:flex-col max-sm:gap-8">
+        <div className="flex justify-between mb-14 max-md:flex-wrap max-md:gap-12 max-sm:flex-col max-sm:gap-8">
           <div className="flex flex-col gap-8">
             <div className="text-sm font-medium tracking-normal leading-4 text-zinc-900">
               Shop and Learn
