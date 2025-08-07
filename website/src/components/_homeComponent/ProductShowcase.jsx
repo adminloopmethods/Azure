@@ -15,8 +15,8 @@ export const ProductShowcase= () => {
               className="absolute left-0 bottom-0 w-2/3 max-w-[300px] object-contain"
             />
             <div className="z-10 ml-auto text-left max-w-md">
-              <h2 className="text-4xl sm:text-5xl font-semibold text-black max-md:text-3xl">Watches</h2>
-              <p className="mt-4 text-sm sm:text-base text-neutral-900 font-light max-md:text-sm">
+              <h2 className="text-4xl sm:text-5xl font-semibold text-black max-md:text-3xl max-lg:pl-10">Watches</h2>
+              <p className="mt-2 text-sm sm:text-base text-neutral-900 font-light max-md:text-sm max-lg:pl-10">
                 Combining Apple Watch and iPhone opens up a world of features that make each device better.
               </p>
             </div>

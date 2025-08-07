@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import icons from "@/assets/icons/azure-logo.svg";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,11 +19,13 @@ export const Header = () => {
     <header className="w-full bg-white flex flex-col lg:flex-row justify-between pt-2.5 pb-5 px-4 lg:px-10 text-sm font-light relative">
       {/* Top Row: Logo + Hamburger */}
       <div className="flex justify-between items-center w-full lg:w-auto">
-        <img
-          src={icons.src}
-          alt="Azure Innovation Logo"
-          className="object-contain w-32 h-14"
-        />
+        <Link href="/">
+          <img
+            src={icons.src}
+            alt="Azure Innovation Logo"
+            className="object-contain w-32 h-14"
+          />
+        </Link>
         <button
           className="lg:hidden text-black text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -72,7 +75,7 @@ export const Header = () => {
           {/* CTA Button */}
           {/* CTA Button */}
           <div className="flex justify-center w-full">
-            <button className="inline-block text-xs px-2 py-1 border border-black rounded-full w-1/3 text-black whitespace-nowrap transition duration-300 hover:bg-black hover:text-white">
+            <button className="inline-block text-sm px-2 py-1 border border-black rounded-full w-1/3 text-black whitespace-nowrap transition duration-300 hover:bg-black hover:text-white font-normal">
               Contact Us
             </button>
           </div>
@@ -88,6 +91,7 @@ export const Header = () => {
             alt="Search icon"
             className="h-full w-auto"
           />
+
           <input
             type="text"
             placeholder="Search accessories"
@@ -120,7 +124,7 @@ export const Header = () => {
         </nav>
 
         {/* CTA Button */}
-        <button className="inline-block text-xs px-3 py-2 border border-black rounded-full text-black whitespace-nowrap transition duration-300 hover:bg-black hover:text-white ml-6 cursor-pointer">
+        <button className="inline-block text-sm px-3 py-2 border border-black rounded-full text-black whitespace-nowrap transition duration-300 hover:bg-black hover:text-white ml-6 cursor-pointer font-normal">
           Contact Us
         </button>
       </div>

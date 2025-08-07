@@ -23,7 +23,7 @@ export const AboutSection = () => {
 
         {/* Right: Paragraph Text */}
         <div className="w-[70%] max-md:w-full max-md:mt-6">
-          <div className="text-black text-lg xl:text-2xl font-light leading-8 max-xl:text-xl max-lg:text-lg max-md:text-base max-md:leading-7">
+          <div className="text-black text-2xl xl:text-2xl font-extralight leading-8 max-xl:text-xl max-lg:text-lg max-md:text-base max-md:leading-7">
             <p>
               Azure Innovations is a dynamic Apple Reseller and Service
               Provider, supplying genuine Apple products to individuals and

@@ -32,7 +32,7 @@ export default function ServicesPage() {
     },
     {
       title: "Streaming Services",
-      imageUrl: typeof streamImg === "string" ? streamImg : streamImg.src, // ✅ fix here
+      imageUrl: typeof streamImg === "string" ? streamImg : streamImg.src, 
       iconUrl:
         "https://api.builder.io/api/v1/image/assets/TEMP/d75a879531fa3ede32e5bae2b11599f12861ea42?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
       routeTo: "/services/streaming-services",
@@ -66,14 +66,14 @@ export default function ServicesPage() {
   return (
     <div className="flex overflow-hidden flex-col bg-white">
       {/* Hero Section */}
-      <div className="flex flex-col justify-center items-center px-16 py-28 w-full text-6xl leading-none whitespace-nowrap bg-black text-neutral-100 max-md:px-5 max-md:py-24 max-md:max-w-full max-md:text-4xl">
+      <div className="flex flex-col justify-center items-center px-16 py-28 w-full text-6xl leading-none whitespace-nowrap bg-black text-neutral-100 max-md:px-5 max-md:py-24 max-md:max-w-full max-md:text-4xl ">
         <div className="mb-0 text-neutral-100 max-md:mb-2.5 max-md:text-4xl">
           Services
         </div>
       </div>
 
       {/* Service Cards Grid */}
-      <div className="self-center mt-20 w-full max-w-[1240px] max-md:mt-10 max-md:max-w-full">
+      <div className="self-center mt-20 w-full max-w-[1240px] max-md:mt-10 max-md:max-w-full px-10">
         <div className="flex gap-5 max-md:flex-col">
           <div className="w-6/12 max-md:ml-0 max-md:w-full">
             <ServiceCard
@@ -94,7 +94,7 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      <div className="self-center mt-10 w-full max-w-[1240px] max-md:max-w-full">
+      <div className="self-center mt-10 w-full max-w-[1240px] max-md:max-w-full px-10 mb-20">
         <div className="flex gap-5 max-md:flex-col">
           <div className="w-6/12 max-md:ml-0 max-md:w-full">
             <ServiceCard
@@ -114,31 +114,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-
-      {/* Benefits Section */}
-      <div className="flex flex-col justify-center items-center px-16 py-24 mt-20 w-full text-center bg-zinc-100 max-md:px-5 max-md:mt-10 max-md:max-w-full">
-        <div className="flex flex-wrap gap-5 justify-between items-start w-full max-w-[1141px] max-md:max-w-full">
-          {benefits.map((benefit, index) => (
-            <React.Fragment key={index}>
-              <BenefitCard
-                iconUrl={benefit.iconUrl}
-                title={benefit.title}
-                description={benefit.description}
-              />
-              {index < benefits.length - 1 && (
-                <div className="shrink-0 self-stretch w-px h-[162px]" />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
-
-      {/* Decorative Image */}
-      <img
-        src="https://api.builder.io/api/v1/image/assets/TEMP/421826147270ef3b39308a103b3f9ad1c5ed955f?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
-        className="object-contain w-full aspect-[1000] max-md:max-w-full"
-        alt="Decorative element"
-      />
     </div>
   );
 }
