@@ -5,14 +5,6 @@ const ContactSection = () => {
   return (
     <div className="relative px-24 py-16 w-full max-md:px-12 max-md:py-10 max-sm:px-5 max-sm:py-8">
       <div className="flex relative w-full bg-white shadow-2xl h-[534px] max-md:flex-col max-md:h-auto">
-        <div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html:
-                '<svg id="406:328" width="491" height="534" viewBox="0 0 491 534" fill="none" xmlns="http://www.w3.org/2000/svg" class="contact-form-bg" style="width: 491px; height: 534px; position: absolute; left: 0; top: 0"> <g clip-path="url(#clip0_406_328)"> <path d="M0 0H491V647H0V0Z" fill="black"></path> </g> <defs> <clipPath id="clip0_406_328"> <rect width="491" height="647" fill="white"></rect> </clipPath> </defs> </svg>',
-            }}
-          />
-        </div>
         <div className="flex relative flex-col justify-start p-10 bg-black h-[534px] w-[491px] z-[2] max-md:p-8 max-md:w-full max-md:h-auto max-sm:p-5">
           <div className="flex gap-2 items-center mb-5">
             <div>
@@ -74,18 +66,21 @@ const ContactSection = () => {
         </div>
         <ContactForm />
       </div>
-      <img
-        src="https://api.builder.io/api/v1/image/assets/TEMP/b8253788955d6253af4f7f4e00319f357fb985de?width=2476"
-        alt="maps"
-        className="mt-12 w-full mix-blend-luminosity h-[273px]"
-      />
+
       <div>
-        <div
-          dangerouslySetInnerHTML={{
-            __html:
-              '<svg id="406:372" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="map-marker" style="width: 39px; height: 39px; position: absolute; left: 326px; top: 50px"> <circle opacity="0.2" cx="19.6847" cy="19.6847" r="19.1847" fill="#BDBDBD" stroke="black"></circle> <circle cx="20.2995" cy="19.069" r="9.22722" fill="url(#paint0_linear_406_372)"></circle> <defs> <linearGradient id="paint0_linear_406_372" x1="20.2995" y1="9.8418" x2="20.2995" y2="28.2962" gradientUnits="userSpaceOnUse"> <stop stop-color="#BDBDBD"></stop> <stop offset="1"></stop> </linearGradient> </defs> </svg>',
-          }}
+        <img //!map image
+          src="https://api.builder.io/api/v1/image/assets/TEMP/b8253788955d6253af4f7f4e00319f357fb985de?width=2476"
+          alt="maps"
+          className="mt-12 w-full mix-blend-luminosity h-[273px]"
         />
+        <div className="absolute top-175 -left-8">
+          <div
+            dangerouslySetInnerHTML={{
+              __html:
+                '<svg id="406:372" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="map-marker" style="width: 39px; height: 39px; position: absolute; left: 326px; top: 50px"> <circle opacity="0.2" cx="19.6847" cy="19.6847" r="19.1847" fill="#BDBDBD" stroke="black"></circle> <circle cx="20.2995" cy="19.069" r="9.22722" fill="url(#paint0_linear_406_372)"></circle> <defs> <linearGradient id="paint0_linear_406_372" x1="20.2995" y1="9.8418" x2="20.2995" y2="28.2962" gradientUnits="userSpaceOnUse"> <stop stop-color="#BDBDBD"></stop> <stop offset="1"></stop> </linearGradient> </defs> </svg>',
+            }}
+          />
+        </div>
       </div>
     </div>
   );
