@@ -1,128 +1,68 @@
 "use client";
 import React from "react";
 import { images } from "@/assets";
+import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <section
-      style={{
-        paddingLeft: "clamp(1rem, 5vw, 100px)",
-        paddingRight: "clamp(1rem, 5vw, 100px)",
-        paddingTop: "clamp(2rem, 5vw, 4rem)",
-      }}
-      className="bg-black"
-    >
-      <div
-        className="flex max-md:flex-col"
-        style={{ gap: "clamp(1rem, 3vw, 2rem)" }}
-      >
-        {/* Left */}
-        <div className="w-6/12 max-md:ml-0 max-md:w-full">
-          <div className="flex flex-col items-start self-stretch my-auto w-full text-neutral-100 max-md:mt-10 max-md:max-w-full">
-            {/* Tagline */}
-            <div
-              className="flex flex-col justify-center self-stretch bg-white bg-opacity-10 border-white border-opacity-20 rounded-[66px] max-md:max-w-full"
-              style={{
-                padding: "clamp(0.8rem, 2vw, 1.5rem)",
-                fontSize: "clamp(0.9rem, 1vw, 1.2rem)",
-                lineHeight: "clamp(1.2rem, 1.5vw, 1.8rem)",
-              }}
-            >
-              <div>
-                <span
-                  style={{
-                    fontFamily:
-                      "Poppins, -apple-system, Roboto, Helvetica, sans-serif",
-                    fontWeight: 400,
-                    color: "rgba(85,85,85,1)",
-                  }}
-                >
-                  Azure.
-                </span>{" "}
-                <span
-                  style={{
-                    fontFamily:
-                      "Poppins, -apple-system, Roboto, Helvetica, sans-serif",
-                    fontWeight: 275,
-                    color: "rgba(85,85,85,1)",
-                  }}
-                >
-                  The best way to buy the products you love.
-                </span>
-              </div>
-            </div>
+    <section className="bg-black px-4 sm:px-8 xl:px-24 2xl:px-36 pt-10">
+      <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16 max-w-screen-2xl mx-auto">
+        {/* Left Side */}
+        <div className="w-full md:w-6/12 text-white text-center md:text-left">
+          {/* Tagline */}
+          <div
+            className="bg-[#1A1A1A] bg-opacity-10 rounded-full px-4 py-2 text-sm sm:text-base text-gray-400 mb-6 inline-block max-w-full md:max-w-[420px] whitespace-nowrap overflow-hidden text-ellipsis"
+            style={{
+              border: "0.42px solid rgba(255, 255, 255, 0.2)",
+            }}
+          >
+            <span className="font-medium text-gray-600">Azure.</span>{" "}
+            <span className="font-light">
+              The best way to buy the products you love.
+            </span>
+          </div>
 
-            {/* Heading */}
-            <div
-              style={{ gap: "clamp(0.5rem, 1vw, 1rem)", marginTop: "clamp(1.5rem, 4vw, 2rem)" }}
-              className="flex leading-none max-md:text-4xl"
-            >
-              <h1
-                className="flex-auto text-neutral-100"
-                style={{
-                  fontSize: "clamp(2rem, 5vw, 4rem)",
-                  lineHeight: "1.1",
-                  fontWeight: 600,
-                }}
-              >
-                iPhone 16
-              </h1>
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/0340dd5d657e26e3ecc2da040feef7c5b9cc067b?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
-                alt="Arrow icon"
-                className="object-contain shrink-0 my-auto w-6 aspect-[0.8]"
-              />
-            </div>
+          {/* Heading */}
+          <div className="flex items-center justify-center md:justify-start gap-2 mb-4 flex-wrap">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold text-white">
+              iPhone 16
+            </h1>
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/0340dd5d657e26e3ecc2da040feef7c5b9cc067b?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
+              alt="Arrow Icon"
+              width={24}
+              height={24}
+              className="object-contain"
+            />
+          </div>
 
-            {/* Subtext */}
-            <p
-              className="text-neutral-100 font-[275]"
-              style={{
-                fontSize: "clamp(1rem, 2vw, 1.5rem)",
-                lineHeight: "clamp(1.5rem, 3vw, 2.25rem)",
-                marginTop: "clamp(1rem, 2.5vw, 1.5rem)",
-              }}
-            >
-              Our most powerful cameras yet.
-              <br />
-              Ultrafast chips. And USB-C.
-            </p>
+          {/* Subtext */}
+          <p className="text-sm sm:text-base md:text-lg text-white font-light mb-6 leading-relaxed">
+            Our most powerful cameras yet.
+            <br />
+            Ultrafast chips. And USB-C.
+          </p>
 
-            {/* Buttons */}
-            <div
-              className="flex gap-4 items-start [@media(min-width:200px)_and_(max-width:400px)]:flex-col text-center text-blue-500 max-md:max-w-full"
-              style={{ marginTop: "clamp(1.5rem, 4vw, 2.5rem)" }}
-            >
-              <button className="flex justify-center items-start px-6 py-3 text-[clamp(0.7rem,.8vw,1rem)] sm:text-[clamp(0.9rem,1vw,1.2rem)] border border-blue-500 border-solid min-w-7 rounded-[980px] max-md:px-5">
-                <span
-                  style={{
-                    fontSize: "",
-                    fontWeight: 500,
-                  }}
-                >
-                  Explore iPhone 16
-                </span>
-              </button>
-              <button className="flex justify-center items-start px-6 py-3 text-[clamp(0.7rem,.8vw,1rem)] sm:text-[clamp(0.9rem,1vw,1.2rem)] border border-blue-500 border-solid min-w-7 rounded-[980px] max-md:px-5">
-                <span
-                  style={{
-                    fontSize: "",
-                    fontWeight: 500,
-                  }}
-                >
-                  Explore iPhone 16 Pro
-                </span>
-              </button>
-            </div>
+          {/* Buttons */}
+          <div className="flex flex-wrap sm:flex-nowrap gap-4 justify-center md:justify-start">
+            <button className="px-6 py-2 whitespace-nowrap border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition">
+              Explore iPhone 16
+            </button>
+            <button className="px-6 py-2 whitespace-nowrap border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition">
+              Explore iPhone 16 Pro
+            </button>
           </div>
         </div>
 
-        {/* Right */}
-        <div className="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-          <img
+        {/* Right Side - Image */}
+        <div className="w-full md:w-6/12 flex justify-center pt-4 sm:pt-6 md:pt-8">
+          <Image
             src={images.bannerImage.src}
+            width={477}
+            height={524}
             alt="iPhone 16"
-            className="object-contain grow w-full aspect-[1.1] max-md:mt-10 max-md:max-w-full"
+            className="w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[550px] xl:max-w-[600px] 2xl:max-w-[650px] h-auto object-contain"
+            priority
           />
         </div>
       </div>

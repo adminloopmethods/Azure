@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-import {icons} from "@/assets/index"
+import { icons } from "@/assets/index";
+import Link from "next/link";
 
 export const ProductNavigation = () => {
   return (
@@ -14,27 +15,27 @@ export const ProductNavigation = () => {
         <span className="basis-auto">Authorised Reseller</span>
       </div>
       <div className="flex flex-wrap ml-[200px] gap-10 items-center  max-md:max-w-full ">
-        <a href="#" className="self-stretch my-auto">
+        <Link href="#" className="self-stretch my-auto">
           Mac
-        </a>
-        <a href="#" className="self-stretch my-auto">
+        </Link>
+        <Link href="#" className="self-stretch my-auto">
           iPad
-        </a>
-        <a href="#" className="self-stretch my-auto">
+        </Link>
+        <Link href="#" className="self-stretch my-auto">
           iPhone
-        </a>
-        <a href="#" className="self-stretch my-auto">
+        </Link>
+        <Link href="#" className="self-stretch my-auto">
           Watch
-        </a>
-        <a href="#" className="self-stretch my-auto">
+        </Link>
+        <Link href="#" className="self-stretch my-auto">
           AirPods
-        </a>
-        <a href="#" className="self-stretch my-auto">
+        </Link>
+        <Link href="#" className="self-stretch my-auto">
           TV & Home
-        </a>
-        <a href="#" className="self-stretch my-auto">
+        </Link>
+        <Link href="#" className="self-stretch my-auto">
           Accessories
-        </a>
+        </Link>
       </div>
     </nav>
   );

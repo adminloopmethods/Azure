@@ -26,8 +26,7 @@ export const BannerSections = () => {
       buttonColor: "text-black border-black",
       bgColor: "bg-zinc-100",
       textColor: "text-black",
-      image1:
-        images.ipads.src,
+      image1: images.ipads.src,
       image1Class:
         "object-contain absolute top-0 right-[-43px] z-0 max-w-full aspect-[1.1] h-[390px] w-[371px]",
     },
@@ -57,11 +56,11 @@ export const BannerSections = () => {
   ];
 
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-20 w-full px-4 max-md:mt-10">
+    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-20 w-full px-4 md:px-6 lg:px-8">
       {bannerCards.map((card, index) => (
         <div
           key={index}
-          className={`relative overflow-hidden px-6 pt-[420px] pb-14 ${card.bgColor} rounded-lg shadow-md max-md:pt-64`}
+          className={`relative overflow-hidden px-6 pt-[280px] md:pt-[360px] lg:pt-[420px] pb-14 ${card.bgColor} rounded-lg shadow-md`}
         >
           {/* Text Content */}
           <div className="relative z-10">
@@ -83,14 +82,14 @@ export const BannerSections = () => {
             <img
               src={card.image1}
               alt={card.title}
-              className={`${card.image1Class} max-md:h-[220px] max-md:w-auto `}
+              className={`${card.image1Class} max-md:h-[200px] max-md:w-auto max-sm:h-[180px]`}
             />
           )}
           {card.image2 && (
             <img
               src={card.image2}
               alt={card.title}
-              className={`${card.image2Class} max-md:h-[220px] max-md:w-auto `}
+              className={`${card.image2Class} max-md:h-[200px] max-md:w-auto max-sm:h-[180px]`}
             />
           )}
         </div>

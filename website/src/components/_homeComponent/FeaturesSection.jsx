@@ -42,37 +42,31 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section className="flex flex-col px-20 py-20 w-full text-white bg-black max-md:px-6 max-md:py-14">
-      <h2 className="text-5xl font-bold leading-none max-md:text-3xl">
+    <section className="w-full bg-black text-white px-6 sm:px-10 md:px-16 lg:px-20 py-14 sm:py-16 md:py-20">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center md:text-left leading-tight">
         Azure Innovations Features
       </h2>
 
-      <div className="mt-12 flex flex-wrap justify-between gap-y-12">
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
         {features.map((feature, index) => (
-          <React.Fragment key={index}>
-            <div className="flex flex-col items-start w-full lg:w-[22%]">
-              <img
-                src={feature.image}
-                alt={feature.alt}
-                className={`object-contain ${feature.imageWidth}`}
-              />
-              <h3 className="mt-5 text-2xl font-semibold leading-tight">
-                {feature.title}
-              </h3>
-              <p className="mt-5 text-lg font-light leading-7">
-                {feature.description}
-              </p>
-            </div>
-
-            {/* Divider for desktop */}
-            {index < features.length - 1 && (
-              // <div className="hidden lg:block w-px h-auto bg-white/30 mx-4" />
-              <div className="hidden lg:block shrink-0 w-[1px] h-[292px] bg-[#ffffff80] fade-mask" />
-            )}
-          </React.Fragment>
+          <div
+            key={index}
+            className="flex flex-col items-center text-center sm:items-start sm:text-left"
+          >
+            <img
+              src={feature.image}
+              alt={feature.alt}
+              className={`object-contain mb-4 ${feature.imageWidth}`}
+            />
+            <h3 className="text-xl sm:text-2xl font-semibold leading-tight">
+              {feature.title}
+            </h3>
+            <p className="mt-4 text-base sm:text-lg font-light leading-relaxed text-white/90">
+              {feature.description}
+            </p>
+          </div>
         ))}
       </div>
-
     </section>
   );
 };
