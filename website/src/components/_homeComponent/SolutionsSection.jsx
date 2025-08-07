@@ -19,7 +19,7 @@ export const SolutionsSection = () => {
               <p>Cloud and streaming solutions with IBM and Google</p>
               <p>Network management solutions through partners like Cisco</p>
             </div>
-            <button className="mt-8 md:mt-10 text-sm md:text-base px-6 md:px-10 py-2.5 md:py-3 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-300">
+            <button className="mt-8 md:mt-10 text-sm md:text-base px-6 md:px-10 py-2.5 md:py-3 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer">
               Read More
             </button>
           </div>

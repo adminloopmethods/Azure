@@ -71,7 +71,7 @@ export const ProductShowcase= () => {
             <p className="mt-4 text-sm sm:text-base text-neutral-900 font-light max-md:text-sm">
               The new 15-inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.
             </p>
-            <button className="mt-6 px-8 py-3 border border-black text-black text-lg rounded-full w-fit max-md:text-base max-md:px-6 max-md:py-2">
+            <button className="mt-6 px-8 py-3 border border-black text-black text-lg rounded-full w-fit max-md:text-base max-md:px-6 max-md:py-2 whitespace-nowrap transition duration-300 hover:bg-black hover:text-white cursor-pointer">
               Shop
             </button>
           </div>
@@ -160,8 +160,8 @@ export const ProductShowcase= () => {
                 with a spacious Liquid Retina display.
               </p>
             </div>
-            <button className="flex gap-3 justify-center items-center px-16 py-3 mt-4 max-w-full text-xl leading-8 text-center text-black whitespace-nowrap border-black border-solid border-[1.385px] min-h-[57px] rounded-[119.077px] w-[180px] max-md:px-5">
-              <span className="self-stretch my-auto text-black">Shop</span>
+            <button className="flex gap-3 justify-center items-center px-16 py-3 mt-4 max-w-full text-xl leading-8 text-center text-black whitespace-nowrap border-black border-solid border-[1.385px] min-h-[57px] rounded-[119.077px] w-[180px] max-md:px-5 transition duration-300 hover:bg-black hover:text-white cursor-pointer">
+              <span className="self-stretch my-auto  ">Shop</span>
             </button>
           </div>
 

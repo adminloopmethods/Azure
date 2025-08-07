@@ -3,59 +3,56 @@ import React from "react";
 
 export const ServiceBenefits = () => {
   return (
-    <section className="flex flex-col items-center justify-center w-full px-16 py-24 mt-2.5 text-center bg-zinc-100 max-xl:px-10 max-lg:px-6 max-md:px-4 max-md:py-16">
-      <div className="flex w-full max-w-[1141px] gap-8 max-md:flex-col max-md:gap-10">
-        {/* 1st Block */}
-        <div className="flex-1 flex flex-col items-center px-4">
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/a182124d608feeb4f6d631c13445ac12798c4a9e?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
-            alt="Fast delivery icon"
-            className="w-11 h-auto object-contain"
-          />
-          <h3 className="mt-4 text-lg font-semibold text-zinc-900">
-            Fast, free delivery
-          </h3>
-          <p className="mt-3 text-sm leading-relaxed text-neutral-500">
-            Enjoy quick, free delivery or pick up your order at a nearby Apple Store.
-          </p>
-        </div>
+    <div className="px-30 py-10 bg-[#F2F2F2] max-md:px-12 max-md:py-16 max-sm:px-5 max-sm:py-10 max-sm:mb-10">
+        <div className="flex justify-between max-md:flex-col max-md:gap-12 max-md:items-center max-sm:gap-10">
+          <div className="text-center max-w-[300px]">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/ecda8f319f377123e2a829dabfdc9bec4b231def?width=88"
+              alt=""
+              className="block mx-auto mt-0 mb-2.5 w-auto h-14"
+            />
+            <div className="mb-2.5 text-lg font-semibold leading-6 text-zinc-900">
+              Fast, free delivery
+            </div>
+            <div className="text-sm leading-5 text-neutral-500">
+              Enjoy quick, free delivery or pick up your order at a nearby Apple
+              Store.
+            </div>
+          </div>
 
-        {/* Divider for Desktop */}
-        <div className="self-stretch w-px bg-[#80808030] max-md:hidden" />
+          <div className="h-px w-[300px] bg-gradient-to-r [background-image:linear-gradient(to_right,_white_0%,_#d1d5db_20%,_#d1d5db_80%,_white_100%)] lg:rotate-90 lg:translate-y-20" />
 
-        {/* 2nd Block */}
-        <div className="flex-1 flex flex-col items-center px-4">
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/366ec813a546b4d4a1f8e7a269a1be6143586999?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
-            alt="Easy returns icon"
-            className="w-11 h-auto object-contain"
-          />
-          <h3 className="mt-4 text-lg font-semibold text-zinc-900">
-            Free and easy returns
-          </h3>
-          <p className="mt-3 text-sm leading-relaxed text-neutral-500">
-            Return online or at any Apple Store—simple and hassle-free.
-          </p>
-        </div>
+          <div className="text-center max-w-[300px]">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/bec1318e8eabc4a24941bfa7b4542343ae71edac?width=88"
+              alt=""
+              className="block mx-auto mt-0 mb-2.5 w-auto h-14"
+            />
+            <div className="mb-2.5 text-lg font-semibold leading-6 text-zinc-900">
+              Free and easy returns
+            </div>
+            <div className="text-sm leading-5 text-neutral-500">
+              Return online or at any Apple Store—simple and hassle-free.
+            </div>
+          </div>
 
-        {/* Divider for Desktop */}
-        <div className="self-stretch w-px bg-[#80808030] max-md:hidden" />
+          <div className="h-px w-[300px] bg-gradient-to-r [background-image:linear-gradient(to_right,_white_0%,_#d1d5db_20%,_#d1d5db_80%,_white_100%)] lg:rotate-90 lg:translate-y-20 " />
 
-        {/* 3rd Block */}
-        <div className="flex-1 flex flex-col items-center px-4">
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/dd7fd682731fc522d0bf968e0f34fb8b3d7fdfb6?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
-            alt="Cash back icon"
-            className="w-14 h-auto object-contain"
-          />
-          <h3 className="mt-4 text-lg font-semibold text-zinc-900">
-            Get 3% Daily Cash back
-          </h3>
-          <p className="mt-3 text-sm leading-relaxed text-neutral-500">
-            Get 3% back daily when you pay with Apple Card, plus interest-free monthly installments.
-          </p>
+          <div className="text-center max-w-[300px]">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/bde46adeb55329589ff0d8df33ef0e184523cfc1?width=112"
+              alt=""
+              className="block mx-auto mt-0 mb-2.5 w-auto h-14"
+            />
+            <div className="mb-2.5 text-lg font-semibold leading-6 text-zinc-900">
+              Get 3% Daily Cash back
+            </div>
+            <div className="text-sm leading-5 text-neutral-500">
+              Get 3% back daily when you pay with Apple Card, plus interest-free
+              monthly installments.
+            </div>
+          </div>
         </div>
       </div>
-    </section>
   );
 };

@@ -11,7 +11,7 @@ export const Header = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
-    { href: "/blog", label: "Blog" },
+    { href: "/services", label: "Services" },
   ];
 
   return (
@@ -73,7 +73,7 @@ export const Header = () => {
           {/* CTA Button */}
           <div className="flex justify-center w-full">
             <button className="inline-block text-xs px-2 py-1 border border-black rounded-full w-1/3 text-black whitespace-nowrap transition duration-300 hover:bg-black hover:text-white">
-              Get in Touch
+              Contact Us
             </button>
           </div>
         </div>
@@ -120,8 +120,8 @@ export const Header = () => {
         </nav>
 
         {/* CTA Button */}
-        <button className="inline-block text-xs px-2 py-1 border border-black rounded-full text-black whitespace-nowrap transition duration-300 hover:bg-black hover:text-white ml-6">
-          Get in Touch
+        <button className="inline-block text-xs px-3 py-2 border border-black rounded-full text-black whitespace-nowrap transition duration-300 hover:bg-black hover:text-white ml-6 cursor-pointer">
+          Contact Us
         </button>
       </div>
     </header>
