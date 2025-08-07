@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ProductNavigation } from "@/components/_homeComponent/ProductNavigation";
 
 
 const poppins = Poppins({
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={poppins.variable}>
       <body className="antialiased">
         <Header />
+        <ProductNavigation />
         {children}
 
         <Footer />

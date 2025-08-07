@@ -1,13 +1,7 @@
 "use client";
-import * as React from "react";
+import React from "react";
 
-interface BenefitCardProps {
-  iconUrl: string;
-  title: string;
-  description: string;
-}
-
-export const BenefitCard: React.FC<BenefitCardProps> = ({
+export const BenefitCard = ({
   iconUrl,
   title,
   description,

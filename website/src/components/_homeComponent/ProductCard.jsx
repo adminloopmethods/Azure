@@ -4,7 +4,6 @@ import React from "react";
 
 
 export const ProductCard= ({
-  iconSrc,
   imageSrc,
   title,
   price,
@@ -16,13 +15,6 @@ export const ProductCard= ({
     <article className="flex flex-col justify-between px-4 py-6 mx-auto w-full h-full rounded-lg bg-zinc-100 max-md:mt-4">
       {/* TOP SECTION */}
       <div className="flex flex-col justify-center items-center  h-full">
-        <div className="flex gap-2 items-center self-start">
-          <img
-            src={iconSrc}
-            alt="Product category icon"
-            className="object-contain self-start my-auto aspect-square w-[30px]"
-          />
-        </div>
         <img
           src={imageSrc}
           alt={title}
@@ -41,9 +33,10 @@ export const ProductCard= ({
       </div>
 
       {/* BOTTOM SECTION */}
-      <button className="mt-6 flex gap-2 justify-center items-center self-center px-16 py-3  text-sm leading-6 text-white bg-black rounded-lg max-md:px-5">
-        <span className="self-stretch my-auto text-white">{buttonText}</span>
-      </button>
-    </article>
+      <button className="mt-6 flex gap-2 justify-center items-center self-center px-16 py-3 text-sm leading-6 text-white bg-black rounded-lg max-md:px-5 border border-transparent hover:bg-white hover:text-black hover:border-black transition-colors duration-300 cursor-pointer">
+  <span className="self-stretch my-auto">{buttonText}</span>
+</button>
+
+  </article>
   );
 };

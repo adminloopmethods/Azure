@@ -10,6 +10,7 @@ export const BannerSections = () => {
         "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
       buttonColor: "text-black border-black",
       bgColor: "bg-white",
+      buttonHoverStyle: "hover:bg-black hover:text-white",
       textColor: "text-black",
       image1: images.huwaiBuds.src,
       image1Class:
@@ -25,6 +26,7 @@ export const BannerSections = () => {
         "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
       buttonColor: "text-black border-black",
       bgColor: "bg-zinc-100",
+      buttonHoverStyle: "hover:bg-black hover:text-white",
       textColor: "text-black",
       image1: images.ipads.src,
       image1Class:
@@ -36,6 +38,7 @@ export const BannerSections = () => {
         "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
       buttonColor: "text-black border-black",
       bgColor: "bg-neutral-200",
+      buttonHoverStyle: "hover:bg-black hover:text-white",
       textColor: "text-black",
       image1:
         "https://api.builder.io/api/v1/image/assets/TEMP/2b7c9a0b743f8958355bd687bdac3eb85c58da0e?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
@@ -48,6 +51,7 @@ export const BannerSections = () => {
         "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
       buttonColor: "text-white border-white",
       bgColor: "bg-black",
+      buttonHoverStyle: "hover:bg-white hover:text-black",
       textColor: "text-white",
       image1: images.mac.src,
       image1Class:
@@ -64,14 +68,16 @@ export const BannerSections = () => {
         >
           {/* Text Content */}
           <div className="relative z-10">
-            <h3 className={`text-2xl font-medium leading-none ${card.textColor}`}>
+            <h3
+              className={`text-2xl font-medium leading-none ${card.textColor}`}
+            >
               {card.title}
             </h3>
             <p className="mt-4 text-base font-light leading-6 text-neutral-700">
               {card.description}
             </p>
             <button
-              className={`mt-4 py-3 px-6 text-[17px] leading-7 border rounded-full ${card.buttonColor}`}
+              className={`mt-4 py-3 px-6 text-[17px] leading-7 border rounded-full transition-colors duration-300 cursor-pointer ${card.buttonColor} ${card.buttonHoverStyle}`}
             >
               Shop Now
             </button>
