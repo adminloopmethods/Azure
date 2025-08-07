@@ -71,7 +71,7 @@ export const Footer = () => {
       <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/421826147270ef3b39308a103b3f9ad1c5ed955f?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
         alt="Footer divider"
-        className="object-contain w-full h-px my-6"
+        className="object-contain w-full h-px mb-10"
       />
 
       <div className="max-w-[1239px] mx-auto">
