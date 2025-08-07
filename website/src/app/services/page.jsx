@@ -2,6 +2,7 @@
 import * as React from "react";
 import { ServiceCard } from "@/components/service/ServiceCard";
 import { BenefitCard } from "@/components/service/BenefitCard";
+import streamImg from "@/assets/images/stream-img.png";
 
 export default function ServicesPage() {
   const serviceCards = [
@@ -31,8 +32,7 @@ export default function ServicesPage() {
     },
     {
       title: "Streaming Services",
-      imageUrl:
-        "https://api.builder.io/api/v1/image/assets/TEMP/e49b9bf4db941173f9b716778b28bbe39aa8c91b?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+      imageUrl: typeof streamImg === "string" ? streamImg : streamImg.src, // ✅ fix here
       iconUrl:
         "https://api.builder.io/api/v1/image/assets/TEMP/d75a879531fa3ede32e5bae2b11599f12861ea42?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
       routeTo: "/services/streaming-services",

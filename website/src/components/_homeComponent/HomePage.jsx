@@ -9,8 +9,6 @@ import { FeaturesSection } from "./FeaturesSection";
 import { ProductGrid } from "./ProductGrid";
 import { BannerSections } from "./BannerSections";
 import { SolutionsSection } from "./SolutionsSection";
-import { ServiceBenefits } from "./ServiceBenefits";
-import { ProductNavigation } from "./ProductNavigation";
 
 const HomePage = () => {
   return (
@@ -23,7 +21,6 @@ const HomePage = () => {
         <ProductGrid />
         <BannerSections />
         <SolutionsSection />
-        <ServiceBenefits />
       </div>
     </div>
   );

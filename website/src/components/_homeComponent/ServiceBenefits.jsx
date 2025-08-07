@@ -3,7 +3,7 @@ import React from "react";
 
 export const ServiceBenefits = () => {
   return (
-    <section className="flex flex-col items-center justify-center w-full px-16 py-24 mt-2.5 text-center bg-zinc-100 max-xl:px-10 max-lg:px-6 max-md:px-4 max-md:py-16">
+    <section className="flex flex-col items-center justify-center w-full px-16 py-24 text-center bg-zinc-100 max-xl:px-10 max-lg:px-6 max-md:px-4 max-md:py-16">
       <div className="flex w-full max-w-[1141px] gap-8 max-md:flex-col max-md:gap-10">
         {/* 1st Block */}
         <div className="flex-1 flex flex-col items-center px-4">

@@ -4,11 +4,12 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProductNavigation } from "@/components/_homeComponent/ProductNavigation";
+import { ServiceBenefits } from "@/components/_homeComponent/ServiceBenefits";
 
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"], // include weights you'll use
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"], 
   variable: "--font-poppins",
 });
 
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
         <Header />
         <ProductNavigation />
         {children}
-
+        <ServiceBenefits /> 
         <Footer />
       </body>
     </html>
