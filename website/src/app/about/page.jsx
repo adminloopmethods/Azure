@@ -33,11 +33,6 @@ export default function AboutPage() {
       {/* Main Content Section */}
       <div className="px-24 py-20 max-md:px-12 max-md:py-16 max-sm:px-5 max-sm:py-5">
         <div className="flex gap-11 items-start max-md:flex-col max-md:gap-8 max-sm:gap-5">
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/95eb0e2f9524f8af6f23bb1c251d150d9a1e9b8c?width=1062"
-            alt=""
-            className="object-cover rounded-lg h-[689px] w-[531px] max-md:w-full max-md:h-auto"
-          />
           <div className="text-lg font-medium leading-7 text-justify text-black w-[664px] max-md:w-full max-sm:text-base max-sm:leading-6">
             Service Provider for products as well as Apple Corporate partners,
             having head office at Naraina (Delhi) and branch office at Noida,
@@ -61,6 +56,11 @@ export default function AboutPage() {
             Based on the combination of flexible support portfolio, pro-active
             way of working and our focus on the every purchase.
           </div>
+          <img
+            src="https://api.builder.io/api/v1/image/assets/TEMP/95eb0e2f9524f8af6f23bb1c251d150d9a1e9b8c?width=1062"
+            alt=""
+            className="object-cover rounded-lg h-[600px] w-[531px] max-md:w-full max-md:h-auto"
+          />
         </div>
       </div>
 

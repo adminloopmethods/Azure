@@ -8,10 +8,10 @@ export default function ContactPage() {
   return (
     <div className="w-full bg-white">
       <div className="relative">
-        <Navigation />
+        {/* <Navigation /> */}
       </div>
       <Hero />
-      <BenefitsSection />
+      {/* <BenefitsSection /> */}
       <ContactSection />
     </div>
   );
