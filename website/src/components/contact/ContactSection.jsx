@@ -5,7 +5,7 @@ const ContactSection = () => {
   return (
     <div className="relative px-24 py-16 w-full max-md:px-12 max-md:py-10 max-sm:px-5 max-sm:py-8">
       <div className="flex relative w-full bg-white shadow-2xl h-[534px] max-md:flex-col max-md:h-auto">
-        <div className="flex relative flex-col justify-start p-10 bg-black h-[534px] w-[491px] z-[2] max-md:p-8 max-md:w-full max-md:h-auto max-sm:p-5">
+        <div className="flex relative flex-col justify-start p-12 bg-black h-[534px] w-[560px] z-[2] max-md:p-8 max-md:w-full max-md:h-auto max-sm:p-5">
           <div className="flex gap-2 items-center mb-5">
             <div>
               <div
@@ -19,10 +19,10 @@ const ContactSection = () => {
               Mail us
             </div>
           </div>
-          <div className="mb-2.5 ml-8 text-lg font-light leading-6 text-white">
+          <div className="mb-2.5 ml-8 max-md:ml-0 text-lg font-light leading-6 text-white">
             sales@azureinnovations.co.in
           </div>
-          <div className="mb-2.5 ml-8 text-lg font-light leading-6 text-white">
+          <div className="mb-2.5 ml-8 max-md:ml-0 text-lg font-light leading-6 text-white">
             service@azureinnovations.co.in
           </div>
           <div className="flex gap-2 items-center mt-10 mb-5">
@@ -38,10 +38,10 @@ const ContactSection = () => {
               Call us
             </div>
           </div>
-          <div className="mb-2.5 ml-8 text-lg font-light leading-6 text-white">
+          <div className="mb-2.5 ml-8 max-md:ml-0 text-lg font-light leading-6 text-white">
             +91-98111-53334
           </div>
-          <div className="mb-2.5 ml-8 text-lg font-light leading-6 text-white">
+          <div className="mb-2.5 ml-8 max-md:ml-0 text-lg font-light leading-6 text-white">
             +91-98991-06357
           </div>
           <div className="flex gap-2 items-center mt-10 mb-5">
@@ -57,10 +57,10 @@ const ContactSection = () => {
               Find us
             </div>
           </div>
-          <div className="mb-1.5 ml-8 text-lg font-light leading-7 text-white w-[357px]">
-            203-204, 1st Community Centre Naraina Phase - 1
-          </div>
-          <div className="ml-8 text-lg font-light leading-6 text-white">
+            <div className="mb-1.5 ml-8 max-md:ml-0 text-lg font-light leading-7 text-white max-w-[357px]">
+              203-204, 1st Community Centre Naraina Phase - 1
+            </div>
+          <div className="ml-8 max-md:ml-0 text-lg font-light leading-6 text-white">
             New Delhi - 110028
           </div>
         </div>
@@ -73,7 +73,7 @@ const ContactSection = () => {
           alt="maps"
           className="mt-12 w-full mix-blend-luminosity h-[273px]"
         />
-        <div className="absolute top-175 -left-8">
+        <div className="absolute top-175 -left-8 max-md:hidden">
           <div
             dangerouslySetInnerHTML={{
               __html:
