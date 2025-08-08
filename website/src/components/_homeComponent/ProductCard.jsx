@@ -1,9 +1,8 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 
-
-
-export const ProductCard= ({
+export const ProductCard = ({
   imageSrc,
   title,
   price,
@@ -20,9 +19,12 @@ export const ProductCard= ({
           alt={title}
           className={`object-contain mx-6 mt-8 h-[200px] ${imageWidth}`}
         />
-        <div style={{
-          flexGrow: 1,
-        }} className="flex flex-col justify-between text-center mt-10 w-full text-black">
+        <div
+          style={{
+            flexGrow: 1,
+          }}
+          className="flex flex-col justify-between text-center mt-10 w-full text-black"
+        >
           <h3 className="text-lg font-medium leading-6">{title}</h3>
           {showPrice && price && (
             <div className="mt-4 text-2xl font-semibold tracking-wider leading-none">
@@ -34,9 +36,10 @@ export const ProductCard= ({
 
       {/* BOTTOM SECTION */}
       <button className="mt-6 flex gap-2 justify-center items-center self-center px-16 py-3 text-sm leading-6 text-white bg-black rounded-lg max-md:px-5 border border-transparent hover:bg-white hover:text-black hover:border-black transition-colors duration-300 cursor-pointer">
-  <span className="self-stretch my-auto">{buttonText}</span>
-</button>
-
-  </article>
+        <span className="self-stretch my-auto">
+          <a href="https://web.whatsapp.com/send?phone=8879xxxxxx" target="_blank">{buttonText}</a>
+        </span>
+      </button>
+    </article>
   );
 };

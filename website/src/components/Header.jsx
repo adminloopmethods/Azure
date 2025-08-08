@@ -67,7 +67,10 @@ export const Header = () => {
           <nav className="flex flex-col gap-4 items-center">
             {navLinks.map((link) =>
               link.isDropdown ? (
-                <div key={link.label} className="relative w-full flex flex-col items-center">
+                <div
+                  key={link.label}
+                  className="relative w-full flex flex-col items-center"
+                >
                   <button
                     onClick={() => setSolutionsOpen(!solutionsOpen)}
                     className="relative px-1 py-1 font-medium text-black opacity-70 hover:opacity-100 nav-link cursor-pointer"
@@ -107,7 +110,7 @@ export const Header = () => {
           {/* CTA Button */}
           <div className="flex justify-center w-full">
             <button className="inline-block text-sm px-2 py-1 border border-black rounded-full w-1/3 text-black whitespace-nowrap hover:bg-black hover:text-white font-normal">
-              Whatsapp
+              <a href="https://web.whatsapp.com/send?phone=8879xxxxxx" target="_blank">{buttonText}</a>
             </button>
           </div>
         </div>
@@ -177,7 +180,7 @@ export const Header = () => {
 
         {/* CTA */}
         <button className="inline-block text-sm px-3 py-2 border border-black rounded-full text-black whitespace-nowrap hover:bg-black hover:text-white cursor-pointer font-normal">
-          Whatsapp
+          <a href="https://web.whatsapp.com/send?phone=8879xxxxxx" target="_blank">Whatsapp</a>
         </button>
       </div>
 
@@ -189,13 +192,13 @@ export const Header = () => {
         }
 
         .nav-link::after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: 0;
           left: 0;
           width: 0;
           height: 1px;
-          background-color: #D3D3D3;
+          background-color: #d3d3d3;
           transition: width 0.3s ease;
         }
 
