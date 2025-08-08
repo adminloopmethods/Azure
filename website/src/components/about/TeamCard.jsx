@@ -12,7 +12,7 @@ export const TeamCard = ({ name, title, image }) => {
       <Image
         src={image}
         alt="cofounder"
-        className="rounded-lg h-[360px] w-[320px] object-cover"
+        className="rounded-lg h-[360px] w-[360px] object-cover"
       />
       <div className="p-4 rounded-2xl">
         <h2 className="text-3xl mt-2">{name}</h2>
