@@ -14,28 +14,24 @@ export const ProductNavigation = () => {
         />
         <span className="basis-auto">Authorised Reseller</span>
       </div>
-      <div className="flex flex-wrap ml-[200px] gap-10 items-center  max-md:max-w-full ">
-        <Link href="#" className="self-stretch my-auto">
-          Mac
-        </Link>
-        <Link href="#" className="self-stretch my-auto">
-          iPad
-        </Link>
-        <Link href="#" className="self-stretch my-auto">
-          iPhone
-        </Link>
-        <Link href="#" className="self-stretch my-auto">
-          Watch
-        </Link>
-        <Link href="#" className="self-stretch my-auto">
-          AirPods
-        </Link>
-        <Link href="#" className="self-stretch my-auto">
-          TV & Home
-        </Link>
-        <Link href="#" className="self-stretch my-auto">
-          Accessories
-        </Link>
+      <div className="flex flex-wrap ml-[200px] gap-10 items-center max-md:max-w-full">
+        {[
+          "Mac",
+          "iPad",
+          "iPhone",
+          "Watch",
+          "AirPods",
+          "TV & Home",
+          "Accessories",
+        ].map((item) => (
+          <Link
+            key={item}
+            href="#"
+            className="self-stretch my-auto transition-all duration-300 ease-in-out hover:scale-110 hover:text-white hover:[text-shadow:0_0_10px_rgba(255,255,255,2.0)]"
+          >
+            {item}
+          </Link>
+        ))}
       </div>
     </nav>
   );
