@@ -3,7 +3,7 @@ import * as React from "react";
 
 export function MicrosoftSurfaceSection() {
   return (
-    <section className="mt-12 w-full max-w-[1239px] max-md:mt-10 max-md:max-w-full">
+    <section className=" w-full px-5 max-md:max-w-full">
       <div className="flex gap-5 max-md:flex-col">
         <div className="w-[44%] max-md:ml-0 max-md:w-full">
           <img
@@ -14,23 +14,26 @@ export function MicrosoftSurfaceSection() {
         </div>
         <div className="ml-5 w-[56%] max-md:ml-0 max-md:w-full">
           <div className="flex flex-col text-black max-md:mt-10 max-md:max-w-full">
-            <h2 className="self-start text-6xl font-semibold leading-[64px] max-md:max-w-full max-md:text-4xl max-md:leading-[52px]">
+            <h2 className="self-start text-6xl font-semibold leading-[64px] max-md:max-w-full max-md:text-3xl max-md:leading-[52px]">
               Microsoft Surface for Business
             </h2>
-            <p className="mt-8 text-2xl leading-9 font-[275] max-md:max-w-full">
-              As an authorised Microsoft Surface reseller, we provide the full
-              lineup of powerful laptops and 2-in-1 tablets tailored for
-              enterprise productivity.
-              <br />
-              <br />
-              Work smarter with Surface + Microsoft 365.
-              <br />
-              Choose sleek, touchscreen, 4G-enabled devices for ultimate
-              mobility.
-              <br />
-              Built-in security and manageability for today's hybrid work
-              culture.
-            </p>
+            <div className="mt-8 list-disc text-2xl max-md:text-[17px] leading-9 font-[275] max-md:max-w-full">
+                As an authorised Microsoft Surface reseller, we provide the full
+                lineup of powerful laptops and 2-in-1 tablets tailored for
+                enterprise productivity.
+
+              <ul className="list-disc pl-5">
+                <li>Work smarter with Surface + Microsoft 365.</li>
+                <li>
+                  Choose sleek, touchscreen, 4G-enabled devices for ultimate
+                  mobility.
+                </li>
+                <li>
+                  Built-in security and manageability for today's hybrid work
+                  culture.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

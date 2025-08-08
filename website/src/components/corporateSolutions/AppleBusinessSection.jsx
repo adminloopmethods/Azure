@@ -3,17 +3,17 @@ import * as React from "react";
 
 export function AppleBusinessSection() {
   return (
-    <section className="w-full max-w-[1240px]">
+    <section className="w-full max-w-[1240px] px-5 py-5">
       <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/441c12a659c137f74200ec8b41b7d04446f2db17?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
         alt="Apple for Business"
-        className="object-contain mt-9 w-full shadow-sm aspect-[2.9] max-w-[1240px] max-md:max-w-full"
+        className="object-contain w-full shadow-sm aspect-[2.9] max-w-[1240px] max-md:max-w-full"
       />
-      <h2 className="mt-16 text-6xl font-semibold leading-none text-black max-md:mt-10 max-md:max-w-full max-md:text-4xl">
+      <h2 className="mt-16 text-6xl font-semibold leading-none text-black max-md:mt-10 max-md:max-w-full max-md:text-3xl">
         Apple for Business – Smart, Secure, Scalable
       </h2>
-      <div className="mt-8 text-2xl leading-9 text-black font-[275] max-md:max-w-full">
-        <ul>
+      <div className="mt-8 px-5 text-2xl max-md:text-xl leading-9 text-black font-[275] max-md:max-w-full">
+        <ul className="list-disc">
           <li>
             <span style={{ fontWeight: 400 }}>
               Secure, Seamless Integration
