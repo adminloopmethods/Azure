@@ -107,7 +107,7 @@ export const Header = () => {
           {/* CTA Button */}
           <div className="flex justify-center w-full">
             <button className="inline-block text-sm px-2 py-1 border border-black rounded-full w-1/3 text-black whitespace-nowrap hover:bg-black hover:text-white font-normal">
-              Contact Us
+              Whatsapp
             </button>
           </div>
         </div>
@@ -138,7 +138,7 @@ export const Header = () => {
                 <div key={link.label} className="relative">
                   <button
                     onClick={() => setSolutionsOpen(!solutionsOpen)}
-                    className={`px-1 py-1 font-medium cursor-pointer text-black nav-link ${
+                    className={`px-1 py-1 font-medium text-black nav-link ${
                       solutionsOpen ? "active" : "opacity-70"
                     }`}
                   >
@@ -177,7 +177,7 @@ export const Header = () => {
 
         {/* CTA */}
         <button className="inline-block text-sm px-3 py-2 border border-black rounded-full text-black whitespace-nowrap hover:bg-black hover:text-white cursor-pointer font-normal">
-          Contact Us
+          Whatsapp
         </button>
       </div>
 
@@ -194,8 +194,8 @@ export const Header = () => {
           bottom: 0;
           left: 0;
           width: 0;
-          height: 2px;
-          background-color: black;
+          height: 1px;
+          background-color: #D3D3D3;
           transition: width 0.3s ease;
         }
 

@@ -43,7 +43,7 @@ const features = [
 export const FeaturesSection = () => {
   return (
     <section className="w-full bg-black text-white px-6 sm:px-10 md:px-16 lg:px-20 py-14 sm:py-16 md:py-20">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center md:text-left leading-tight">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center md:text-left leading-tight">
         Azure Innovations Features
       </h2>
 

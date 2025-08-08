@@ -4,7 +4,8 @@ import React from "react";
 export const ServiceBenefits = () => {
   return (
     <div className="px-30 py-10 bg-[#F2F2F2] max-md:px-12 max-md:py-16 max-sm:px-5 max-sm:py-10">
-        <div className="flex justify-between max-md:flex-col max-md:gap-12 max-md:items-center max-sm:gap-10">
+        <div className="flex justify-between max-lg:flex-col max-lg:gap-12 max-lg:items-center max-sm:gap-10">
+
           <div className="text-center max-w-[300px]">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/ecda8f319f377123e2a829dabfdc9bec4b231def?width=88"

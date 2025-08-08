@@ -31,11 +31,11 @@ export default function SoftwareServicePage() {
         <div className="flex flex-col lg:flex-row gap-10 items-start">
           {/* LEFT: Content */}
           <div className="w-full lg:w-1/2">
-            <h2 className="text-6xl font-extralight text-gray-800">
+            <h2 className="text-5xl font-extralight text-gray-800">
               Your <span className="font-semibold text-black">Trusted</span> Software Service{" "}
               <span className="font-semibold text-black">Partner</span>
             </h2>
-            <p className="text-gray-600 mt-4 font-extralight max-w-2xl text-2xl">
+            <p className="text-gray-600 mt-4 font-extralight max-w-2xl text-xl">
               We specialize in expert software support for Apple and other IT
               solutions. Whether online or onsite, we handle everything from
               technical troubleshooting to ongoing maintenance—ensuring smooth,

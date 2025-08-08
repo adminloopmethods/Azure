@@ -1,5 +1,6 @@
 "use client";
 import { images } from "@/assets";
+import Link from "next/link";
 import React from "react";
 
 export const ProductShowcase= () => {
@@ -161,7 +162,9 @@ export const ProductShowcase= () => {
               </p>
             </div>
             <button className="flex gap-3 justify-center items-center px-16 py-3 mt-4 max-w-full text-xl leading-8 text-center text-black whitespace-nowrap border-black border-solid border-[1.385px] min-h-[57px] rounded-[119.077px] w-[180px] max-md:px-5 transition duration-300 hover:bg-black hover:text-white cursor-pointer">
-              <span className="self-stretch my-auto  ">Shop</span>
+              <Link href="/shops">
+              <span className="self-stretch my-auto">Shop</span>
+              </Link>
             </button>
           </div>
 
