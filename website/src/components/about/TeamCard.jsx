@@ -20,16 +20,16 @@ export const TeamCard = ({ name, title, image }) => {
       </div>
       <div className=" flex gap-3  mb-4 px-4">
         <div className="rounded-full flex justify-center items-center size-10  bg-[#383D38]">
-          <Image src={faceBook} className="size-5" />
+          <Image src={faceBook} alt="logo" className="size-5" />
         </div>
         <div className="rounded-full flex justify-center items-center size-10  bg-[#383D38]">
-          <Image src={LinkedIn} className="size-5" />
+          <Image src={LinkedIn} alt="logo" className="size-5" />
         </div>
         <div className="rounded-full flex justify-center items-center size-10  bg-[#383D38]">
-          <Image src={instagram} className="size-5" />
+          <Image src={instagram} alt="logo" className="size-5" />
         </div>
         <div className="rounded-full flex justify-center items-center size-10  bg-[#383D38]">
-          <Image src={twitter} className="size-5" />
+          <Image src={twitter} alt="logo" className="size-5" />
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import * as React from "react";
 export function ITSolutions() {
   // ! todo
   return (
-    <div className="bg-black p-10 w-screen">
+    <div className="bg-black lg:p-20 p-5 mt-10 w-screen">
       <div className="text-6xl font-semibold leading-none text-white max-md:text-4xl">
         Solutions For IT
       </div>
