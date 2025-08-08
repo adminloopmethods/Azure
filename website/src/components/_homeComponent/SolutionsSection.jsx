@@ -8,13 +8,13 @@ export const SolutionsSection = () => {
         {/* Text Section */}
         <div className="w-full lg:w-1/2 flex items-center">
           <div className="flex flex-col justify-center w-full text-black">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
+            <h2 className="text-5xl md:text-4xl lg:text-5xl font-normal leading-tight">
               Our Solutions
             </h2>
-            <p className="mt-4 md:mt-6 text-base md:text-lg font-light">
+            <p className="mt-4 text-xl md:mt-6 md:text-lg font-light">
               We offer end-to-end Apple product solutions, including:
             </p>
-            <div className="mt-6 md:mt-8 text-sm md:text-base leading-relaxed font-light space-y-2">
+            <div className="mt-6 text-xl md:mt-8  md:text-base leading-relaxed font-extralight space-y-2">
               <p>DEP and MDM services via trusted vendors like 42Gears and AirWatch</p>
               <p>Cloud and streaming solutions with IBM and Google</p>
               <p>Network management solutions through partners like Cisco</p>
