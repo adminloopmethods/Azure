@@ -4,11 +4,13 @@ import * as React from "react";
 export function AppleBusinessSection() {
   return (
     <section className="w-full px-5 lg:px-20 py-5">
-      <img
+      <div className="w-full">
+        <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/441c12a659c137f74200ec8b41b7d04446f2db17?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
         alt="Apple for Business"
-        className="object-contain w-full shadow-sm aspect-[2.9] max-w-[1240px] max-md:max-w-full"
+        className="object-cover shadow-sm aspect-[2.9] max-md:max-w-full"
       />
+      </div>
       <h2 className="mt-16 text-6xl font-semibold leading-none text-black max-md:mt-10 max-md:max-w-full max-md:text-3xl">
         Apple for Business – Smart, Secure, Scalable
       </h2>
