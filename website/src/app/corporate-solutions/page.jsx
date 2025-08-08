@@ -13,7 +13,8 @@ export default function CorporateSolutions() {
       <HeroSection />
       <AppleBusinessSection />
       <div className="w-full px-5 lg:px-20 lg:my-10">
-        <div className="h-px bg-black/30"></div>
+        <div className="h-px bg-black/30">
+        </div>
       </div>
       <MicrosoftSurfaceSection />
       <AppleCareSection />
