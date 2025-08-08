@@ -3,15 +3,15 @@ import * as React from "react";
 
 export function RemoteTeaching() {
   return (
-    <div className="mb-20">
-      <div className="mt-20 text-6xl font-semibold leading-none text-black max-md:mt-10 max-md:max-w-full max-md:text-4xl">
+    <div className="mb-20 max-md:px-5">
+      <div className="mt-20 text-6xl lg:text-center font-semibold leading-none text-black max-md:mt-10 max-md:max-w-full max-md:text-3xl">
         Remote Teaching With Apple
       </div>
-      <div className="mt-12 mb-20 w-full max-w-[1240px] max-md:mt-10 max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col max-md:">
+      <div className="mt-12 w-full max-w-[1240px] max-md:mt-10 max-md:max-w-full">
+        <div className="flex gap-2 max-md:flex-col max-md:">
           <div className="w-6/12 max-md:ml-0 max-md:w-full">
             <div className="flex overflow-hidden h-[300px] flex-col grow px-14 pt-9 pb-32 w-full bg-gray-200 text-zinc-900 max-md:px-5 max-md:pb-24 max-md:mt-5 max-md:max-w-full">
-              <div className="self-start text-4xl font-medium leading-none">
+              <div className="self-start text-4xl max-md:text-2xl font-medium leading-none">
                 Class Delivery Tool
               </div>
               <div className="mt-8 text-lg font-light leading-7 max-md:max-w-full">
@@ -23,7 +23,7 @@ export function RemoteTeaching() {
           </div>
           <div className="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
             <div className="overflow-hidden h-[300px] grow px-14 pt-9 pb-16 w-full bg-zinc-900 max-md:px-5 max-md:mt-5 max-md:max-w-full">
-              <div className="text-4xl font-medium leading-[50px] text-neutral-100 max-md:mr-2.5 max-md:max-w-full">
+              <div className="self-start text-4xl max-md:text-2xl font-medium leading-none">
                 Collaboration & Content
                 <br />
                 Delivery Tool
@@ -38,10 +38,10 @@ export function RemoteTeaching() {
         </div>
       </div>
       <div className="mt-5 w-full max-w-[1240px] max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col max-md:">
+        <div className="flex gap-2 max-md:flex-col max-md:">
           <div className="w-6/12 max-md:ml-0 max-md:w-full">
             <div className="flex overflow-hidden h-[300px] flex-col grow px-14 pt-9 pb-24 w-full bg-gray-200 text-zinc-900 max-md:px-5 max-md:mt-5 max-md:max-w-full">
-              <div className="self-start text-4xl font-medium leading-[50px] max-md:max-w-full">
+              <div className="self-start text-4xl max-md:text-2xl font-medium leading-none">
                 White-boarding &<br />
                 Screen Recording Tool
               </div>
@@ -54,7 +54,7 @@ export function RemoteTeaching() {
           </div>
           <div className="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
             <div className="flex overflow-hidden h-[300px] flex-col grow px-14 pt-9 pb-44 w-full bg-gray-200 text-zinc-900 max-md:px-5 max-md:pb-24 max-md:mt-5 max-md:max-w-full">
-              <div className="self-start text-4xl font-medium leading-none max-md:max-w-full">
+              <div className="self-start text-4xl max-md:text-2xl font-medium leading-none">
                 Content Creation Tool
               </div>
               <div className="mt-8 text-lg font-light leading-7 max-md:max-w-full">
@@ -67,7 +67,7 @@ export function RemoteTeaching() {
         </div>
       </div>
       <div className="flex overflow-hidden flex-col items-start px-16 py-16 mt-5 w-full bg-gray-200 max-w-[1240px] text-zinc-900 max-md:px-5 max-md:max-w-full">
-        <div className="text-4xl font-medium leading-none">Assessment Tool</div>
+        <div className="self-start text-4xl max-md:text-2xl font-medium leading-none">Assessment Tool</div>
         <div className="mt-2.5 text-lg font-light leading-7 max-md:max-w-full">
           Effortlessly conduct real-time assessments through interactive
           quizzes, polls, and exit tickets. Instantly analyze student
