@@ -3,7 +3,7 @@ import * as React from "react";
 
 export function MicrosoftSurfaceSection() {
   return (
-    <section className=" w-full px-5 max-md:max-w-full">
+    <section className=" w-full mb-10 px-5 lg:px-20 max-md:max-w-full">
       <div className="flex gap-5 max-md:flex-col">
         <div className="w-[44%] max-md:ml-0 max-md:w-full">
           <img
@@ -22,7 +22,7 @@ export function MicrosoftSurfaceSection() {
                 lineup of powerful laptops and 2-in-1 tablets tailored for
                 enterprise productivity.
 
-              <ul className="list-disc pl-5">
+              <ul className="list-disc px-5 lg:px-10 mt-8 max-md:mt-5">
                 <li>Work smarter with Surface + Microsoft 365.</li>
                 <li>
                   Choose sleek, touchscreen, 4G-enabled devices for ultimate

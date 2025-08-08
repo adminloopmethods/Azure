@@ -3,7 +3,7 @@ import * as React from "react";
 
 export function AppleBusinessSection() {
   return (
-    <section className="w-full max-w-[1240px] px-5 py-5">
+    <section className="w-full px-5 lg:px-20 py-5">
       <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/441c12a659c137f74200ec8b41b7d04446f2db17?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
         alt="Apple for Business"
@@ -37,7 +37,7 @@ export function AppleBusinessSection() {
           <li>
             <span style={{ fontWeight: 400 }}>Cost-Effective Investment</span>
           </li>
-          <ul>
+          <ul className="list-disc px-5 lg:px-10">
             <li>IBM reports saving ₹22,800–₹45,400 per Mac compared to PCs.</li>
             <li>Forrester states Macs cost ₹43,000 less over three years.</li>
             <li>
