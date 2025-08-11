@@ -1,59 +1,127 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
+import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+
+  const inputClass =
+    "block w-full bg-transparent border-b border-gray-300 px-0 py-3 placeholder:text-sm focus:border-black focus:outline-none";
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("");
+
+    const formData = new FormData(e.target);
+
+    try {
+      await emailjs.send(
+        "service_8k0pjbn", // Replace with your EmailJS service ID
+        "template_nrojx1d", // Replace with your EmailJS template ID
+        {
+          firstName: formData.get("firstName"),
+          lastName: formData.get("lastName"),
+          email: formData.get("email"),
+          phoneNumber: formData.get("phoneNumber"),
+          message: formData.get("message"),
+        },
+        { publicKey: "vR7bL3KlTc9VAquPq" } // Replace with your public key
+      );
+
+      setStatus("✅ Message sent successfully!");
+      e.target.reset();
+    } catch (error) {
+      if (error instanceof EmailJSResponseStatus) {
+        console.log("EMAILJS FAILED...", error);
+        setStatus("❌ EmailJS failed. Check console.");
+        return;
+      }
+      console.log("ERROR", error);
+      setStatus("❌ Something went wrong.");
+    }
+
+    setLoading(false);
+  };
+
   return (
-    <div className="text-black/60 p-22 max-md:p-5">
-      <form className="flex flex-col gap-10 max-w-[550px]">
-        <div className="flex justify-between gap-10 max-md:flex-col">
-          <div className="flex flex-col justify-between">
-            <label htmlFor="firstName">First Name</label>
+    <div className="text-black/70 p-6 md:p-10">
+      <form className="mx-auto max-w-xl space-y-8" onSubmit={handleSubmit}>
+        {/* Name row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <label className="flex flex-col gap-2">
+            <span className="text-sm font-medium">First Name</span>
             <input
-              type="text"
               id="firstName"
-              className="border-0 border-b border-gray-400 focus:outline-none focus:border-black py-2"
-            />
-          </div>
-          <div className="flex flex-col justify-between">
-            <label htmlFor="lastName">Last Name</label>
-
-            <input
+              name="firstName"
               type="text"
+              className={inputClass}
+              required
+            />
+          </label>
+
+          <label className="flex flex-col gap-2">
+            <span className="text-sm font-medium">Last Name</span>
+            <input
               id="lastName"
-              className="border-0 border-b border-gray-400 focus:outline-none focus:border-black py-2"
-            />
-          </div>
-        </div>
-        <div className="flex justify-between gap-10 max-md:flex-col">
-          <div className="flex flex-col justify-between">
-            <label htmlFor="email">Email</label>
-            <input
+              name="lastName"
               type="text"
+              className={inputClass}
+              required
+            />
+          </label>
+        </div>
+
+        {/* Contact row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <label className="flex flex-col gap-2">
+            <span className="text-sm font-medium">Email</span>
+            <input
               id="email"
-              className="border-0 border-b border-gray-400 focus:outline-none focus:border-black py-2"
+              name="email"
+              type="email"
+              inputMode="email"
+              className={inputClass}
+              required
             />
-          </div>
-          <div className="flex flex-col justify-between">
-            <label htmlFor="phoneNumber">Phone Number</label>
+          </label>
 
+          <label className="flex flex-col gap-2">
+            <span className="text-sm font-medium">Phone Number</span>
             <input
-              type="text"
               id="phoneNumber"
-              className="border-0 border-b border-gray-400 focus:outline-none focus:border-black py-2"
+              name="phoneNumber"
+              type="tel"
+              inputMode="tel"
+              className={inputClass}
             />
-          </div>
+          </label>
         </div>
 
-        <div className="flex flex-col">
-          <label htmlFor="message">Message</label>
-          <input
-            type="text"
+        {/* Message */}
+        <label className="flex flex-col gap-2">
+          <span className="text-sm font-medium">Message</span>
+          <textarea
             id="message"
-            placeholder="Write you message"
-            className="  border-0 border-b placeholder:text-sm border-gray-400 focus:outline-none focus:border-black py-2"
+            name="message"
+            placeholder="Write your message"
+            className="max-h-[120px] pt-5 resize-y block w-full bg-transparent border-b border-gray-300 placeholder:text-sm focus:border-black focus:outline-none"
+            required
           />
-        </div>
+        </label>
 
-        <button className="relative w-[235px] h-[60px] rounded-4xl left-54 bg-black text-white max-md:left-0 max-md:w-[150px] max-md:h-[45px]">Send Message</button>
+        {/* Button */}
+        <button
+          type="submit"
+          disabled={loading}
+          className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-black px-6 py-3 md:px-8 md:py-4 text-white text-sm md:text-base font-medium transition hover:bg-black/90 active:translate-y-px cursor-pointer"
+        >
+          {loading ? "Sending..." : "Send Message"}
+        </button>
+
+        {/* Status Message */}
+        {status && <p className="mt-4">{status}</p>}
       </form>
     </div>
   );
