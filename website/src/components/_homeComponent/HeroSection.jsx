@@ -46,10 +46,10 @@ export const HeroSection = () => {
           {/* Buttons */}
           <div className="flex flex-wrap sm:flex-nowrap gap-4 justify-center md:justify-start">
             <button className="px-6 py-2 whitespace-nowrap border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition cursor-pointer">
-              Explore iPhone 16
+              <a href="mailto:example@email.com">Explore iPhone 16</a>
             </button>
             <button className="px-6 py-2 whitespace-nowrap border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition cursor-pointer">
-              Explore iPhone 16 Pro
+              <a href="mailto:example@email.com">Explore iPhone 16 Pro</a>
             </button>
           </div>
         </div>
