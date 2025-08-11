@@ -114,7 +114,8 @@ export const Footer = () => {
           </p>
 
           {/* Navigation Links */}
-          <div className="flex justify-between flex-wrap gap-x-4 gap-y-2 mt-6 text-sm font-light">
+          {/* <div className="flex justify-between flex-wrap gap-x-4 gap-y-2 mt-6 text-sm font-light"> */}
+          <div className="grid grid-cols-2 grid-rows-3 gap-x-10 mt-6 text-sm font-light">
             {[
                 { text: "Home", href: "/" },
                 { text: "About", href: "/about" },
