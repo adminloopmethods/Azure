@@ -50,7 +50,12 @@ export const ProductGrid = () => {
     price: ["$900", "$2543", "$900", "$900"][index],
     buttonText: "Whatsapp",
     showPrice: true,
-    category: ["Bestseller", "Bestseller", "Featured Products", "Featured Products"][index],
+    category: [
+      "Bestseller",
+      "Bestseller",
+      "Featured Products",
+      "Featured Products",
+    ][index],
   }));
 
   // Combine all products
@@ -93,7 +98,7 @@ export const ProductGrid = () => {
       </div>
 
       {/* Product Grid */}
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-5">
+      <div className="mt-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
         {filteredProducts.map((product, index) => (
           <ProductCard key={index} {...product} showPrice={true} />
         ))}

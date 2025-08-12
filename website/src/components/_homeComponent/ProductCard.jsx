@@ -11,23 +11,25 @@ export const ProductCard = ({
   showPrice = false,
 }) => {
   return (
-    <article className="flex flex-col justify-between px-4 py-6 mx-auto w-full h-full rounded-lg bg-zinc-100 max-md:mt-4">
+    <article className="flex flex-col justify-between px-3 sm:px-4 py-4 sm:py-6 mx-auto w-full h-full rounded-lg bg-zinc-100 max-md:mt-4">
       {/* TOP SECTION */}
-      <div className="flex flex-col justify-center items-center  h-full">
+      <div className="flex flex-col justify-center items-center h-full">
         <img
           src={imageSrc}
           alt={title}
-          className={`object-contain mx-6 mt-8 h-[200px] ${imageWidth}`}
+          className={`object-contain mx-4 sm:mx-6 mt-6 sm:mt-8 h-[150px] sm:h-[200px] ${imageWidth}`}
         />
         <div
           style={{
             flexGrow: 1,
           }}
-          className="flex flex-col justify-between text-center mt-10 w-full text-black"
+          className="flex flex-col justify-between text-center mt-6 sm:mt-10 w-full text-black"
         >
-          <h3 className="text-lg font-medium leading-6">{title}</h3>
+          <h3 className="text-base sm:text-lg font-medium leading-snug">
+            {title}
+          </h3>
           {showPrice && price && (
-            <div className="mt-4 text-2xl font-semibold tracking-wider leading-none">
+            <div className="mt-2 sm:mt-4 text-lg sm:text-2xl font-semibold tracking-wider leading-none">
               {price}
             </div>
           )}
@@ -35,9 +37,15 @@ export const ProductCard = ({
       </div>
 
       {/* BOTTOM SECTION */}
-      <button className="mt-6 flex gap-2 justify-center items-center self-center px-16 py-3 text-sm leading-6 text-white bg-black rounded-lg max-md:px-5 border border-transparent hover:bg-white hover:text-black hover:border-black transition-colors duration-300 cursor-pointer">
-        <span className="self-stretch my-auto">
-          <a href="https://web.whatsapp.com/send?phone=8879xxxxxx" target="_blank">{buttonText}</a>
+      <button className="mt-4 sm:mt-6 flex gap-2 justify-center items-center self-center px-10 sm:px-16 py-2 sm:py-3 text-xs sm:text-sm leading-6 text-white bg-black rounded-lg border border-transparent hover:bg-white hover:text-black hover:border-black transition-colors duration-300 cursor-pointer">
+        <span>
+          <a
+            href="https://web.whatsapp.com/send?phone=8879xxxxxx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {buttonText}
+          </a>
         </span>
       </button>
     </article>
