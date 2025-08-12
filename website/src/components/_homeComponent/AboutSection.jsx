@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 
 export const AboutSection = () => {
@@ -16,7 +17,7 @@ export const AboutSection = () => {
             </h2>
 
             <button className="mt-8 py-3 px-10 text-xl max-md:text-base leading-8 text-black border border-black rounded-full min-h-[57px] max-sm:px-6 transition hover:bg-black hover:text-white cursor-pointer">
-              Read More
+              <Link href="/about">Read More</Link>
             </button>
           </div>
         </div>

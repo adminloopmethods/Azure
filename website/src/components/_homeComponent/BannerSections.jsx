@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { images } from "@/assets";
+import Link from "next/link";
 
 export const BannerSections = () => {
   const bannerCards = [
@@ -64,7 +65,7 @@ export const BannerSections = () => {
       {bannerCards.map((card, index) => (
         <div
           key={index}
-          className={`relative overflow-hidden px-6 pt-[280px] md:pt-[360px] lg:pt-[420px] pb-14 ${card.bgColor} rounded-lg shadow-md`}
+          className={`relative text-medium overflow-hidden px-6 pt-[280px] md:pt-[360px] lg:pt-[420px] pb-14 ${card.bgColor} rounded-lg shadow-md`}
         >
           {/* Text Content */}
           <div className="relative z-10">
@@ -73,13 +74,17 @@ export const BannerSections = () => {
             >
               {card.title}
             </h3>
-            <p className="mt-4 text-base font-light leading-6 text-neutral-700">
+            <p
+              className={`mt-4 text-base font-light leading-6 ${card.textColor}`}
+            >
               {card.description}
             </p>
             <button
               className={`mt-4 py-3 px-6 text-[17px] leading-7 border rounded-full transition-colors duration-300 cursor-pointer ${card.buttonColor} ${card.buttonHoverStyle}`}
             >
+              <Link href="/shops">
               Shop Now
+              </Link>
             </button>
           </div>
 

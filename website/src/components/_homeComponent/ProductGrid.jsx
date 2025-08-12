@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import { ProductCard } from "./ProductCard";
 
 export const ProductGrid = () => {
@@ -49,16 +50,16 @@ export const ProductGrid = () => {
     price: ["$900", "$2543", "$900", "$900"][index],
     buttonText: "Whatsapp",
     showPrice: true,
-    category: ["Bestseller", "Bestseller", "Featured Products", "Featured Products"][index], // 🟢 Changed category here
+    category: ["Bestseller", "Bestseller", "Featured Products", "Featured Products"][index],
   }));
 
-  // 🧩 Combine all
+  // Combine all products
   const allProducts = [...firstRowProducts, ...secondRowProducts];
 
-  // 🔍 Filtered list
+  // Filter products based on selectedKey; when "View All" is clicked, navigate away, so no filtering needed here
   const filteredProducts =
     selectedKey === "View All"
-      ? allProducts
+      ? []
       : allProducts.filter((product) => product.category === selectedKey);
 
   return (
@@ -82,13 +83,12 @@ export const ProductGrid = () => {
           ))}
         </div>
 
-        {/* View All Button – Hidden on mobile */}
-        <button
-          onClick={() => setSelectedKey("View All")}
-          className="hidden sm:block py-2 px-6 sm:px-8 text-sm sm:text-base leading-6 sm:leading-8 text-black border border-black rounded-full whitespace-nowrap transition duration-300 hover:bg-black hover:text-white cursor-pointer"
-        >
-          View All
-        </button>
+        {/* View All Button using Next.js Link */}
+        <Link href="/shops" passHref legacyBehavior>
+          <a className="hidden sm:inline-block py-2 px-6 sm:px-8 text-sm sm:text-base leading-6 sm:leading-8 text-black border border-black rounded-full whitespace-nowrap transition duration-300 hover:bg-black hover:text-white cursor-pointer">
+            View All
+          </a>
+        </Link>
       </div>
 
       {/* Product Grid */}

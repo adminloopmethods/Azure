@@ -8,11 +8,11 @@ export const MainContent = () => {
       <div className="flex flex-col-reverse md:flex-row items-center md:items-start gap-10">
         {/* Text Section */}
         <div className="w-full md:w-1/2">
-          <h2 className="text-black text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
+          <h2 className="text-black text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
             Streaming <span className="font-light">&</span> Webcasting{" "}
             <span className="font-light">Services</span>
           </h2>
-          <p className="mt-6 text-lg sm:text-xl lg:text-2xl text-gray-700 font-light leading-relaxed">
+          <p className="mt-6 text-base sm:text-lg lg:text-xl text-gray-700 font-light leading-relaxed">
             Delivering reliable, high-quality streaming solutions tailored to
             your business needs—seamless, scalable, and secure.
           </p>
