@@ -52,92 +52,21 @@ body {
   mask-repeat: no-repeat;
 }
 
-
-
-.custom-gradient-border {
-  position: relative;
-  overflow: hidden;
+.gradient-border {
+    border: 1px solid transparent; /* Required for border-image to show */
+    border-image: linear-gradient(
+        to bottom, 
+        #a09f9f 0%,   /* top color */
+        transparent 70%,  /* middle color */
+        #a09f9f 100%  /* bottom color */
+    ) 1;
 }
-
-/* Top border with fade */
-.custom-gradient-border::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0%;
-  right: 0%;
-  height: 2px;
- background: linear-gradient(90deg, #666666);
-}
-
-/* Bottom border with fade */
-.custom-gradient-border::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0%;
-  right: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, #666666);
-}
-
-/* Left border with fade */
-.left-gradient {
-  position: absolute;
-  top: 0;
-  bottom: 70%;
-  left: 0;
-  width: 2px;
-  background: linear-gradient(
-    180deg,
-    #666666 0%,
-    #171717 80%,
-    transparent 100%
-  );
-}
-
-/* Right border with fade */
-.right-gradient {
-  position: absolute;
-  top: 0%;
-  bottom: 70%;
-  right: 0;
-  width: 2px;
-  background: linear-gradient(
-    180deg,
-    #666666 0%,
-    #171717 80%,
-    transparent 100%
-  );
-}
-
-
-/* Bottom Left border fade */
-.bottom-left-gradient {
-  position: absolute;
-  top: 70%;
-  bottom: 0;
-  left: 0;
-  width: 2px;
-  background: linear-gradient(
-    0deg, /* reversed direction */
-    #666666 0%,
-    #171717 80%,
-    transparent 100%
-  );
-}
-
-/* Bottom Right border fade */
-.bottom-right-gradient {
-  position: absolute;
-  top: 70%;
-  bottom: 0;
-  right: 0;
-  width: 2px;
-  background: linear-gradient(
-    0deg, /* reversed direction */
-    #666666 0%,
-    #171717 80%,
-    transparent 100%
-  );
+.gradient-border-h {
+    border: 1px solid transparent; /* Required for border-image to show */
+    border-image: linear-gradient(
+        to right, 
+        #a09f9f 0%,   /* top color */
+        transparent 70%,  /* middle color */
+        #a09f9f 100%  /* bottom color */
+    ) 1;
 }

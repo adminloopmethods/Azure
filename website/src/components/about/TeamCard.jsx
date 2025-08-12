@@ -15,20 +15,20 @@ export const TeamCard = ({ name, title, image }) => {
         className="rounded-lg h-[360px] w-[360px] object-cover"
       />
       <div className="p-4 rounded-2xl">
-        <h2 className="text-3xl mt-2">{name}</h2>
-        <p>{title}</p>
+        <h2 className="text-3xl max-md:text-2xl mt-2">{name}</h2>
+        <p className="font-light">{title}</p>
       </div>
       <div className=" flex gap-3  mb-4 px-4">
-        <div className="rounded-full flex justify-center items-center size-10  bg-[#383D38]">
+        <div className="rounded-full flex justify-center items-center size-8  bg-[#383D38]">
           <Image src={faceBook} alt="logo" className="size-5" />
         </div>
-        <div className="rounded-full flex justify-center items-center size-10  bg-[#383D38]">
+        <div className="rounded-full flex justify-center items-center size-8  bg-[#383D38]">
           <Image src={LinkedIn} alt="logo" className="size-5" />
         </div>
-        <div className="rounded-full flex justify-center items-center size-10  bg-[#383D38]">
+        <div className="rounded-full flex justify-center items-center size-8  bg-[#383D38]">
           <Image src={instagram} alt="logo" className="size-5" />
         </div>
-        <div className="rounded-full flex justify-center items-center size-10  bg-[#383D38]">
+        <div className="rounded-full flex justify-center items-center size-8  bg-[#383D38]">
           <Image src={twitter} alt="logo" className="size-5" />
         </div>
       </div>

@@ -9,8 +9,8 @@ export function ITSolutions() {
         Solutions For IT
       </div>
 
-      <div className="mt-12 lg:flex lg:gap-10 ">
-        <div className="mb-10 bg-neutral-800 border border-white/10">
+      <div className="mt-12 lg:flex lg:gap-10">
+        <div className="mb-10 bg-neutral-800 border gradient-border">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/c0959dd8dfa404d28be1c761faa5deb72237fb06?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
             className="object-contain w-full aspect-[1.38] max-md:max-w-full"
@@ -32,7 +32,7 @@ export function ITSolutions() {
           </div>
         </div>
 
-        <div className="mb-10 bg-neutral-800 border border-white/10">
+        <div className="mb-10 bg-neutral-800 gradient-border">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/4c4e355e550d3fa59add857b11758f753748ea5e?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
             className="object-contain w-full aspect-[1.38] max-md:max-w-full"
@@ -53,7 +53,7 @@ export function ITSolutions() {
       </div>
 
       {/* third */}
-      <div className="bg-neutral-800 lg:flex border border-white/10">
+      <div className="bg-neutral-800 lg:flex gradient-border-h">
         <div className="px-2 py-18 w-full flex-3/7 bg-white max-md:py-24 max-md:max-w-full">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/281f6eb736305b9d5e91cb4cb4d0ea0409d30339?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"

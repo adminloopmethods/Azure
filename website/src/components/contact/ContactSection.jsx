@@ -19,10 +19,10 @@ const ContactSection = () => {
               Mail us
             </div>
           </div>
-          <div className="mb-2.5 ml-8 max-md:ml-0 text-lg font-light leading-6 text-white">
+          <div className="mb-2.5 ml-8 max-md:ml-0 text-lg max-md:text-sm font-light leading-6 text-white">
             sales@azureinnovations.co.in
           </div>
-          <div className="mb-2.5 ml-8 max-md:ml-0 text-lg font-light leading-6 text-white">
+          <div className="mb-2.5 ml-8 max-md:ml-0 text-lg max-md:text-sm font-light leading-6 text-white">
             service@azureinnovations.co.in
           </div>
           <div className="flex gap-2 items-center mt-10 mb-5">
@@ -38,10 +38,10 @@ const ContactSection = () => {
               Call us
             </div>
           </div>
-          <div className="mb-2.5 ml-8 max-md:ml-0 text-lg font-light leading-6 text-white">
+          <div className="mb-2.5 ml-8 max-md:ml-0 text-lg max-md:text-sm font-light leading-6 text-white">
             +91-98111-53334
           </div>
-          <div className="mb-2.5 ml-8 max-md:ml-0 text-lg font-light leading-6 text-white">
+          <div className="mb-2.5 ml-8 max-md:ml-0 text-lg max-md:text-sm font-light leading-6 text-white">
             +91-98991-06357
           </div>
           <div className="flex gap-2 items-center mt-10 mb-5">
@@ -57,10 +57,10 @@ const ContactSection = () => {
               Find us
             </div>
           </div>
-            <div className="mb-1.5 ml-8 max-md:ml-0 text-lg font-light leading-7 text-white max-w-[357px]">
+            <div className="mb-1.5 ml-8 max-md:ml-0 text-lg max-md:text-sm font-light leading-7 text-white max-w-[357px]">
               203-204, 1st Community Centre Naraina Phase - 1
             </div>
-          <div className="ml-8 max-md:ml-0 text-lg font-light leading-6 text-white">
+          <div className="ml-8 max-md:ml-0 text-lg max-md:text-sm font-light leading-6 text-white">
             New Delhi - 110028
           </div>
         </div>
