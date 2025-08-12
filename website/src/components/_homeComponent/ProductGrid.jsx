@@ -84,10 +84,11 @@ export const ProductGrid = () => {
         </div>
 
         {/* View All Button using Next.js Link */}
-        <Link href="/shops" passHref legacyBehavior>
-          <a className="hidden sm:inline-block py-2 px-6 sm:px-8 text-sm sm:text-base leading-6 sm:leading-8 text-black border border-black rounded-full whitespace-nowrap transition duration-300 hover:bg-black hover:text-white cursor-pointer">
-            View All
-          </a>
+        <Link
+          href="/shops"
+          className="hidden sm:inline-block py-2 px-6 sm:px-8 text-sm sm:text-base leading-6 sm:leading-8 text-black border border-black rounded-full whitespace-nowrap transition duration-300 hover:bg-black hover:text-white cursor-pointer"
+        >
+          View All
         </Link>
       </div>
 

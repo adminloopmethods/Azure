@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 export const SolutionsSection = () => {
@@ -15,18 +15,18 @@ export const SolutionsSection = () => {
             <h2 className="text-5xl md:text-4xl lg:text-5xl font-normal leading-tight">
               Our Solutions
             </h2>
-            <p className="mt-4 text-black text-2xl xl:text-2xl leading-8 max-xl:text-xl max-lg:text-lg max-md:text-base max-md:leading-7 font-light">
+            <p className="mt-4 text-xl md:mt-6 md:text-lg font-light">
               We offer end-to-end Apple product solutions, including:
             </p>
-            <div className="mt-6 text-black text-2xl xl:text-2xl font-extralight leading-8 max-xl:text-xl max-lg:text-lg max-md:text-base max-md:leading-7">
+            <div className="mt-6 text-xl md:mt-8  md:text-base leading-relaxed font-extralight space-y-2">
               <p>DEP and MDM services via trusted vendors like 42Gears and AirWatch</p>
               <p>Cloud and streaming solutions with IBM and Google</p>
               <p>Network management solutions through partners like Cisco</p>
             </div>
-            <button className="mt-8 w-64 py-3 px-10 text-xl max-md:text-base leading-8 text-black border border-black rounded-full min-h-[57px] max-sm:px-6 transition hover:bg-black hover:text-white cursor-pointer">
-              <Link href="/other-solutions">
+            <button className="mt-8 md:mt-10 text-sm md:text-base px-6 md:px-10 py-2.5 md:py-3 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
+              onClick={() => router.push("/educational-solutions")}
+            >
               Read More
-              </Link>
             </button>
           </div>
         </div>
