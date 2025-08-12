@@ -62,7 +62,7 @@ export const ProductShowcase= () => {
         </div>
 
         {/* MacBook Air Section */}
-        <div className="relative flex flex-col justify-between bg-gray-200 p-6 lg:p-16 rounded-lg w-full overflow-hidden max-w-full min-w-[280px] max-md:h-[300px]">
+        <div className="relative flex flex-col justify-between bg-gray-200 p-6 lg:p-16 rounded-lg w-full overflow-hidden max-w-full min-w-[100px] max-md:h-[300px]">
           <div className="z-10 max-w-md">
             <h2 className="text-4xl sm:text-6xl font-light text-black max-md:text-3xl">
               <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400 }}>
@@ -139,7 +139,7 @@ export const ProductShowcase= () => {
             </div>
           </div>
         </div>
-        <div className="flex overflow-hidden relative flex-1 shrink gap-px items-start py-52 pr-64 pl-14 bg-gray-200 basis-0 h-[618px] min-w-60 max-md:px-5 max-md:py-24 max-md:max-w-full">
+        <div className="flex overflow-hidden relative flex-1 shrink gap-px items-start py-52 pr-64 pl-4 bg-gray-200 basis-0 h-[618px] min-w-60 max-md:px-5 max-md:py-24 max-md:max-w-full">
           {/* Gradient spot behind text */}
           <div className="absolute left-10 top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,_rgba(255,255,255,0.6)_0%,_rgba(255,255,255,0)_70%)] z-[1] blur-3xl pointer-events-none"></div>
 
