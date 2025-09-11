@@ -1,7 +1,14 @@
 "use client";
 import React from "react";
-import { images } from "@/assets";
 import Link from "next/link";
+import Image from "next/image";
+
+// Import local assets
+import huwabuds from "@/assets/images/earphone2.png";
+import ipads from "@/assets/images/ipad.png";
+import samsung from "@/assets/images/samsung.png";
+import mac from "@/assets/images/macbook.png";
+import earbuds from "@/assets/images/watch1.png";
 
 export const BannerSections = () => {
   const bannerCards = [
@@ -13,13 +20,12 @@ export const BannerSections = () => {
       bgColor: "bg-white",
       buttonHoverStyle: "hover:bg-black hover:text-white",
       textColor: "text-black",
-      image1: images.huwaiBuds.src,
+      image1: huwabuds,
       image1Class:
-        "object-contain absolute -top-4 left-0 z-0 max-w-full aspect-[1.04] h-[307px] w-[318px] rotate-[50deg]",
-      image2:
-        "https://api.builder.io/api/v1/image/assets/TEMP/5e0fbf3a0aa98aa32fc5ba41f9aff705a5461cb8?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+        "object-contain absolute -top-4 left-2 z-0 h-[220px] w-[220px] md:h-[260px] md:w-[260px] rotate-[10deg]",
+      image2: earbuds,
       image2Class:
-        "object-contain absolute top-3 -right-14 z-0 max-w-full aspect-[1.04] h-[307px] w-[318px]",
+        "object-contain absolute top-3 right-2 z-0 h-[200px] w-[200px] md:h-[240px] md:w-[240px]",
     },
     {
       title: "Ipad Pro",
@@ -29,9 +35,9 @@ export const BannerSections = () => {
       bgColor: "bg-zinc-100",
       buttonHoverStyle: "hover:bg-black hover:text-white",
       textColor: "text-black",
-      image1: images.ipads.src,
+      image1: ipads,
       image1Class:
-        "object-contain absolute top-0 right-[-43px] z-0 max-w-full aspect-[1.1] h-[390px] w-[371px]",
+        "object-contain absolute top-4 right-4 z-0 h-[220px] w-[220px] md:h-[280px] md:w-[280px]",
     },
     {
       title: "Samsung Galaxy",
@@ -41,10 +47,9 @@ export const BannerSections = () => {
       bgColor: "bg-neutral-200",
       buttonHoverStyle: "hover:bg-black hover:text-white",
       textColor: "text-black",
-      image1:
-        "https://api.builder.io/api/v1/image/assets/TEMP/2b7c9a0b743f8958355bd687bdac3eb85c58da0e?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+      image1: samsung,
       image1Class:
-        "object-contain absolute top-0 left-[10px] z-0 max-w-full aspect-[1.61] h-[385px] w-[579px]",
+        "object-contain absolute top-4 left-4 z-0 h-[220px] w-[320px] md:h-[280px] md:w-[380px]",
     },
     {
       title: "Macbook Pro",
@@ -54,9 +59,9 @@ export const BannerSections = () => {
       bgColor: "bg-black",
       buttonHoverStyle: "hover:bg-white hover:text-black",
       textColor: "text-white",
-      image1: images.mac.src,
+      image1: mac,
       image1Class:
-        "object-contain absolute top-0 left-[90px] z-0 max-w-full aspect-[1.61] h-[385px] w-[579px]",
+        "object-contain absolute top-4 left-4 z-0 h-[220px] w-[320px] md:h-[280px] md:w-[380px]",
     },
   ];
 
@@ -65,42 +70,36 @@ export const BannerSections = () => {
       {bannerCards.map((card, index) => (
         <div
           key={index}
-          className={`relative text-medium overflow-hidden px-6 pt-[280px] md:pt-[360px] lg:pt-[420px] pb-14 ${card.bgColor} rounded-lg shadow-md`}
+          className={`relative text-medium overflow-hidden px-4 pt-[240px] md:pt-[300px] lg:pt-[340px] pb-10 ${card.bgColor} rounded-lg shadow-md`}
         >
           {/* Text Content */}
           <div className="relative z-10">
-            <h3
-              className={`text-2xl font-medium leading-none ${card.textColor}`}
-            >
+            <h3 className={`text-xl md:text-2xl font-medium leading-none ${card.textColor}`}>
               {card.title}
             </h3>
-            <p
-              className={`mt-4 text-base font-light leading-6 ${card.textColor}`}
-            >
+            <p className={`mt-3 text-sm md:text-base font-light leading-6 ${card.textColor}`}>
               {card.description}
             </p>
             <button
-              className={`mt-4 py-3 px-6 text-[17px] leading-7 border rounded-full transition-colors duration-300 cursor-pointer ${card.buttonColor} ${card.buttonHoverStyle}`}
+              className={`mt-4 py-2 px-4 text-sm md:text-[17px] leading-6 border rounded-full transition-colors duration-300 cursor-pointer ${card.buttonColor} ${card.buttonHoverStyle}`}
             >
-              <Link href="/shops">
-              Shop Now
-              </Link>
+              <Link href="/shops">Shop Now</Link>
             </button>
           </div>
 
           {/* Images */}
           {card.image1 && (
-            <img
+            <Image
               src={card.image1}
               alt={card.title}
-              className={`${card.image1Class} max-md:h-[200px] max-md:w-auto max-sm:h-[180px]`}
+              className={`${card.image1Class}`}
             />
           )}
           {card.image2 && (
-            <img
+            <Image
               src={card.image2}
               alt={card.title}
-              className={`${card.image2Class} max-md:h-[200px] max-md:w-auto max-sm:h-[180px]`}
+              className={`${card.image2Class}`}
             />
           )}
         </div>
