@@ -9,6 +9,7 @@ export const ProductCard = ({
   buttonText,
   imageWidth = "w-[217px]",
   showPrice = false,
+  onEnquire,
 }) => {
   return (
     <article className="flex flex-col justify-between px-3 sm:px-4 py-4 sm:py-6 mx-auto w-full h-full rounded-lg bg-zinc-100 max-md:mt-4">
@@ -37,16 +38,11 @@ export const ProductCard = ({
       </div>
 
       {/* BOTTOM SECTION */}
-      <button className="mt-4 sm:mt-6 flex gap-2 justify-center items-center self-center px-10 sm:px-16 py-2 sm:py-3 text-xs sm:text-sm leading-6 text-white bg-black rounded-lg border border-transparent hover:bg-white hover:text-black hover:border-black transition-colors duration-300 cursor-pointer">
-        <span>
-          <a
-            href="https://web.whatsapp.com/send?phone=8879xxxxxx"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {buttonText}
-          </a>
-        </span>
+      <button
+        onClick={onEnquire} 
+        className="mt-4 sm:mt-6 flex gap-2 justify-center items-center self-center px-10 sm:px-16 py-2 sm:py-3 text-xs sm:text-sm leading-6 text-white bg-black rounded-lg border border-transparent hover:bg-white hover:text-black hover:border-black transition-colors duration-300 cursor-pointer"
+      >
+        {buttonText}
       </button>
     </article>
   );

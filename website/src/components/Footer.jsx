@@ -33,7 +33,7 @@ export const Footer = () => {
               services, and values.
             </p>
 
-            <p className="text-md font-medium">Call : 98703698212</p>
+            {/* <p className="text-md font-medium">Call : 98703698212</p> */}
           </div>
 
           {/* right */}

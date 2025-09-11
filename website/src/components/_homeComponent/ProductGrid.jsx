@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ProductCard } from "./ProductCard";
+import EnquireNow from "./EnquireNow";
 
 export const ProductGrid = () => {
   const [selectedKey, setSelectedKey] = useState("New Arrival");
+  const [showEnquire, setShowEnquire] = useState(false); 
 
   const keys = ["New Arrival", "Bestseller", "Featured Products"];
 
@@ -13,14 +15,14 @@ export const ProductGrid = () => {
       imageSrc:
         "https://api.builder.io/api/v1/image/assets/TEMP/218588128d1aeb13ac286c34b70fbdb9fb94cc72?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
       title: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
-      buttonText: "Whatsapp",
+      buttonText: "Enquire Now",
       category: "New Arrival",
     },
     {
       imageSrc:
         "https://api.builder.io/api/v1/image/assets/TEMP/fbfb269aae7dd4b5345c135244b1a8a51cb951fc?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
       title: "Blackmagic Pocket Cinema Camera 6k",
-      buttonText: "Whatsapp",
+      buttonText: "Enquire Now",
       imageAspect: "aspect-square",
       imageWidth: "w-[196px]",
       category: "New Arrival",
@@ -29,7 +31,7 @@ export const ProductGrid = () => {
       imageSrc:
         "https://api.builder.io/api/v1/image/assets/TEMP/80942dfd20eaee592e187ceb034f46e21e055aa6?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
       title: "Apple Watch Series 9 GPS 41mm Starlight Aluminium...",
-      buttonText: "Whatsapp",
+      buttonText: "Enquire Now",
       imageAspect: "aspect-square",
       imageWidth: "w-[211px]",
       category: "New Arrival",
@@ -38,7 +40,7 @@ export const ProductGrid = () => {
       imageSrc:
         "https://api.builder.io/api/v1/image/assets/TEMP/d73322bddd31a6451be1b0e9620b7868096dcda7?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
       title: "AirPods Max Silver",
-      buttonText: "Whatsapp",
+      buttonText: "Enquire Now",
       imageAspect: "aspect-square",
       imageWidth: "w-[210px]",
       category: "New Arrival",
@@ -47,8 +49,8 @@ export const ProductGrid = () => {
 
   const secondRowProducts = firstRowProducts.map((product, index) => ({
     ...product,
-    price: ["$900", "$2543", "$900", "$900"][index],
-    buttonText: "Whatsapp",
+    // price: ["₹900", "₹2543", "₹900", "₹900"][index],
+    buttonText: "Enquire Now",
     showPrice: true,
     category: [
       "Bestseller",
@@ -100,9 +102,21 @@ export const ProductGrid = () => {
       {/* Product Grid */}
       <div className="mt-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
         {filteredProducts.map((product, index) => (
-          <ProductCard key={index} {...product} showPrice={true} />
+          <ProductCard
+            key={index}
+            {...product}
+            showPrice={true}
+            onEnquire={() => setShowEnquire(true)} 
+          />
         ))}
       </div>
+
+      {/* EnquireNow Popup */}
+      {showEnquire && (
+  <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-50">
+    <EnquireNow onClose={() => setShowEnquire(false)} />  {/* ✅ FIXED */}
+  </div>
+)}
     </section>
   );
 };
