@@ -27,7 +27,7 @@ export const SolutionsSection = () => {
             </div>
 
             <button
-              className="mt-8 md:mt-10 text-sm md:text-base w-80 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
+              className="mt-8 md:mt-10 text-sm md:text-base w-80git  py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
               onClick={() => router.push("/educational-solutions")}
             >
               Read More

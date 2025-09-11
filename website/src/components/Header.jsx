@@ -4,18 +4,21 @@ import icons from "@/assets/icons/azure-logo.svg";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import EnquireNow from "@/components/_homeComponent/EnquireNow";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false); // NEW
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [showEnquire, setShowEnquire] = useState(false);
+
   const pathname = usePathname();
 
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
-    { label: "Services", isDropdown: true, type: "services" }, // NEW
+    { label: "Services", isDropdown: true, type: "services" },
     { label: "Solutions", isDropdown: true, type: "solutions" },
     { href: "/shops", label: "Shops" },
   ];
@@ -30,10 +33,7 @@ export const Header = () => {
   const serviceLinks = [
     { href: "/services/software-services", label: "Software Services" },
     { href: "/services/hardware-services", label: "Hardware Services" },
-    {
-      href: "/services/it-professional-services",
-      label: "IT Professional Services",
-    },
+    { href: "/services/it-professional-services", label: "IT Professional Services" },
     { href: "/services/streaming-services", label: "Streaming Services" },
   ];
 
@@ -150,13 +150,11 @@ export const Header = () => {
 
           {/* CTA Button */}
           <div className="flex justify-center w-full">
-            <button className="inline-block text-sm px-2 py-1 border border-black rounded-full w-1/3 text-black whitespace-nowrap hover:bg-black hover:text-white font-normal">
-              <a
-                href="https://web.whatsapp.com/send?phone=8879xxxxxx"
-                target="_blank"
-              >
-                WhatsApp
-              </a>
+            <button
+              onClick={() => setShowEnquire(true)}
+              className="inline-block text-sm px-2 py-1 border border-black rounded-full w-1/3 text-black whitespace-nowrap hover:bg-black hover:text-white font-normal"
+            >
+              Enquire Now
             </button>
           </div>
         </div>
@@ -252,16 +250,21 @@ export const Header = () => {
           </nav>
 
           {/* CTA */}
-          <a
-            href="https://web.whatsapp.com/send?phone=8879xxxxxx"
-            target="_blank"
+          <button
+            onClick={() => setShowEnquire(true)}
+            className="inline-block text-sm px-3 py-2 border border-black rounded-full text-black whitespace-nowrap hover:bg-black hover:text-white cursor-pointer font-normal"
           >
-            <button className="inline-block text-sm px-3 py-2 border border-black rounded-full text-black whitespace-nowrap hover:bg-black hover:text-white cursor-pointer font-normal">
-              Whatsapp
-            </button>
-          </a>
+            Enquire Now
+          </button>
         </div>
       </div>
+
+      {/* EnquireNow Popup */}
+      {showEnquire && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-50">
+          <EnquireNow onClose={() => setShowEnquire(false)} />
+        </div>
+      )}
 
       {/* CSS */}
       <style jsx>{`
