@@ -14,32 +14,59 @@ export const ProductGrid = () => {
     {
       imageSrc:
         "https://api.builder.io/api/v1/image/assets/TEMP/218588128d1aeb13ac286c34b70fbdb9fb94cc72?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
-      title: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
+      title: "iPhone 17 Pro",
       buttonText: "Enquire Now",
       category: "New Arrival",
     },
     {
       imageSrc:
         "https://api.builder.io/api/v1/image/assets/TEMP/fbfb269aae7dd4b5345c135244b1a8a51cb951fc?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
-      title: "Blackmagic Pocket Cinema Camera 6k",
+      title: "iPhone 17",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
       imageWidth: "w-[196px]",
       category: "New Arrival",
     },
+    // {
+    //   imageSrc:
+    //     "https://api.builder.io/api/v1/image/assets/TEMP/80942dfd20eaee592e187ceb034f46e21e055aa6?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+    //   title: "Apple Watch Series 9 GPS 41mm Starlight Aluminium...",
+    //   buttonText: "iPhone Air",
+    //   imageAspect: "aspect-square",
+    //   imageWidth: "w-[211px]",
+    //   category: "New Arrival",
+    // },
     {
       imageSrc:
-        "https://api.builder.io/api/v1/image/assets/TEMP/80942dfd20eaee592e187ceb034f46e21e055aa6?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
-      title: "Apple Watch Series 9 GPS 41mm Starlight Aluminium...",
+        "https://api.builder.io/api/v1/image/assets/TEMP/d73322bddd31a6451be1b0e9620b7868096dcda7?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+      title: "Apple Watch Series 11",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
-      imageWidth: "w-[211px]",
+      imageWidth: "w-[210px]",
       category: "New Arrival",
     },
     {
       imageSrc:
         "https://api.builder.io/api/v1/image/assets/TEMP/d73322bddd31a6451be1b0e9620b7868096dcda7?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
-      title: "AirPods Max Silver",
+      title: "Apple Watch SE 3",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "New Arrival",
+    },
+     {
+      imageSrc:
+        "https://api.builder.io/api/v1/image/assets/TEMP/d73322bddd31a6451be1b0e9620b7868096dcda7?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+      title: "Apple Watch Ultra 3",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "New Arrival",
+    },
+    {
+      imageSrc:
+      "https://api.builder.io/api/v1/image/assets/TEMP/d73322bddd31a6451be1b0e9620b7868096dcda7?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+      title: "AirPods Pro 3",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
       imageWidth: "w-[210px]",
