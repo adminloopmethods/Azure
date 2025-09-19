@@ -100,13 +100,45 @@ export default function ShopPage() {
       imageWidth: "w-[210px]",
       category: "Apple",
     },
+    {
+      imageSrc:`${images.appleKeyboard.src}`,
+      title: "Magic Keyboard with Touch ID",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "Apple",
+    },
+    {
+      imageSrc:`${images.appleMouse.src}`,
+      title: "Magic Mouse (USB‑C) - Black Multi-Touch Surface",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "Apple",
+    },
+    {
+      imageSrc:`${images.appleMini.src}`,
+      title: "Apple Mac Mini",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "Apple",
+    },
+    {
+      imageSrc:`${images.appleStudioDisplay.src}`,
+      title: "Apple Studio Display",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "Apple",
+    },
   ];
 
   const secondRowProducts = firstRowProducts.map((product, index) => ({
     ...product,
     buttonText: "Enquire Now",
     showPrice: true,
-    category: ["MS Surface", "Apple", "Jamf", "Apple"][index],
+    category: ["MS Surface", "Apple", "Jamf"][index],
   }));
 
   const allProducts = [...firstRowProducts, ...secondRowProducts];
