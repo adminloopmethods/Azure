@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ProductCard } from "./ProductCard";
 import EnquireNow from "./EnquireNow";
+import { images } from "@/assets";
 
 export const ProductGrid = () => {
   const [selectedKey, setSelectedKey] = useState("New Arrival");
@@ -12,15 +13,13 @@ export const ProductGrid = () => {
 
   const firstRowProducts = [
     {
-      imageSrc:
-        "https://api.builder.io/api/v1/image/assets/TEMP/218588128d1aeb13ac286c34b70fbdb9fb94cc72?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+      imageSrc:`${images.iphone17pro.src}`,
       title: "iPhone 17 Pro",
       buttonText: "Enquire Now",
       category: "New Arrival",
     },
     {
-      imageSrc:
-        "https://api.builder.io/api/v1/image/assets/TEMP/fbfb269aae7dd4b5345c135244b1a8a51cb951fc?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+      imageSrc:`${images.iphone17.src}`,
       title: "iPhone 17",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -37,8 +36,7 @@ export const ProductGrid = () => {
     //   category: "New Arrival",
     // },
     {
-      imageSrc:
-        "https://api.builder.io/api/v1/image/assets/TEMP/d73322bddd31a6451be1b0e9620b7868096dcda7?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+      imageSrc:`${images.appWatch.src}`,
       title: "Apple Watch Series 11",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -46,8 +44,7 @@ export const ProductGrid = () => {
       category: "New Arrival",
     },
     {
-      imageSrc:
-        "https://api.builder.io/api/v1/image/assets/TEMP/d73322bddd31a6451be1b0e9620b7868096dcda7?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+      imageSrc:`${images.appleWatchSE3.src}`,
       title: "Apple Watch SE 3",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -55,8 +52,7 @@ export const ProductGrid = () => {
       category: "New Arrival",
     },
      {
-      imageSrc:
-        "https://api.builder.io/api/v1/image/assets/TEMP/d73322bddd31a6451be1b0e9620b7868096dcda7?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+      imageSrc:`${images.appleWatchUltra3.src}`,
       title: "Apple Watch Ultra 3",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -64,8 +60,7 @@ export const ProductGrid = () => {
       category: "New Arrival",
     },
     {
-      imageSrc:
-      "https://api.builder.io/api/v1/image/assets/TEMP/d73322bddd31a6451be1b0e9620b7868096dcda7?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+      imageSrc:`${images.airPodsPro3.src}`,
       title: "AirPods Pro 3",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
