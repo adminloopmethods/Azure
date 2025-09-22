@@ -143,7 +143,7 @@ export const ProductShowcase= () => {
           {/* Gradient spot behind text */}
           <div className="absolute left-10 top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,_rgba(255,255,255,0.6)_0%,_rgba(255,255,255,0)_70%)] z-[1] blur-3xl pointer-events-none"></div>
 
-          <div className="z-[1] flex-1 shrink my-auto basis-0 max-w-[360px] min-w-60 relative">
+          <div className="z-[1] flex-1 shrink my-auto basis-0 max-w-[360px] min-w-60 ml-8 relative">
             <div className="w-full">
               <h2 className="text-6xl font-thin leading-none text-black max-md:text-4xl">
                 <span

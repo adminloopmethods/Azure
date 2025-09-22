@@ -21,11 +21,9 @@ export const BannerSections = () => {
       buttonHoverStyle: "hover:bg-black hover:text-white",
       textColor: "text-black",
       image1: huwabuds,
-      image1Class:
-        "object-contain absolute -top-4 left-2 z-0 h-[220px] w-[220px] md:h-[260px] md:w-[260px] rotate-[10deg]",
+      image1Class: "object-contain h-[200px] md:h-[240px] rotate-[10deg]",
       image2: earbuds,
-      image2Class:
-        "object-contain absolute top-3 right-2 z-0 h-[200px] w-[200px] md:h-[240px] md:w-[240px]",
+      image2Class: "object-contain h-[180px] md:h-[220px]",
     },
     {
       title: "Ipad Pro",
@@ -36,8 +34,7 @@ export const BannerSections = () => {
       buttonHoverStyle: "hover:bg-black hover:text-white",
       textColor: "text-black",
       image1: ipads,
-      image1Class:
-        "object-contain absolute top-4 right-4 z-0 h-[220px] w-[220px] md:h-[280px] md:w-[280px]",
+      image1Class: "object-contain h-[220px] md:h-[260px]",
     },
     {
       title: "Samsung Galaxy",
@@ -48,8 +45,7 @@ export const BannerSections = () => {
       buttonHoverStyle: "hover:bg-black hover:text-white",
       textColor: "text-black",
       image1: samsung,
-      image1Class:
-        "object-contain absolute top-4 left-4 z-0 h-[220px] w-[320px] md:h-[280px] md:w-[380px]",
+      image1Class: "object-contain h-[220px] md:h-[260px]",
     },
     {
       title: "Macbook Pro",
@@ -60,8 +56,7 @@ export const BannerSections = () => {
       buttonHoverStyle: "hover:bg-white hover:text-black",
       textColor: "text-white",
       image1: mac,
-      image1Class:
-        "object-contain absolute top-4 left-4 z-0 h-[220px] w-[320px] md:h-[280px] md:w-[380px]",
+      image1Class: "object-contain h-[220px] md:h-[260px]",
     },
   ];
 
@@ -70,14 +65,36 @@ export const BannerSections = () => {
       {bannerCards.map((card, index) => (
         <div
           key={index}
-          className={`relative text-medium overflow-hidden px-4 pt-[240px] md:pt-[300px] lg:pt-[340px] pb-10 ${card.bgColor} rounded-lg shadow-md`}
+          className={`relative text-medium overflow-hidden rounded-lg shadow-md ${card.bgColor} flex flex-col`}
         >
+          {/* Image Container */}
+          <div className="relative w-full h-[240px] md:h-[300px] flex justify-center items-center">
+            {card.image1 && (
+              <Image
+                src={card.image1}
+                alt={card.title}
+                className={card.image1Class}
+              />
+            )}
+            {card.image2 && (
+              <Image
+                src={card.image2}
+                alt={card.title}
+                className={`absolute right-6 top-6 ${card.image2Class}`}
+              />
+            )}
+          </div>
+
           {/* Text Content */}
-          <div className="relative z-10">
-            <h3 className={`text-xl md:text-2xl font-medium leading-none ${card.textColor}`}>
+          <div className="relative z-10 px-4 pb-8">
+            <h3
+              className={`text-xl md:text-2xl font-medium leading-none ${card.textColor}`}
+            >
               {card.title}
             </h3>
-            <p className={`mt-3 text-sm md:text-base font-light leading-6 ${card.textColor}`}>
+            <p
+              className={`mt-3 text-sm md:text-base font-light leading-6 ${card.textColor}`}
+            >
               {card.description}
             </p>
             <button
@@ -86,22 +103,6 @@ export const BannerSections = () => {
               <Link href="/shops">Shop Now</Link>
             </button>
           </div>
-
-          {/* Images */}
-          {card.image1 && (
-            <Image
-              src={card.image1}
-              alt={card.title}
-              className={`${card.image1Class}`}
-            />
-          )}
-          {card.image2 && (
-            <Image
-              src={card.image2}
-              alt={card.title}
-              className={`${card.image2Class}`}
-            />
-          )}
         </div>
       ))}
     </section>

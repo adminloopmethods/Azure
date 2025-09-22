@@ -17,7 +17,7 @@ export const SolutionsSection = () => {
             <p className="mt-4 text-xl md:mt-6 md:text-lg font-light">
               We offer end-to-end Apple product solutions, including:
             </p>
-            <div className="mt-6 text-xl md:mt-8  md:text-base leading-relaxed font-extralight space-y-2">
+            <div className="mt-6 text-xl md:mt-8 md:text-base leading-relaxed font-extralight space-y-2">
               <p>
                 DEP and MDM services via trusted vendors like 42Gears and
                 AirWatch
@@ -27,7 +27,7 @@ export const SolutionsSection = () => {
             </div>
 
             <button
-              className="mt-8 md:mt-10 text-sm md:text-base w-80git  py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
+              className="mt-8 md:mt-10 w-[260px] py-3 text-sm md:text-base border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer self-start"
               onClick={() => router.push("/educational-solutions")}
             >
               Read More
@@ -36,11 +36,11 @@ export const SolutionsSection = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/9284abfa1db00c94e25e348bffc34741f74926d6?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
             alt="Our Solutions"
-            className="w-full h-auto object-contain"
+            className="w-full h-auto max-w-md lg:max-w-lg object-contain"
           />
         </div>
       </div>
