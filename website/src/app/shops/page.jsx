@@ -144,7 +144,7 @@ export default function ShopPage() {
     category: "Apple",
   }));
 
-  const allProducts = [...firstRowProducts, ...secondRowProducts];
+  const allProducts = [...firstRowProducts];
   const filteredProducts = allProducts.filter(
     (product) => product.category === selectedKey
   );
