@@ -7,23 +7,24 @@ import { images } from "@/assets";
 
 export const ProductGrid = () => {
   const [selectedKey, setSelectedKey] = useState("New Arrival");
-  const [showEnquire, setShowEnquire] = useState(false); 
+  const [showEnquire, setShowEnquire] = useState(false);
 
   const keys = ["New Arrival", "Bestseller", "Featured Products"];
 
   const firstRowProducts = [
     {
-      imageSrc:`${images.iphone17pro.src}`,
+      imageSrc: `${images.iphone17pro.src}`,
       title: "iPhone 17 Pro",
       buttonText: "Enquire Now",
+      imageWidth: "w-full scale-150",
       category: "New Arrival",
     },
     {
-      imageSrc:`${images.iphone17.src}`,
+      imageSrc: `${images.iphone17.src}`,
       title: "iPhone 17",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
-      imageWidth: "w-[196px]",
+      imageWidth: "w-full scale-150",
       category: "New Arrival",
     },
     // {
@@ -36,7 +37,7 @@ export const ProductGrid = () => {
     //   category: "New Arrival",
     // },
     {
-      imageSrc:`${images.appWatch.src}`,
+      imageSrc: `${images.appWatch.src}`,
       title: "Apple Watch Series 11",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -44,15 +45,15 @@ export const ProductGrid = () => {
       category: "New Arrival",
     },
     {
-      imageSrc:`${images.appleWatchSE3.src}`,
+      imageSrc: `${images.appleWatchSE3.src}`,
       title: "Apple Watch SE 3",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
       imageWidth: "w-[210px]",
       category: "New Arrival",
     },
-     {
-      imageSrc:`${images.appleWatchUltra3.src}`,
+    {
+      imageSrc: `${images.appleWatchUltra3.src}`,
       title: "Apple Watch Ultra 3",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -60,7 +61,7 @@ export const ProductGrid = () => {
       category: "New Arrival",
     },
     {
-      imageSrc:`${images.airPodsPro3.src}`,
+      imageSrc: `${images.airPodsPro3.src}`,
       title: "AirPods Pro 3",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -128,17 +129,17 @@ export const ProductGrid = () => {
             key={index}
             {...product}
             showPrice={true}
-            onEnquire={() => setShowEnquire(true)} 
+            onEnquire={() => setShowEnquire(true)}
           />
         ))}
       </div>
 
       {/* EnquireNow Popup */}
       {showEnquire && (
-  <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-50">
-    <EnquireNow onClose={() => setShowEnquire(false)} />  {/* ✅ FIXED */}
-  </div>
-)}
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-50">
+          <EnquireNow onClose={() => setShowEnquire(false)} /> {/* ✅ FIXED */}
+        </div>
+      )}
     </section>
   );
 };

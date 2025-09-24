@@ -11,35 +11,36 @@ export default function ShopPage() {
   const [showEnquire, setShowEnquire] = useState(false); // 👈 modal state
   const [selectedProduct, setSelectedProduct] = useState(null); // 👈 which product
 
-  const keys = ["Apple", "MS Surface", "Jamf"];
+  const keys = ["Apple" /*, "MS Surface", "Jamf"*/];
 
   const firstRowProducts = [
     {
-      imageSrc:`${images.iphone17pro.src}`,
+      imageSrc: `${images.iphone17pro.src}`,
       title: "Apple iPhone 17 Pro Max",
       buttonText: "Enquire Now",
+      imageWidth: "w-full scale-150",
       category: "Apple",
     },
+    // {
+    //   imageSrc:
+    //     "https://api.builder.io/api/v1/image/assets/TEMP/fbfb269aae7dd4b5345c135244b1a8a51cb951fc?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+    //   title: "MS Surface Pro 9 Laptop",
+    //   buttonText: "Enquire Now",
+    //   imageAspect: "aspect-square",
+    //   imageWidth: "w-[196px]",
+    //   category: "MS Surface",
+    // },
+    // {
+    //   imageSrc:
+    //     "https://api.builder.io/api/v1/image/assets/TEMP/80942dfd20eaee592e187ceb034f46e21e055aa6?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
+    //   title: "Jamf Device Management Software",
+    //   buttonText: "Enquire Now",
+    //   imageAspect: "aspect-square",
+    //   imageWidth: "w-[211px]",
+    //   category: "Jamf",
+    // },
     {
-      imageSrc:
-        "https://api.builder.io/api/v1/image/assets/TEMP/fbfb269aae7dd4b5345c135244b1a8a51cb951fc?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
-      title: "MS Surface Pro 9 Laptop",
-      buttonText: "Enquire Now",
-      imageAspect: "aspect-square",
-      imageWidth: "w-[196px]",
-      category: "MS Surface",
-    },
-    {
-      imageSrc:
-        "https://api.builder.io/api/v1/image/assets/TEMP/80942dfd20eaee592e187ceb034f46e21e055aa6?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114",
-      title: "Jamf Device Management Software",
-      buttonText: "Enquire Now",
-      imageAspect: "aspect-square",
-      imageWidth: "w-[211px]",
-      category: "Jamf",
-    },
-    {
-      imageSrc:`${images.airmaxhero.src}`,
+      imageSrc: `${images.airmaxhero.src}`,
       title: "Apple AirPods Max Silver",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -47,29 +48,30 @@ export default function ShopPage() {
       category: "Apple",
     },
     {
-      imageSrc:`${images.iphone17pro.src}`,
+      imageSrc: `${images.iphone17pro.src}`,
       title: "iPhone 17 Pro",
       buttonText: "Enquire Now",
+      imageWidth: "w-full scale-150",
       category: "Apple",
     },
     {
-      imageSrc:`${images.iphone17.src}`,
+      imageSrc: `${images.iphone17.src}`,
       title: "iPhone 17",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
-      imageWidth: "w-[196px]",
+      imageWidth: "w-full scale-150",
       category: "Apple",
     },
     {
-      imageSrc:`${images.iphoneAir.src}`,
+      imageSrc: `${images.iphoneAir.src}`,
       title: "iPhone Air",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
-      imageWidth: "w-[211px]",
+      imageWidth: "w-full scale-150",
       category: "Apple",
     },
     {
-      imageSrc:`${images.appWatch.src}`,
+      imageSrc: `${images.appWatch.src}`,
       title: "Apple Watch Series 11",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -77,15 +79,15 @@ export default function ShopPage() {
       category: "Apple",
     },
     {
-      imageSrc:`${images.appleWatchSE3.src}`,
+      imageSrc: `${images.appleWatchSE3.src}`,
       title: "Apple Watch SE 3",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
       imageWidth: "w-[210px]",
       category: "Apple",
     },
-     {
-      imageSrc:`${images.appleWatchUltra3.src}`,
+    {
+      imageSrc: `${images.appleWatchUltra3.src}`,
       title: "Apple Watch Ultra 3",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -93,7 +95,7 @@ export default function ShopPage() {
       category: "Apple",
     },
     {
-      imageSrc:`${images.airPodsPro3.src}`,
+      imageSrc: `${images.airPodsPro3.src}`,
       title: "AirPods Pro 3",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -101,7 +103,7 @@ export default function ShopPage() {
       category: "Apple",
     },
     {
-      imageSrc:`${images.appleKeyboard.src}`,
+      imageSrc: `${images.appleKeyboard.src}`,
       title: "Magic Keyboard with Touch ID",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -109,7 +111,7 @@ export default function ShopPage() {
       category: "Apple",
     },
     {
-      imageSrc:`${images.appleMouse.src}`,
+      imageSrc: `${images.appleMouse.src}`,
       title: "Magic Mouse (USB‑C) - Black Multi-Touch Surface",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -117,7 +119,7 @@ export default function ShopPage() {
       category: "Apple",
     },
     {
-      imageSrc:`${images.appleMini.src}`,
+      imageSrc: `${images.appleMini.src}`,
       title: "Apple Mac Mini",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -125,7 +127,7 @@ export default function ShopPage() {
       category: "Apple",
     },
     {
-      imageSrc:`${images.appleStudioDisplay.src}`,
+      imageSrc: `${images.appleStudioDisplay.src}`,
       title: "Apple Studio Display",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
@@ -134,11 +136,12 @@ export default function ShopPage() {
     },
   ];
 
+  // Commenting out non-Apple products in secondRowProducts as well
   const secondRowProducts = firstRowProducts.map((product, index) => ({
     ...product,
     buttonText: "Enquire Now",
     showPrice: true,
-    category: ["MS Surface", "Apple", "Jamf"][index],
+    category: "Apple",
   }));
 
   const allProducts = [...firstRowProducts, ...secondRowProducts];
