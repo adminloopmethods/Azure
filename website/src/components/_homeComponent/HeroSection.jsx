@@ -11,7 +11,7 @@ export const HeroSection = () => {
     <div className="w-full lg:w-6/12 text-white text-center lg:text-left">
       {/* Tagline */}
       <div
-        className="bg-[#1A1A1A] bg-opacity-10 rounded-full px-4 py-2 text-sm sm:text-base text-gray-400 mb-6 inline-block max-w-full md:max-w-[420px] whitespace-nowrap overflow-hidden text-ellipsis"
+        className="bg-[#1A1A1A] bg-opacity-10 rounded-full px-4 py-2 text-sm sm:text-base text-gray-400 mb-6 inline-block max-w-full md:max-w-[450px] whitespace-nowrap overflow-hidden text-ellipsis"
         style={{
           border: "0.42px solid rgba(255, 255, 255, 0.2)",
         }}

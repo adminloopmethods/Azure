@@ -62,7 +62,7 @@ export const Header = () => {
       {menuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-md z-50 px-4 pt-5 pb-6 flex flex-col gap-6">
           {/* Search */}
-          <div className="flex gap-2.5 px-3 py-2 border border-zinc-300 rounded-full text-neutral-500 h-9 w-full items-center">
+          {/* <div className="flex gap-2.5 px-3 py-2 border border-zinc-300 rounded-full text-neutral-500 h-9 w-full items-center">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/feac8458b9d780f3e7a69397d6f0170d371ef099"
               alt="Search icon"
@@ -73,7 +73,7 @@ export const Header = () => {
               placeholder="Search accessories"
               className="w-full bg-transparent outline-none text-sm"
             />
-          </div>
+          </div> */}
 
           {/* Mobile Nav */}
           <nav className="flex flex-col gap-4 items-center">
@@ -163,7 +163,7 @@ export const Header = () => {
       {/* Desktop Menu */}
       <div className="hidden xl:flex items-center justify-between w-full">
         {/* Search */}
-        <div className="flex gap-2.5 ml-32 px-3 py-2 border border-zinc-300 rounded-full text-neutral-500 h-9 w-80 items-center">
+        {/* <div className="flex gap-2.5 ml-32 px-3 py-2 border border-zinc-300 rounded-full text-neutral-500 h-9 w-80 items-center">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/feac8458b9d780f3e7a69397d6f0170d371ef099"
             alt="Search icon"
@@ -174,7 +174,7 @@ export const Header = () => {
             placeholder="Search accessories"
             className="w-full bg-transparent outline-none text-sm"
           />
-        </div>
+        </div> */}
 
         {/* Nav + CTA */}
         <div className="flex items-center gap-6 ml-auto">

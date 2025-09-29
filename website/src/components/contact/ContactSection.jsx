@@ -1,7 +1,13 @@
+"use client";
 import React from "react";
+import { AdvancedMarker, APIProvider, Map } from "@vis.gl/react-google-maps";
 import ContactForm from "./ContactForm";
+import Link from "next/link";
 
 const ContactSection = () => {
+  // 28.633260985141845, 77.1384643442431
+  const position = { lat: 28.633260985141845, lng: 77.1384643442431 };
+
   return (
     <div className="relative px-24 py-16 w-full max-md:px-12 max-md:py-10 max-sm:px-5 max-sm:py-8">
       <div className="flex relative w-full bg-white shadow-2xl h-[534px] max-md:flex-col max-md:h-auto">
@@ -57,9 +63,9 @@ const ContactSection = () => {
               Find us
             </div>
           </div>
-            <div className="mb-1.5 ml-8 max-md:ml-0 text-lg max-md:text-sm font-light leading-7 text-white max-w-[357px]">
-              203-204, 1st Community Centre Naraina Phase - 1
-            </div>
+          <div className="mb-1.5 ml-8 max-md:ml-0 text-lg max-md:text-sm font-light leading-7 text-white max-w-[357px]">
+            203-204, 1st Community Centre Naraina Phase - 1
+          </div>
           <div className="ml-8 max-md:ml-0 text-lg max-md:text-sm font-light leading-6 text-white">
             New Delhi - 110028
           </div>
@@ -68,11 +74,34 @@ const ContactSection = () => {
       </div>
 
       <div>
-        <img //!map image
-          src="https://api.builder.io/api/v1/image/assets/TEMP/b8253788955d6253af4f7f4e00319f357fb985de?width=2476"
-          alt="maps"
-          className="mt-12 w-full mix-blend-luminosity h-[273px]"
-        />
+        <div
+          style={{ height: "50vh", width: "100%" }}
+          className="mt-20 items-center flex flex-col"
+        >
+          <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_NEW_API_KEY}>
+            <Map defaultCenter={position} defaultZoom={10} mapId="DEMO_MAP_ID">
+              <AdvancedMarker
+                position={position}
+                content={
+                  <div className="bg-white p-1 rounded shadow-lg text-sm font-bold">
+                    Azure Innovations
+                  </div>
+                }
+              />
+            </Map>
+          </APIProvider>
+          <button className="inline-flex w-full mt-10 sm:w-auto items-center justify-center rounded-full bg-black px-6 py-3 md:px-8 md:py-4 text-white text-sm md:text-base font-medium transition hover:bg-black/90 active:translate-y-px cursor-pointer">
+            <Link
+              href="https://maps.app.goo.gl/9kiuApZWr3xo94nW6"
+              target="_blank"
+              className="w-full h-full flex items-center justify-center"
+            >
+              Get Directions
+            </Link>
+          </button>
+        </div>
+
+        {/* NEXT_PUBLIC_GOOGLE_MAPS_NEW_API_KEY */}
         <div className="absolute top-175 -left-8 max-md:hidden">
           <div
             dangerouslySetInnerHTML={{
