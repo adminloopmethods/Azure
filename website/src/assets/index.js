@@ -1,4 +1,4 @@
-import logo from "@/assets/icons/azure-logo.svg";
+import logo from "@/assets/icons/azure-logo.png";
 import appleIcon from "@/assets/icons/appleIcon.svg";
 
 import bannerImage from "@/assets/images/bannerBack.png";

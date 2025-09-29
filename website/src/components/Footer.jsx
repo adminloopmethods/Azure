@@ -7,7 +7,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import Image from "next/image";
-import azureLogo from "@/assets/icons/azure-logo.svg";
+import azureLogo from "@/assets/icons/azure-logo.png";
 import { ServiceBenefits } from "./_homeComponent/ServiceBenefits";
 
 export const Footer = () => {

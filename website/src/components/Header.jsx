@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import icons from "@/assets/icons/azure-logo.svg";
+import icons from "@/assets/icons/azure-logo.png";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -45,7 +45,7 @@ export const Header = () => {
           <img
             src={icons.src}
             alt="Azure Innovation Logo"
-            className="object-contain w-32 h-14"
+            className="object-contain w-32 h-14 scale-150"
           />
         </Link>
         {/* Mobile Hamburger */}
