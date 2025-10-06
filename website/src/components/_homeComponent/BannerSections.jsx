@@ -13,9 +13,9 @@ import earbuds from "@/assets/images/watch1.png";
 export const BannerSections = () => {
   const bannerCards = [
     {
-      title: "Popular Products",
+      title: "Apple Watch",
       description:
-        "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+        "Power your wrist with health insights, real-time fitness tracking, ECG, and seamless integration with the iPhone — all in a sleek, always-on smartwatch.",
       buttonColor: "text-black border-black",
       bgColor: "bg-white",
       buttonHoverStyle: "hover:bg-black hover:text-white",
@@ -26,9 +26,9 @@ export const BannerSections = () => {
       image2Class: "object-contain h-[180px] md:h-[220px]",
     },
     {
-      title: "Ipad Pro",
+      title: "iPad Pro",
       description:
-        "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+        "Unleash creativity with the iPad Pro — featuring a Liquid Retina XDR display, Apple M-series chip, ProMotion, and Apple Pencil support for ultra-fluid performance.",
       buttonColor: "text-black border-black",
       bgColor: "bg-zinc-100",
       buttonHoverStyle: "hover:bg-black hover:text-white",
@@ -39,7 +39,7 @@ export const BannerSections = () => {
     {
       title: "Samsung Galaxy",
       description:
-        "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+        "Experience innovation at your fingertips with the Samsung Galaxy — powerful cameras, vibrant AMOLED display, long battery life, and seamless Android integration.",
       buttonColor: "text-black border-black",
       bgColor: "bg-neutral-200",
       buttonHoverStyle: "hover:bg-black hover:text-white",
@@ -48,9 +48,9 @@ export const BannerSections = () => {
       image1Class: "object-contain h-[220px] md:h-[260px]",
     },
     {
-      title: "Macbook Pro",
+      title: "MacBook Pro",
       description:
-        "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+        "Engineered for professionals: the MacBook Pro delivers blazing performance with M-series silicon, stunning display, extended battery life, and pro-level graphics & AI capabilities.",
       buttonColor: "text-white border-white",
       bgColor: "bg-black",
       buttonHoverStyle: "hover:bg-white hover:text-black",
