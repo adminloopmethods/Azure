@@ -18,8 +18,8 @@ const ContactForm = () => {
 
     try {
       await emailjs.send(
-        "service_8k0pjbn", // Replace with your EmailJS service ID
-        "template_nrojx1d", // Replace with your EmailJS template ID
+        "service_k1zvd0m", // Replace with your EmailJS service ID
+        "template_8xb5z27", // Replace with your EmailJS template ID
         {
           firstName: formData.get("firstName"),
           lastName: formData.get("lastName"),
@@ -27,7 +27,7 @@ const ContactForm = () => {
           phoneNumber: formData.get("phoneNumber"),
           message: formData.get("message"),
         },
-        { publicKey: "vR7bL3KlTc9VAquPq" } // Replace with your public key
+        { publicKey: "vDjUfIHHlUeLop0Wp" } // Replace with your public key
       );
 
       setStatus("✅ Message sent successfully!");
@@ -128,3 +128,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+``

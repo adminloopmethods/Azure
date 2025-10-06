@@ -7,13 +7,13 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import Image from "next/image";
-import azureLogo from "@/assets/icons/azure-logo.svg";
+import azureLogo from "@/assets/icons/azure-logo.png";
 import { ServiceBenefits } from "./_homeComponent/ServiceBenefits";
 
 export const Footer = () => {
   return (
     <div className="lg:flex lg:flex-col">
-      <ServiceBenefits />
+      {/* <ServiceBenefits /> */}
 
       {/* ====== Desktop & Large Screen Footer ====== */}
       <footer className="hidden lg:block w-full bg-white text-sm text-zinc-700 px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 py-12">
