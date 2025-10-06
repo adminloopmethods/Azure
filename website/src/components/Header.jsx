@@ -17,9 +17,9 @@ export const Header = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
     { label: "Services", isDropdown: true, type: "services" },
     { label: "Solutions", isDropdown: true, type: "solutions" },
+    { href: "/contact", label: "Contact" },
     { href: "/shops", label: "Shops" },
   ];
 

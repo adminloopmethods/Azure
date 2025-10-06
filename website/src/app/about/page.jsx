@@ -113,7 +113,7 @@ export default function AboutPage() {
       </div>
 
       {/* Vision/Mission Section */}
-      <div className="flex px-24 py-10 mb-10 gap-10 max-md:flex-col max-md:px-12 max-md:py-5 max-sm:px-0 max-sm:py-5 max-sm:mb-5">
+      <div className="flex px-24 py-10  gap-10 max-md:flex-col max-md:px-12 max-md:py-5 max-sm:px-0 max-sm:py-5 max-sm:mb-5">
 
         <div className="flex flex-col min-h-[282px] w-[610px] max-md:w-full">
           <div className="p-12 bg-gray-200 min-h-[282px] max-w-[610px] max-sm:px-5 max-sm:py-8">
@@ -142,7 +142,7 @@ export default function AboutPage() {
       </div>
 
       {/* Team Section */}
-      <div className="px-24 pt-12 pb-14 bg-black max-md:p-12 max-sm:px-5 max-sm:py-10">
+      {/* <div className="px-24 pt-12 pb-14 bg-black max-md:p-12 max-sm:px-5 max-sm:py-10">
         <div className="mb-12 text-5xl text-white leading-[58px] max-sm:text-4xl max-sm:leading-10">
           Managing Director &amp; Co-Founder
         </div>
@@ -156,7 +156,7 @@ export default function AboutPage() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Features Section */}
       
