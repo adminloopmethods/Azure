@@ -26,7 +26,7 @@ export const BannerSections = () => {
       image2Class: "object-contain h-[180px] md:h-[220px]",
     },
     {
-      title: "Ipad Pro",
+      title: "iPad Pro",
       description:
         "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
       buttonColor: "text-black border-black",

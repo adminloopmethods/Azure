@@ -66,7 +66,7 @@ export const ProductShowcase= () => {
           <div className="z-10 max-w-md">
             <h2 className="text-4xl sm:text-6xl font-light text-black max-md:text-3xl">
               <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400 }}>
-                Macbook Air
+                MacBook Air
               </span>
             </h2>
             <p className="mt-4 text-sm sm:text-base text-neutral-900 font-light max-md:text-sm">
@@ -153,7 +153,7 @@ export const ProductShowcase= () => {
                     fontWeight: 400,
                   }}
                 >
-                  Macbook Air
+                  MacBook Air
                 </span>
               </h2>
               <p className="mt-4 text-sm leading-6 font-[275] text-neutral-900">
