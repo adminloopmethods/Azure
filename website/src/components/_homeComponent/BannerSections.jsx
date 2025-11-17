@@ -15,7 +15,7 @@ export const BannerSections = () => {
     {
       title: "Popular Products",
       description:
-        "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+        "Experience cutting-edge innovation with our best-selling smart gadgets, designed to make life simpler and smarter. Trusted by thousands, these top-rated devices blend style, speed, and intelligence in every detail.",
       buttonColor: "text-black border-black",
       bgColor: "bg-white",
       buttonHoverStyle: "hover:bg-black hover:text-white",
@@ -28,7 +28,7 @@ export const BannerSections = () => {
     {
       title: "iPad Pro",
       description:
-        "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+        "The Apple iPad Pro features an all-screen Liquid Retina display with ProMotion and True Tone technology. Powered by the A12X Bionic chip, it offers high performance, Face ID for security, and a versatile USB-C connector. ",
       buttonColor: "text-black border-black",
       bgColor: "bg-zinc-100",
       buttonHoverStyle: "hover:bg-black hover:text-white",
@@ -37,9 +37,9 @@ export const BannerSections = () => {
       image1Class: "object-contain h-[220px] md:h-[260px]",
     },
     {
-      title: "Samsung Galaxy",
+      title: " Samsung Galaxy Z Fold 4",
       description:
-        "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+        "This device is a foldable smartphone that offers a large, immersive 7.6-inch main display when unfolded, transforming from a phone into a tablet-like experience.",
       buttonColor: "text-black border-black",
       bgColor: "bg-neutral-200",
       buttonHoverStyle: "hover:bg-black hover:text-white",
@@ -50,7 +50,7 @@ export const BannerSections = () => {
     {
       title: "Macbook Pro",
       description:
-        "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+        "The Apple MacBook Pro is a high-end laptop featuring powerful M1 Pro or M1 Max chips for exceptional CPU and GPU performance. It boasts a brilliant Liquid Retina XDR display and advanced connectivity options for professional workflows.",
       buttonColor: "text-white border-white",
       bgColor: "bg-black",
       buttonHoverStyle: "hover:bg-white hover:text-black",
