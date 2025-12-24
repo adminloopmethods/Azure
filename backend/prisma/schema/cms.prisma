@@ -1,0 +1,57 @@
+model Site {
+  id        String   @id @default(cuid())
+  name      String
+  domain    String?
+  createdAt DateTime @default(now())
+  pages     Page[]
+}
+
+model Page {
+  id     String @id @default(cuid())
+  siteId String
+  site   Site   @relation(fields: [siteId], references: [id])
+
+  slug      String
+  title     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // pointer to current published version (must be unique for 1-1)
+  publishedVersionId String?      @unique
+  publishedVersion   PageVersion? @relation("PublishedVersion", fields: [publishedVersionId], references: [id])
+
+  // all versions (normal 1-many)
+  versions PageVersion[]
+
+  @@unique([siteId, slug])
+}
+
+model PageVersion {
+  id String @id @default(cuid())
+
+  // normal backref
+  pageId String
+  page   Page   @relation(fields: [pageId], references: [id])
+
+  // opposite side of the 1-1 published pointer
+  publishedOnPage Page? @relation("PublishedVersion")
+
+  status             VersionStatus
+  content            Json
+  // NEW: Visual builder specific fields
+  layoutType         String        @default("visual") // "visual" or "traditional"
+  responsiveSettings Json? // Screen size configurations
+  customStyles       Json? // Global CSS/styling for the pag
+
+  label     String?
+  createdBy String?
+  createdAt DateTime @default(now())
+
+  // one DRAFT and one PUBLISHED per page (MVP)
+  @@unique([pageId, status])
+}
+
+enum VersionStatus {
+  DRAFT
+  PUBLISHED
+}
