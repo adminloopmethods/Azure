@@ -3,13 +3,11 @@ import ContactSection from "@/components/contact/ContactSection";
 import Hero from "@/components/contact/Hero";
 import Navigation from "@/components/contact/Navigation";
 import React from "react";
-
+// hell
 export default function ContactPage() {
   return (
     <div className="w-full bg-white">
-      <div className="relative">
-        {/* <Navigation /> */}
-      </div>
+      <div className="relative">{/* <Navigation /> */}</div>
       <Hero />
       {/* <BenefitsSection /> */}
       <ContactSection />
