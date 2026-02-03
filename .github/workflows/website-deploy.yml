@@ -32,18 +32,14 @@ jobs:
         working-directory: website
         run: npm run build
 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: SSH Deploy
+        uses: easingthemes/ssh-deploy@v5.1.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: website/out/
-          server-dir: ${{ secrets.FTP_DESTINATION }}/
-          dangerous-clean-slate: true
-          exclude: |
-            **/.well-known/**
-            **/cgi-bin/**
-            **/.htaccess
-            **/out.zip
-            **/out/**
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "website/out/"
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USERNAME }}
+          REMOTE_PORT: ${{ secrets.SSH_PORT || '22' }}
+          TARGET: ${{ secrets.FTP_DESTINATION }}
+          EXCLUDE: "/.well-known/, /cgi-bin/, /.htaccess, /out.zip, /out/"
