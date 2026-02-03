@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -6,10 +5,9 @@ import { Footer } from "@/components/Footer";
 import { ProductNavigation } from "@/components/_homeComponent/ProductNavigation";
 import { ServiceBenefits } from "@/components/_homeComponent/ServiceBenefits";
 
-
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"], 
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-poppins",
 });
 
