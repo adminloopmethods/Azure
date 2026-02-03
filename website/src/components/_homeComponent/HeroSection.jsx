@@ -46,10 +46,10 @@ export const HeroSection = () => {
       {/* Buttons */}
       <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
         <button className="px-5 py-2 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition cursor-pointer">
-          <a href="mailto:example@email.com">Explore iPhone 17</a>
+          <a href="mailto:sales@azureinnovations.co.in">Explore iPhone 17</a>
         </button>
         <button className="px-5 py-2 border border-blue-500 rounded-full text-blue-500 hover:bg-blue-500 hover:text-white transition cursor-pointer">
-          <a href="mailto:example@email.com">Explore iPhone 17 Pro</a>
+          <a href="mailto:sales@azureinnovations.co.in">Explore iPhone 17 Pro</a>
         </button>
       </div>
     </div>

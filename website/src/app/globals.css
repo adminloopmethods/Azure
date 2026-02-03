@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-poppins: 'Poppins', sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 @theme inline {
@@ -27,9 +27,6 @@ body {
   font-family: var(--font-poppins);
 }
 
-
-
-
 .font-thin {
   font-weight: 100;
 }
@@ -44,29 +41,54 @@ body {
 }
 /* ... and so on */
 
-
 .fade-mask {
-  -webkit-mask-image: linear-gradient(to bottom, transparent, white 30%, white 70%, transparent);
-  mask-image: linear-gradient(to bottom, transparent, white 30%, white 70%, transparent);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    white 30%,
+    white 70%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    white 30%,
+    white 70%,
+    transparent
+  );
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
 
 .gradient-border {
-    border: 1px solid transparent; /* Required for border-image to show */
-    border-image: linear-gradient(
-        to bottom, 
-        #a09f9f 0%,   /* top color */
-        transparent 70%,  /* middle color */
-        #a09f9f 100%  /* bottom color */
-    ) 1;
+  border: 1px solid transparent; /* Required for border-image to show */
+  border-image: linear-gradient(
+      to bottom,
+      #a09f9f 0%,
+      /* top color */ transparent 70%,
+      /* middle color */ #a09f9f 100% /* bottom color */
+    )
+    1;
 }
 .gradient-border-h {
-    border: 1px solid transparent; /* Required for border-image to show */
-    border-image: linear-gradient(
-        to right, 
-        #a09f9f 0%,   /* top color */
-        transparent 70%,  /* middle color */
-        #a09f9f 100%  /* bottom color */
-    ) 1;
+  border: 1px solid transparent; /* Required for border-image to show */
+  border-image: linear-gradient(
+      to right,
+      #a09f9f 0%,
+      /* top color */ transparent 70%,
+      /* middle color */ #a09f9f 100% /* bottom color */
+    )
+    1;
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
 }

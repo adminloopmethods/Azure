@@ -1,0 +1,49 @@
+name: Website Deployment
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "website/**"
+
+jobs:
+  deploy:
+    name: Build and Deploy Website
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.message, '-deploy')
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install Dependencies
+        working-directory: website
+        run: npm ci
+
+      - name: Build Project
+        working-directory: website
+        run: npm run build
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: website/out/
+          server-dir: ${{ secrets.FTP_DESTINATION }}
+          dangerous-clean-slate: true
+          exclude: |
+            **/.well-known/**
+            **/cgi-bin/**
+            **/.htaccess
+            **/out.zip
+            **/out/**
