@@ -33,25 +33,14 @@ jobs:
         working-directory: website
         run: npm run build
 
-      - name: Pre-deployment Clean (SSH)
-        uses: appleboy/ssh-action@v1.0.3
+      - name: SFTP Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
+          server: ${{ secrets.SSH_HOST }}
           port: ${{ secrets.SSH_PORT || '22' }}
-          script: |
-            cd ${{ secrets.FTP_DESTINATION }}
-            # Delete old files but exclude critical system ones
-            find . -maxdepth 1 ! -name '.well-known' ! -name 'cgi-bin' ! -name '.htaccess' ! -name '.' -exec rm -rf {} +
-
-      - name: Deploy Files (SCP)
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.SSH_PORT || '22' }}
-          source: "website/out/*"
-          target: ${{ secrets.FTP_DESTINATION }}
-          strip_components: 2
+          ssh_private_key: ${{ secrets.SSH_KEY }}
+          local_path: "website/out/*"
+          remote_path: ${{ secrets.FTP_DESTINATION }}
+          delete_remote_files: true
+          sftp_only: true
