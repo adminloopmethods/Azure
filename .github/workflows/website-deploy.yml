@@ -6,7 +6,8 @@ on:
       - main
     paths:
       - "website/**"
-#  - ".github/workflows/website-deploy.yml"
+      - ".github/workflows/website-deploy.yml"
+
 jobs:
   deploy:
     name: Build and Deploy Website
@@ -32,14 +33,25 @@ jobs:
         working-directory: website
         run: npm run build
 
-      - name: SSH Deploy
-        uses: easingthemes/ssh-deploy@v5.1.0
+      - name: Pre-deployment Clean (SSH)
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-          ARGS: "-rlgoDzvc -i --delete"
-          SOURCE: "website/out/"
-          REMOTE_HOST: ${{ secrets.SSH_HOST }}
-          REMOTE_USER: ${{ secrets.SSH_USERNAME }}
-          REMOTE_PORT: ${{ secrets.SSH_PORT || '22' }}
-          TARGET: ${{ secrets.FTP_DESTINATION }}
-          EXCLUDE: "/.well-known/, /cgi-bin/, /.htaccess, /out.zip, /out/"
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || '22' }}
+          script: |
+            cd ${{ secrets.FTP_DESTINATION }}
+            # Delete old files but exclude critical system ones
+            find . -maxdepth 1 ! -name '.well-known' ! -name 'cgi-bin' ! -name '.htaccess' ! -name '.' -exec rm -rf {} +
+
+      - name: Deploy Files (SCP)
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || '22' }}
+          source: "website/out/*"
+          target: ${{ secrets.FTP_DESTINATION }}
+          strip_components: 2
