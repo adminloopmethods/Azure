@@ -35,16 +35,31 @@ export const Footer = () => {
           {/* Right */}
           <div className="flex flex-col gap-8 items-end">
             <div className="flex gap-3 text-lg text-zinc-700">
-              <a href="#" className="rounded-full bg-black/10 p-2">
+              <a
+                href="https://www.facebook.com/share/179QzoeEaF/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-black/10 p-2"
+              >
                 <FaFacebookF />
               </a>
-              <a href="#" className="rounded-full bg-black/10 p-2">
+              {/* <a href="#" className="rounded-full bg-black/10 p-2">
                 <FaTwitter />
-              </a>
-              <a href="#" className="rounded-full bg-black/10 p-2">
+              </a> */}
+              <a
+                href="https://www.linkedin.com/company/azureinnovations"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-black/10 p-2"
+              >
                 <FaLinkedinIn />
               </a>
-              <a href="#" className="rounded-full bg-black/10 p-2">
+              <a
+                href="https://www.instagram.com/azure.innovations?igsh=bmt6NHpscXBiNGVm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-black/10 p-2"
+              >
                 <FaInstagram />
               </a>
             </div>
@@ -92,16 +107,25 @@ export const Footer = () => {
               className="object-contain"
             />
             <div className="flex gap-5 text-lg text-black mt-2">
-              <a href="#">
+              <a
+                href="https://www.facebook.com/share/179QzoeEaF/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebookF />
               </a>
-              <a href="#">
-                <FaTwitter />
-              </a>
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/company/azureinnovations"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedinIn />
               </a>
-              <a href="#">
+              <a
+                href="https://www.instagram.com/azure.innovations?igsh=bmt6NHpscXBiNGVm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram />
               </a>
             </div>

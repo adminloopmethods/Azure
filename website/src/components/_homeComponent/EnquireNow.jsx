@@ -38,8 +38,8 @@ const EnquireNow = ({ onClose, productName }) => {
 
     try {
       await emailjs.send(
-        "service_8k0pjbn",
-        "template_nrojx1d",
+        "service_k1zvd0m",
+        "template_8xb5z27",
         {
           firstName: formData.get("firstName"),
           lastName: formData.get("lastName"),
@@ -49,7 +49,7 @@ const EnquireNow = ({ onClose, productName }) => {
           // 👇 merge product + message
           message: `Product: ${formData.get("product")}\nMessage: ${message}`,
         },
-        { publicKey: "vR7bL3KlTc9VAquPq" }
+        { publicKey: "vDjUfIHHlUeLop0Wp" },
       );
 
       setStatus("✅ Message sent successfully!");
@@ -58,6 +58,9 @@ const EnquireNow = ({ onClose, productName }) => {
         formRef.current.reset();
         setMessage(""); // reset textarea too
       }
+      setTimeout(() => {
+        onClose();
+      }, 2000);
     } catch (error) {
       console.log("EMAILJS FAILED...", error);
       setStatus("❌ Something went wrong.");
