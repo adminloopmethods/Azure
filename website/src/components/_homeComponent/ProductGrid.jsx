@@ -70,7 +70,7 @@ export const ProductGrid = () => {
     },
     {
       imageSrc: `${images.macFull.src}`,
-      title: "Apple Macbook",
+      title: "Apple MacBook",
       buttonText: "Enquire Now",
       imageAspect: "aspect-square",
       imageWidth: "w-[210px]",
