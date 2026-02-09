@@ -10,11 +10,11 @@ const clients = [
   { name: "Haku Hodo", logo: clientsData.hakuhodo },
   { name: "Jindal Steel", logo: clientsData.jindalSteel },
   { name: "Oriflame", logo: clientsData.oriflame },
-  { name: "Outlook", logo: clientsData.outlook, showText: true },
+  { name: "Outlook", logo: clientsData.outlook },
   { name: "Religare", logo: clientsData.religare },
   { name: "Amity University", logo: clientsData.amity },
   { name: "OP Jindal Global University", logo: clientsData.opJindal },
-  { name: "Havas" },
+  { name: "Havas", logo: clientsData.havas },
 ];
 
 export const ClientMarquee = () => {

@@ -41,6 +41,7 @@ import religare from "@/assets/images/clients/religare.png";
 import amity from "@/assets/images/clients/amity.png";
 import opJindal from "@/assets/images/clients/op_jindal.png";
 import outlook from "@/assets/images/clients/outlook.png";
+import havas from "@/assets/images/clients/havas.png";
 
 
 
@@ -87,5 +88,6 @@ export const clientsData = {
   amity,
   opJindal,
   outlook,
+  havas,
 };
 
