@@ -134,6 +134,14 @@ export default function ShopPage() {
       imageWidth: "w-[210px]",
       category: "Apple",
     },
+    {
+      imageSrc: `${images.macFull.src}`,
+      title: "Apple Macbook",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "Apple",
+    },
   ];
 
   // Commenting out non-Apple products in secondRowProducts as well
@@ -146,7 +154,7 @@ export default function ShopPage() {
 
   const allProducts = [...firstRowProducts];
   const filteredProducts = allProducts.filter(
-    (product) => product.category === selectedKey
+    (product) => product.category === selectedKey,
   );
 
   return (

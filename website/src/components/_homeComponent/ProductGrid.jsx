@@ -68,6 +68,14 @@ export const ProductGrid = () => {
       imageWidth: "w-[210px]",
       category: "New Arrival",
     },
+    {
+      imageSrc: `${images.macFull.src}`,
+      title: "Apple Macbook",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "New Arrival",
+    },
   ];
 
   const secondRowProducts = firstRowProducts.map((product, index) => ({
