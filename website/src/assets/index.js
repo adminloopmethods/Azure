@@ -30,6 +30,21 @@ import appleMini from "@/assets/images/macmini.png";
 
 import appleStudioDisplay from "@/assets/images/studioDisplay.png";
 
+import somany from "@/assets/images/clients/somany.png";
+import aiims from "@/assets/images/clients/aiims.png";
+import dentsu from "@/assets/images/clients/dentsu.png";
+import exl from "@/assets/images/clients/exl.jpeg";
+import hakuhodo from "@/assets/images/clients/hakuhodo.png";
+import jindalSteel from "@/assets/images/clients/jindal_steel.png";
+import oriflame from "@/assets/images/clients/oriflame.png";
+import religare from "@/assets/images/clients/religare.png";
+import amity from "@/assets/images/clients/amity.png";
+import opJindal from "@/assets/images/clients/op_jindal.png";
+import outlook from "@/assets/images/clients/outlook.png";
+
+
+
+
 export const icons = {
   logo,
   appleIcon,
@@ -59,3 +74,18 @@ export const images = {
   appleMini,
   appleStudioDisplay,
 };
+
+export const clientsData = {
+  somany,
+  aiims,
+  dentsu,
+  exl,
+  hakuhodo,
+  jindalSteel,
+  oriflame,
+  religare,
+  amity,
+  opJindal,
+  outlook,
+};
+

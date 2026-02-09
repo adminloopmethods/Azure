@@ -1,19 +1,20 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
+import { clientsData } from "@/assets";
 
 const clients = [
-  "Somany",
-  "AIIMS",
-  "Dantsu",
-  "EXL",
-  "Haku Hodo",
-  "Jindal Steel",
-  "Oriflame",
-  "Outlook",
-  "Religare",
-  "Amity University",
-  "OP Jindal Global University",
-  "Havas",
+  { name: "Somany", logo: clientsData.somany },
+  { name: "AIIMS", logo: clientsData.aiims },
+  { name: "Dantsu", logo: clientsData.dentsu },
+  { name: "EXL", logo: clientsData.exl },
+  { name: "Haku Hodo", logo: clientsData.hakuhodo },
+  { name: "Jindal Steel", logo: clientsData.jindalSteel },
+  { name: "Oriflame", logo: clientsData.oriflame },
+  { name: "Outlook", logo: clientsData.outlook, showText: true },
+  { name: "Religare", logo: clientsData.religare },
+  { name: "Amity University", logo: clientsData.amity },
+  { name: "OP Jindal Global University", logo: clientsData.opJindal },
+  { name: "Havas" },
 ];
 
 export const ClientMarquee = () => {
@@ -115,6 +116,12 @@ export const ClientMarquee = () => {
       </div>
       <div
         className="marquee-container relative cursor-grab active:cursor-grabbing overflow-hidden"
+        style={{
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent, black 5%, black 95%, transparent)",
+          maskImage:
+            "linear-gradient(to right, transparent, black 5%, black 95%, transparent)",
+        }}
         ref={containerRef}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
@@ -131,17 +138,25 @@ export const ClientMarquee = () => {
           {[...clients, ...clients, ...clients].map((client, index) => (
             <div
               key={index}
-              className="bg-white px-4 py-4 rounded-2xl border-2 border-zinc-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] flex items-center justify-center min-w-[250px] h-[100px] hover:border-black transition-all duration-300 transform md:hover:-translate-y-2 group shrink-0 mr-10 md:mr-12 pointer-events-none"
+              className="bg-white px-8 py-4 rounded-2xl border-2 border-zinc-200 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] flex items-center justify-center min-w-[250px] h-[120px] hover:border-black transition-all duration-300 transform md:hover:-translate-y-2 group shrink-0 mr-10 md:mr-12"
             >
-              <span className="text-2xl md:text-3xl font-bold text-zinc-800 group-hover:text-black font-poppins tracking-tight text-center">
-                {client}
-              </span>
+              <div className="flex items-center gap-4">
+                {client.logo && (
+                  <img
+                    src={client.logo.src}
+                    alt={client.name}
+                    className="max-w-[180px] max-h-[80px] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                )}
+                {(!client.logo || client.showText) && (
+                  <span className="text-2xl md:text-3xl font-bold text-zinc-700 group-hover:text-black font-poppins tracking-tight text-center">
+                    {client.name}
+                  </span>
+                )}
+              </div>
             </div>
           ))}
         </div>
-        {/* Reinforced fading edges */}
-        <div className="absolute inset-y-0 left-0 w-40 md:w-64 bg-gradient-to-r from-white via-white/80 to-transparent z-20 pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-40 md:w-64 bg-gradient-to-l from-white via-white/80 to-transparent z-20 pointer-events-none"></div>
       </div>
     </section>
   );
