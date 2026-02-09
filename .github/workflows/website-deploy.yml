@@ -44,3 +44,57 @@ jobs:
           remote_path: ${{ secrets.FTP_DESTINATION }}
           delete_remote_files: true
           sftp_only: true
+
+  # notify:
+  #   name: Notify Team
+  #   needs: [deploy]
+  #   if: always() && contains(github.event.head_commit.message, '-deploy')
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Send Status to Discord/Slack
+  #       uses: rtCamp/action-slack-notify@v2
+  #       env:
+  #         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+  #         SLACK_COLOR: ${{ needs.deploy.result == 'success' && 'good' || 'danger' }}
+  #         SLACK_MESSAGE: "Azure Website Deployment finished with status: ${{ needs.deploy.result }}"
+
+  notify-email:
+    name: Email Notification
+    needs: [deploy]
+    if: always() && contains(github.event.head_commit.message, '-deploy')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Email Notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.MAIL_SERVER }}
+          server_port: ${{ secrets.MAIL_PORT }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: Azure Website Deployment - ${{ needs.deploy.result }}
+          to: ${{ secrets.MAIL_TO }}
+          from: Azure Deployment <${{ secrets.MAIL_USERNAME }}>
+          body: |
+            Deployment of Azure Website finished with status: ${{ needs.deploy.result }}
+
+            Commit: ${{ github.event.head_commit.message }}
+            Workflow Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+  # notify-whatsapp:
+  #   name: WhatsApp Notification
+  #   needs: [deploy]
+  #   if: always() && contains(github.event.head_commit.message, '-deploy')
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Send WhatsApp Notification
+  #       uses: twilio-labs/actions-sms@v1
+  #       with:
+  #         fromPhoneNumber: ${{ secrets.TWILIO_FROM_WHATSAPP_NUMBER }}
+  #         toPhoneNumber: ${{ secrets.TWILIO_TO_WHATSAPP_NUMBER }}
+  #         message: |
+  #           Azure Website Deployment: ${{ needs.deploy.result }}
+  #           Commit: ${{ github.event.head_commit.message }}
+  #           Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+  #         TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+  #         TWILIO_API_KEY: ${{ secrets.TWILIO_API_KEY }}
+  #         TWILIO_API_SECRET: ${{ secrets.TWILIO_API_SECRET }}
