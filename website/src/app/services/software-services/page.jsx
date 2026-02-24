@@ -4,19 +4,22 @@ import SearvicesHeader from "../common/ServicesHeader";
 const featuresData = [
   {
     title: "Comprehensive Support",
-    description: "From break/fix services to remote troubleshooting and installations—we cover all your software needs.",
+    shortDescription: "Structured IT support designed to ensure stability, security, and uninterrupted operations.",
+    longDescription: "We provide structured, end-to-end IT support designed to ensure system stability and operational continuity. Our services include break/fix assistance, remote troubleshooting, and on-site installations across software environments. With experienced engineers and defined support processes, we help organisations maintain secure, reliable systems while minimising downtime and operational risk.",
     bgColor: "bg-zinc-100",
     textColor: "text-black",
   },
   {
-    title: "Annual Maintenance Contracts ",
-    description: "Ensure smooth performance with AMCs customized for Apple and other IT systems.",
+    title: "Annual Maintenance Contracts (AMC) ",
+    shortDescription: "Predictable maintenance and priority support for long-term system reliability.",
+    longDescription: "Our Annual Maintenance Contracts are designed to deliver consistent system performance and predictable support outcomes. Tailored for Apple and enterprise IT environments, our AMCs include preventive maintenance, routine health checks, and priority support. This approach enables organisations to reduce unexpected disruptions and maintain long-term reliability across their IT infrastructure.",
     bgColor: "bg-zinc-100",
     textColor: "text-black",
   },
   {
     title: "Seamless Upgrades & Migrations",
-    description: "Experience hassle-free software upgrades, updates, and system migrations with expert support.",
+    shortDescription: "Carefully managed upgrades and migrations with minimal operational disruption.",
+    longDescription: "We manage software upgrades, updates, and system migrations with a structured, low-risk approach. From initial assessment and planning to execution and post-migration validation, our team ensures continuity, data integrity, and minimal operational disruption. This enables organisations to transition confidently to updated, secure, and scalable technology environments.",
     bgColor: "bg-black",
     textColor: "text-white",
   },
@@ -32,14 +35,10 @@ export default function SoftwareServicePage() {
           {/* LEFT: Content */}
           <div className="w-full lg:w-1/2">
             <h2 className="text-5xl font-extralight text-gray-800">
-              Your <span className="font-semibold text-black">Trusted</span> Software Service{" "}
-              <span className="font-semibold text-black">Partner</span>
+              Software Support <span className="font-semibold text-black">You Can Rely On</span>
             </h2>
             <p className="text-gray-600 mt-4 font-extralight max-w-2xl text-xl">
-              We specialize in expert software support for Apple and other IT
-              solutions. Whether online or onsite, we handle everything from
-              technical troubleshooting to ongoing maintenance—ensuring smooth,
-              reliable performance at every step.
+              We partner with organisations to deliver dependable software services across Apple and enterprise IT environments. Our team provides structured support, from technical troubleshooting and system optimisation to ongoing maintenance, delivered both remotely and on-site. With a focus on reliability, security, and continuity, we help businesses operate efficiently with technology they can trust.
             </p>
           </div>
 

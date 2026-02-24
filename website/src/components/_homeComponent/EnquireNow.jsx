@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import emailjs from "@emailjs/browser";
+import { sendEmail } from "../../../utils/sendEmail";
 import { RxCross2 } from "react-icons/rx";
 
 const EnquireNow = ({ onClose, productName }) => {
@@ -36,33 +36,27 @@ const EnquireNow = ({ onClose, productName }) => {
 
     const formData = new FormData(formRef.current);
 
-    try {
-      await emailjs.send(
-        "service_k1zvd0m",
-        "template_8xb5z27",
-        {
-          firstName: formData.get("firstName"),
-          lastName: formData.get("lastName"),
-          email: formData.get("email"),
-          phoneNumber: formData.get("phoneNumber"),
-          product: formData.get("product"),
-          // 👇 merge product + message
-          message: `Product: ${formData.get("product")}\nMessage: ${message}`,
-        },
-        { publicKey: "vDjUfIHHlUeLop0Wp" },
-      );
+    const result = await sendEmail({
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      email: formData.get("email"),
+      phoneNumber: formData.get("phoneNumber"),
+      product: formData.get("product"),
+      message: `Product: ${formData.get("product")}\nMessage: ${message}`,
+    });
 
+    if (result.success) {
       setStatus("✅ Message sent successfully!");
 
       if (formRef.current) {
         formRef.current.reset();
-        setMessage(""); // reset textarea too
+        setMessage("");
       }
+
       setTimeout(() => {
         onClose();
       }, 2000);
-    } catch (error) {
-      console.log("EMAILJS FAILED...", error);
+    } else {
       setStatus("❌ Something went wrong.");
     }
 

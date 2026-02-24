@@ -3,20 +3,23 @@ import SearvicesHeader from "../common/ServicesHeader";
 
 const featuresData = [
   {
-    title: "Reliable Hardware Assistance",
-    description: "From diagnostics to repairs, we ensure your Apple and IT hardware performs at its best.",
+    title: "Hardware Support & Lifecycle Management",
+    shortDescription: "We provide structured hardware support across Apple and enterprise IT environments, covering diagnostics, repairs, and performance optimisation to ensure long-term reliability.",
+    longDescription: "We deliver comprehensive hardware support across Apple and enterprise IT environments, covering diagnostics, repairs, replacements, and lifecycle planning. Our structured approach ensures devices perform reliably throughout their lifespan while minimising downtime and operational risk. From day-to-day issues to long-term asset management, we help organisations maintain stable, efficient hardware environments.",
     bgColor: "bg-zinc-100",
     textColor: "text-black",
   },
   {
-    title: "Robust Network Solutions",
-    description: "Design, installation, and support for secure and high-performance networks—powered by trusted vendors like CISCO.",
+    title: "Network Infrastructure & Support",
+    shortDescription: "Design, deployment, and ongoing support of secure, high-performance network infrastructure, delivered in collaboration with established technology partners such as Cisco.",
+    longDescription: "We design, deploy, and support secure, high-performance network infrastructures tailored to business needs. Working with established technology partners such as Cisco, we ensure network reliability, scalability, and security. Our services include installation, optimisation, monitoring, and issue resolution to support uninterrupted connectivity across offices and distributed teams.",
     bgColor: "bg-zinc-100",
     textColor: "text-black",
   },
   {
-    title: "Proactive Maintenance",
-    description: "Prevent downtime with regular health checks, updates, and troubleshooting for your hardware and network systems.",
+    title: "Preventive Maintenance & System Health",
+    shortDescription: "Proactive monitoring, routine health checks, and timely updates to minimise risk, prevent downtime, and maintain stable hardware and network operations.",
+    longDescription: "Our preventive maintenance services focus on identifying issues before they impact operations. Through regular system health checks, updates, and performance monitoring, we help organisations reduce unplanned downtime and extend the life of their hardware and network assets, ensuring consistent performance and long-term operational stability.",
     bgColor: "bg-black",
     textColor: "text-white",
   },
@@ -33,11 +36,10 @@ export default function HardwareServicePage(){
               {/* LEFT: Content */}
               <div className="w-full lg:w-1/2">
                 <h2 className="text-5xl font-extralight text-gray-800">
-                  Your <span className="font-semibold text-black">Hardware</span> and {" "}
-                  <span className="font-semibold text-black">Network Support</span> Services
+                  Keeping Your <span className="font-semibold text-black">Technology Reliable</span>, Every Day
                 </h2>
                 <p className="text-gray-600 mt-4 font-extralight max-w-2xl text-xl">
-                  Reliable support for Apple and IT hardware, network setup, and CISCO solutions. From installations to repairs and preventive maintenance, we ensure smooth, secure, and uninterrupted operations.
+                  We ensure your Apple and IT hardware operates smoothly across its lifecycle. From ongoing reliability to long-term stability, our support is structured, responsive, and built to minimise disruption so teams can stay focused on their work.
                 </p>
               </div>
     

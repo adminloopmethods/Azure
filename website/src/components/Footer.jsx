@@ -7,6 +7,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 import azureLogo from "@/assets/icons/azure-logo.png";
 import { ServiceBenefits } from "./_homeComponent/ServiceBenefits";
 
@@ -72,13 +73,13 @@ export const Footer = () => {
                 { text: "Solutions", href: "/educational-solutions" },
                 { text: "Shops", href: "/shops" },
               ].map((item, i) => (
-                <a
+                <Link
                   key={i}
                   href={item.href}
                   className="hover:underline text-lg font-light"
                 >
                   {item.text}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -147,9 +148,9 @@ export const Footer = () => {
               { text: "Solutions", href: "/educational-solutions" },
               { text: "Shops", href: "/shops" },
             ].map((item, i) => (
-              <a key={i} href={item.href} className="hover:underline">
+              <Link key={i} href={item.href} className="hover:underline">
                 {item.text}
-              </a>
+              </Link>
             ))}
           </div>
 

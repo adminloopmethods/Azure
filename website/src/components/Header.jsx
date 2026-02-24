@@ -93,27 +93,25 @@ export const Header = () => {
                   >
                     {link.label}
                     <MdKeyboardArrowDown
-                      className={`transition-transform duration-300 ${
-                        (link.type === "solutions" && solutionsOpen) ||
-                        (link.type === "services" && servicesOpen)
+                      className={`transition-transform duration-300 ${(link.type === "solutions" && solutionsOpen) ||
+                          (link.type === "services" && servicesOpen)
                           ? "rotate-180"
                           : ""
-                      }`}
+                        }`}
                     />
                   </button>
 
                   {link.type === "solutions" && solutionsOpen && (
                     <div className="mt-2 flex flex-col gap-1 items-center w-full bg-white shadow-lg p-2 rounded-md">
                       {solutionLinks.map((sLink) => (
-                        <a
+                        <Link
                           key={sLink.href}
                           href={sLink.href}
-                          className={`px-3 py-1 w-full text-center text-black text-sm rounded-md hover:bg-gray-100 nav-link ${
-                            pathname === sLink.href ? "active" : ""
-                          }`}
+                          className={`px-3 py-1 w-full text-center text-black text-sm rounded-md hover:bg-gray-100 nav-link ${pathname === sLink.href ? "active" : ""
+                            }`}
                         >
                           {sLink.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
@@ -121,29 +119,27 @@ export const Header = () => {
                   {link.type === "services" && servicesOpen && (
                     <div className="mt-2 flex flex-col gap-1 items-center w-full bg-white shadow-lg p-2 rounded-md">
                       {serviceLinks.map((sLink) => (
-                        <a
+                        <Link
                           key={sLink.href}
                           href={sLink.href}
-                          className={`px-3 py-1 w-full text-center text-black text-sm rounded-md hover:bg-gray-100 nav-link ${
-                            pathname === sLink.href ? "active" : ""
-                          }`}
+                          className={`px-3 py-1 w-full text-center text-black text-sm rounded-md hover:bg-gray-100 nav-link ${pathname === sLink.href ? "active" : ""
+                            }`}
                         >
                           {sLink.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
                 </div>
               ) : (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative px-1 py-1 font-medium text-black nav-link ${
-                    pathname === link.href ? "active" : "opacity-70"
-                  }`}
+                  className={`relative px-1 py-1 font-medium text-black nav-link ${pathname === link.href ? "active" : "opacity-70"
+                    }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               )
             )}
           </nav>
@@ -192,12 +188,11 @@ export const Header = () => {
                   >
                     {link.label}
                     <MdKeyboardArrowDown
-                      className={`transition-transform duration-300 ${
-                        (link.type === "solutions" && solutionsOpen) ||
-                        (link.type === "services" && servicesOpen)
+                      className={`transition-transform duration-300 ${(link.type === "solutions" && solutionsOpen) ||
+                          (link.type === "services" && servicesOpen)
                           ? "rotate-180"
                           : ""
-                      }`}
+                        }`}
                     />
                   </button>
 
@@ -205,15 +200,14 @@ export const Header = () => {
                   {link.type === "solutions" && solutionsOpen && (
                     <div className="absolute top-full left-0 mt-2 bg-white shadow-lg p-2 rounded-md flex flex-col gap-1 w-56 z-50">
                       {solutionLinks.map((sLink) => (
-                        <a
+                        <Link
                           key={sLink.href}
                           href={sLink.href}
-                          className={`px-3 py-1 text-black text-sm rounded-md hover:bg-gray-100 nav-link ${
-                            pathname === sLink.href ? "active" : ""
-                          }`}
+                          className={`px-3 py-1 text-black text-sm rounded-md hover:bg-gray-100 nav-link ${pathname === sLink.href ? "active" : ""
+                            }`}
                         >
                           {sLink.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
@@ -222,29 +216,27 @@ export const Header = () => {
                   {link.type === "services" && servicesOpen && (
                     <div className="absolute top-full left-0 mt-2 bg-white shadow-lg p-2 rounded-md flex flex-col gap-1 w-56 z-50">
                       {serviceLinks.map((sLink) => (
-                        <a
+                        <Link
                           key={sLink.href}
                           href={sLink.href}
-                          className={`px-3 py-1 text-black text-sm rounded-md hover:bg-gray-100 nav-link ${
-                            pathname === sLink.href ? "active" : ""
-                          }`}
+                          className={`px-3 py-1 text-black text-sm rounded-md hover:bg-gray-100 nav-link ${pathname === sLink.href ? "active" : ""
+                            }`}
                         >
                           {sLink.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
                 </div>
               ) : (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative px-1 py-1 font-medium text-black nav-link ${
-                    pathname === link.href ? "active" : "opacity-70"
-                  }`}
+                  className={`relative px-1 py-1 font-medium text-black nav-link ${pathname === link.href ? "active" : "opacity-70"
+                    }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               )
             )}
           </nav>

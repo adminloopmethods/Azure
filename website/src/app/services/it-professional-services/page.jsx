@@ -3,36 +3,29 @@ import SearvicesHeader from "../common/ServicesHeader";
 
 const featuresData = [
   {
-    title: "Help Desk & Equipment",
-    description:
-      "Device support, setup guidance, equipment selection",
+    title: "Technology Advisory & Planning",
+    shortDescription: "Strategic guidance to help organisations plan, evaluate, and align IT decisions with business objectives.",
+    longDescription: "Our technology advisory services support organisations in making strategic IT decisions. We assess current environments, identify gaps, and provide guidance on architecture, platforms, and scalability. By aligning technology planning with business priorities, we help organisations invest confidently and avoid fragmented or reactive IT decisions.",
     bgColor: "bg-zinc-100",
     textColor: "text-black",
   },
   {
-    title: "Network & Data Security",
-    description:
-      "Network protection, data backup & recovery",
+    title: "Infrastructure Architecture & Design",
+    shortDescription: "Design of secure, scalable IT and network architectures built to support performance and growth.",
+    longDescription: "We provide expert design services for secure, scalable IT and network architectures. Our approach focuses on structure, performance, and future readiness, ensuring infrastructure is designed to support evolving business needs. We work with established enterprise technologies to create environments that are stable, secure, and fit for growth.",
     bgColor: "bg-zinc-100",
     textColor: "text-black",
   },
   {
-    title: "Cloud & Data Services",
-    description:
-      "Cloud solutions, secure data storage & management",
-    bgColor: "bg-black",
-    textColor: "text-white",
-  },
-  {
-    title: "Consulting & Repair",
-    description:
-      "IT & social media consulting, equipment repair",
+    title: "Operational Readiness & Risk Management",
+    shortDescription: "Structured assessments and process alignment to strengthen resilience, reduce risk, and support business continuity.",
+    longDescription: "Our operational readiness services focus on strengthening IT governance and resilience. Through structured assessments, documentation, and process reviews, we help organisations identify risks, improve preparedness, and ensure their IT environments can support uninterrupted",
     bgColor: "bg-black",
     textColor: "text-white",
   },
 ];
 
-export default function HardwareServicePage() {
+export default function ITProfessionalServicePage() {
   return (
     <div className="flex overflow-hidden flex-col bg-white">
       <SearvicesHeader>IT Professional </SearvicesHeader>
@@ -42,15 +35,11 @@ export default function HardwareServicePage() {
           {/* LEFT: Content */}
           <div className="w-full lg:w-1/2">
             <h2 className="text-5xl font-extralight text-gray-800">
-              Your <span className="font-semibold text-black">All-in-One
-                {" "} IT Professional</span> {" "}
-              Services Partner
+              Strategic <span className="font-semibold text-black">Expertise</span> Behind Your {" "}
+              <span className="font-semibold text-black">IT Decisions</span>
             </h2>
             <p className="text-gray-600 mt-4 font-extralight max-w-2xl text-xl">
-              Reliable support for Apple and IT hardware, network setup, and
-              CISCO solutions. From installations to repairs and preventive
-              maintenance, we ensure smooth, secure, and uninterrupted
-              operations.
+              We support organisations beyond day-to-day operations with expert guidance, planning, and design. Our professional services help businesses make informed technology decisions, strengthen infrastructure, and prepare IT environments for scale and continuity.
             </p>
           </div>
 
