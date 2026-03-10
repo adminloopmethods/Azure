@@ -142,6 +142,63 @@ export default function ShopPage() {
       imageWidth: "w-[210px]",
       category: "Apple",
     },
+    // New products
+    {
+      imageSrc: `${images.macBookNeo.src}`,
+      title: "MacBook Neo",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "Apple",
+    },
+    {
+      imageSrc: `${images.macBookAir.src}`,
+      title: "MacBook Air",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "Apple",
+    },
+    {
+      imageSrc: `${images.macBookPro.src}`,
+      title: "MacBook Pro",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "Apple",
+    },
+    {
+      imageSrc: `${images.appleDisplay.src}`,
+      title: "Apple Display",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "Apple",
+    },
+    {
+      imageSrc: `${images.iPadAir.src}`,
+      title: "iPad Air",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "Apple",
+    },
+    {
+      imageSrc: `${images.iPhone17e.src}`,
+      title: "iPhone 17e",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "Apple",
+    },
+    {
+      imageSrc: `${images.airPodsPro3.src}`,
+      title: "AirPods Pro 3",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "Apple",
+    },
   ];
 
   // Commenting out non-Apple products in secondRowProducts as well

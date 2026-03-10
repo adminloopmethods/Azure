@@ -43,6 +43,14 @@ import opJindal from "@/assets/images/clients/op_jindal.png";
 import outlook from "@/assets/images/clients/outlook.png";
 import havas from "@/assets/images/clients/havas.png";
 
+// New product images
+import macBookNeo from "@/assets/images/macbook.png";
+import macBookAir from "@/assets/images/macbookair_13_15.png";
+import macBookPro from "@/assets/images/macbookpro_14_16.png";
+import appleDisplay from "@/assets/images/studioDisplay.png";
+import iPadAir from "@/assets/images/ipad.png";
+import iPhone17e from "@/assets/images/iphone17.png";
+
 
 
 
@@ -74,6 +82,13 @@ export const images = {
   appleMouse,
   appleMini,
   appleStudioDisplay,
+  // New products
+  macBookNeo,
+  macBookAir,
+  macBookPro,
+  appleDisplay,
+  iPadAir,
+  iPhone17e,
 };
 
 export const clientsData = {
