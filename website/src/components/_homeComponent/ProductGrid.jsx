@@ -76,6 +76,63 @@ export const ProductGrid = () => {
       imageWidth: "w-[210px]",
       category: "New Arrival",
     },
+     // New products
+     {
+      imageSrc: `${images.macBookNeo.src}`,
+      title: "MacBook Neo",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "New Arrival",
+    },
+    {
+      imageSrc: `${images.macBookAir.src}`,
+      title: "MacBook Air",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "New Arrival",
+    },
+    {
+      imageSrc: `${images.macBookPro.src}`,
+      title: "MacBook Pro",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "New Arrival",
+    },
+    {
+      imageSrc: `${images.appleDisplay.src}`,
+      title: "Apple Display",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "New Arrival",
+    },
+    {
+      imageSrc: `${images.iPadAir.src}`,
+      title: "iPad Air",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "New Arrival",
+    },
+    {
+      imageSrc: `${images.iPhone17e.src}`,
+      title: "iPhone 17e",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "New Arrival",
+    },
+    {
+      imageSrc: `${images.airPodsPro3.src}`,
+      title: "AirPods Pro 3",
+      buttonText: "Enquire Now",
+      imageAspect: "aspect-square",
+      imageWidth: "w-[210px]",
+      category: "New Arrival",
+    },
   ];
 
   const secondRowProducts = firstRowProducts.map((product, index) => ({
