@@ -44,7 +44,7 @@ import outlook from "@/assets/images/clients/outlook.png";
 import havas from "@/assets/images/clients/havas.png";
 
 // New product images
-import macBookNeo from "@/assets/images/macbook.png";
+import macBookNeo from "@/assets/images/macbook-neo.png";
 import macBookAir from "@/assets/images/macbookair_13_15.png";
 import macBookPro from "@/assets/images/macbookpro_14_16.png";
 import appleDisplay from "@/assets/images/studioDisplay.png";
