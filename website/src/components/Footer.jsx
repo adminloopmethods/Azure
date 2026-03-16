@@ -5,6 +5,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
+  FaWhatsapp,
 } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
@@ -62,6 +63,14 @@ export const Footer = () => {
                 className="rounded-full bg-black/10 p-2"
               >
                 <FaInstagram />
+              </a>
+              <a
+                href="https://wa.me/9811511755"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-green-500 text-white p-2"
+              >
+                <FaWhatsapp />
               </a>
             </div>
             <div className="flex flex-wrap gap-6">
@@ -128,6 +137,14 @@ export const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <FaInstagram />
+              </a>
+              <a
+                href="https://wa.me/9811511755"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-500"
+              >
+                <FaWhatsapp />
               </a>
             </div>
           </div>
