@@ -68,14 +68,6 @@ export const ProductGrid = () => {
       imageWidth: "w-[210px]",
       category: "New Arrival",
     },
-    {
-      imageSrc: `${images.macFull.src}`,
-      title: "Apple MacBook",
-      buttonText: "Enquire Now",
-      imageAspect: "aspect-square",
-      imageWidth: "w-[210px]",
-      category: "New Arrival",
-    },
      // New products
      {
       imageSrc: `${images.macBookNeo.src}`,

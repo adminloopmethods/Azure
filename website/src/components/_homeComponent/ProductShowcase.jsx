@@ -77,7 +77,7 @@ export const ProductShowcase= () => {
             </button>
           </div>
           <img
-            src={images.macFull.src}
+            src={images.macBookAir.src}
             alt="MacBook Air"
             className="absolute right-1/2 translate-x-1/2 w-[300px] rotate-[90deg] max-w-[50%] object-contain bottom-[-100px] [@media(max-width:390px)_and_(min-width:280px)]:bottom-[-70px]"
           />
@@ -169,7 +169,7 @@ export const ProductShowcase= () => {
           </div>
 
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/d9810ca12938e2d33ab32362ce24ee1e94cfe80f?placeholderIfAbsent=true&apiKey=3332ba944108427ea5002522aefee114"
+            src={images.macBookAir.src}
             alt="MacBook Air"
             className="object-contain absolute bottom-0 right-0 z-0 self-start w-[325px] h-[605px] min-w-60 translate-y-[0%] max-md:max-w-full"
           />
